@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import DistrictPage from './pages/DistrictPage';
+import ReviewsPage from './pages/ReviewsPage';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/opinie" element={<ReviewsPage />} />
+          <Route path="/reviews.html" element={<ReviewsPage />} />
           <Route path="/:slug" element={<DistrictPage />} />
         </Routes>
       </main>

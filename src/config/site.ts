@@ -42,10 +42,14 @@ export const siteConfig = {
   mainDistricts: [
     'Targówek',
     'Białołęka',
+    'Bielany',
+    'Bródno',
     'Wawer',
     'Ochota',
-    'Ursus',
+    'Praga Północ',
     'Praga Południe',
+    'Rembertów',
+    'Ursus',
   ],
 
   // Wszystkie dzielnice Warszawy (dla sekcji Locations)

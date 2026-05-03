@@ -18,7 +18,41 @@
   RewriteEngine On
   RewriteBase /
 
-  # Nie przekierowuj realnych plików ani folderów (np. /assets/...)
+  # ---------------------------------------------------------------------
+  # 1a. 301 REDIRECTS ze starych URL .html na nowe (ZACHOWANIE SEO)
+  # ---------------------------------------------------------------------
+  # Stare URL: wukowarszawa.pl/wukotargowek.html
+  # Nowy URL:  wukowarszawa.pl/wukotargowek
+  # Google przepisze ranking ze starego URL na nowy w ciągu kilku tygodni.
+
+  # Dzielnice
+  RewriteRule ^wukotargowek\.html$ /wukotargowek [R=301,L]
+  RewriteRule ^wukobialoleka\.html$ /wukobialoleka [R=301,L]
+  RewriteRule ^wukobielany\.html$ /wukobielany [R=301,L]
+  RewriteRule ^wukobrodno\.html$ /wukobrodno [R=301,L]
+  RewriteRule ^wukowawer\.html$ /wukowawer [R=301,L]
+  RewriteRule ^wukoochota\.html$ /wukoochota [R=301,L]
+  RewriteRule ^wukopragapolnoc\.html$ /wukopragapolnoc [R=301,L]
+  RewriteRule ^wukopragapoludnie\.html$ /wukopragapoludnie [R=301,L]
+  RewriteRule ^wukorembertow\.html$ /wukorembertow [R=301,L]
+  RewriteRule ^wukoursus\.html$ /wukoursus [R=301,L]
+
+  # Strona zbiorcza ulic Warszawy → strona główna
+  RewriteRule ^wuko-warszawa\.html$ / [R=301,L]
+
+  # Recenzje - URL pozostaje aktywny dzięki Reactowi (route /reviews.html),
+  # ale można też przekierować na czystszy URL /opinie:
+  # (zostawiamy bez przekierowania - React Router obsłuży oba)
+
+  # ---------------------------------------------------------------------
+  # 1b. SPA fallback - WAŻNE dla React Router (podstrony dzielnic)
+  # ---------------------------------------------------------------------
+  # Bez tego wejście na https://wukowarszawa.pl/wukotargowek bezpośrednio
+  # (np. z Google) da błąd 404. Te reguły mówią Apache: jeśli żądany plik
+  # lub folder nie istnieje, podaj index.html zamiast 404 - dzięki temu
+  # React Router może obsłużyć trasę po stronie przeglądarki.
+
+  # Nie przekierowuj realnych plików ani folderów (np. /assets/..., /img/..., /porady-hydrauliczne/...)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
 
