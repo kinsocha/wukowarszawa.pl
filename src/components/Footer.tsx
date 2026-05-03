@@ -158,7 +158,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-slate-800">
           <div className="text-slate-500 text-xs leading-relaxed text-center">
             <p>
-              <strong>{siteConfig.legalName}</strong> – {siteConfig.ownerName} – NIP {siteConfig.nip} – REGON {siteConfig.regon}
+              <strong>{siteConfig.legalName}</strong>
             </p>
           </div>
         </div>

@@ -198,7 +198,7 @@ const Contact: React.FC = () => {
                     className={`w-full px-4 py-3 rounded-xl border transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 ${
                       errors.phone ? 'border-red-300 focus:border-red-500' : 'border-slate-200 focus:border-sky-500'
                     }`}
-                    placeholder="888 806 921"
+                    placeholder=""
                   />
                   {errors.phone && (
                     <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
@@ -344,9 +344,6 @@ const Contact: React.FC = () => {
                   <h4 className="font-bold text-slate-900 mb-2">Dane firmy</h4>
                   <div className="text-sm text-slate-600 space-y-1">
                     <p>{siteConfig.legalName}</p>
-                    <p>{siteConfig.ownerName}</p>
-                    <p>NIP: {siteConfig.nip}</p>
-                    <p>REGON: {siteConfig.regon}</p>
                   </div>
                 </div>
               </div>

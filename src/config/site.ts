@@ -7,21 +7,18 @@ export const siteConfig = {
   tagline: 'Ciśnieniowe udrażnianie kanalizacji',
 
   // Kontakt
-  phone: '888 806 921',
-  phoneTel: '+48888806921',
+  phone: '',
+  phoneTel: '',
   email: 'wukowarszawa@gmail.com',
 
-  // Dane firmowe (z https://wuko.waw.pl)
+  // Dane firmowe
   legalName: 'Warszawskie Usługi Kanalizacyjne WUKO',
-  ownerName: 'Damian Kwiatkowski',
   address: {
     street: 'ul. Leśna 30a',
     postalCode: '05-502',
     city: 'Jazgarzew',
     region: 'gmina Piaseczno',
   },
-  nip: 'PL 1132815774',
-  regon: '142674317',
   bank: 'Alior Bank S.A.',
 
   // Domena

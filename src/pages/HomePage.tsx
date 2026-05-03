@@ -14,12 +14,12 @@ const HomePage: React.FC = () => {
   // Aktualizacja meta-tagów dla strony głównej
   useEffect(() => {
     document.title =
-      'Wuko Warszawa – ciśnieniowe udrażnianie kanalizacji | tel. 888 806 921';
+      'Wuko Warszawa – ciśnieniowe udrażnianie kanalizacji';
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute(
         'content',
-        'Udrażnianie i czyszczenie kanalizacji w Warszawie. Wuko, sprężyna elektryczna, inspekcja kamerą TV. Doświadczenie od 1979 r. Szybka pomoc – tel. 888 806 921.'
+        'Udrażnianie i czyszczenie kanalizacji w Warszawie. Wuko, sprężyna elektryczna, inspekcja kamerą TV. Doświadczenie od 1979 r.'
       );
     }
   }, []);

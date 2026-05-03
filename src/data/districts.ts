@@ -25,7 +25,7 @@ export const districts: DistrictData[] = [
     fullName: 'Wuko Targówek',
     metaTitle: 'Wuko Targówek – udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
-      'Profesjonalne Wuko Targówek – szybkie i skuteczne udrażnianie rur w dzielnicy Targówek. Ciśnieniowe udrażnianie rur, kamerowanie kanalizacji. Tel. 888 806 921.',
+      'Profesjonalne Wuko Targówek – szybkie i skuteczne udrażnianie rur w dzielnicy Targówek. Ciśnieniowe udrażnianie rur, kamerowanie kanalizacji.',
     heroIntro:
       'Dojeżdżamy na Targówek przy zatorach w mieszkaniach, blokach i lokalach usługowych. Mamy duże doświadczenie w przepychaniu rur w domach i firmach.',
     areas: ['Bródno', 'Targówek Mieszkaniowy', 'Targówek Fabryczny', 'Zacisze', 'Elsnerów'],
@@ -63,7 +63,7 @@ export const districts: DistrictData[] = [
     fullName: 'Wuko Białołęka',
     metaTitle: 'Wuko Białołęka – udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
-      'Ciśnieniowe udrażnianie rur Wuko Białołęka tel. 888 806 921. Monitoring rur kanalizacyjnych, sprężyna elektryczna, hydrodynamiczne czyszczenie.',
+      'Ciśnieniowe udrażnianie rur Wuko Białołęka. Monitoring rur kanalizacyjnych, sprężyna elektryczna, hydrodynamiczne czyszczenie.',
     heroIntro:
       'Świadczymy usługi czyszczenia i udrażniania kanalizacji ciśnieniowo na terenie całej dzielnicy Białołęka. Zapewniamy szybki dojazd, nowoczesny sprzęt i skuteczną pomoc w nagłych przypadkach.',
     areas: ['Tarchomin', 'Choszczówka', 'Białołęka Dworska', 'Brzeziny', 'Henryków', 'Kobiałka', 'Nowodwory', 'Białołęka Nowa'],
@@ -122,7 +122,7 @@ export const districts: DistrictData[] = [
     fullName: 'Wuko Bielany',
     metaTitle: 'Wuko Bielany – udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
-      'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na warszawskich Bielanach. Zatory w zlewie, toalecie, pionach i rurach zewnętrznych. Telefon: 888 806 921.',
+      'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na warszawskich Bielanach. Zatory w zlewie, toalecie, pionach i rurach zewnętrznych.',
     heroIntro:
       'Pracujemy w blokach, kamienicach, domach jednorodzinnych i lokalach usługowych na terenie Bielan i sąsiednich dzielnic. Bielany łączą starszą zabudowę z nowymi osiedlami – znamy specyfikę różnych typów instalacji w tej dzielnicy.',
     areas: ['Chomiczówka', 'Wawrzyszew', 'Stare Bielany', 'Słodowiec', 'Młociny'],
@@ -162,7 +162,7 @@ export const districts: DistrictData[] = [
     fullName: 'Wuko Bródno',
     metaTitle: 'Wuko Bródno – udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
-      'Wuko Bródno (Warszawa) – udrażnianie kanalizacji i czyszczenie rur metodą ciśnieniową. Bródno: zatory w kuchni, łazience i pionach, inspekcja kamerą TV, dojazd lokalny. Tel. 888 806 921.',
+      'Wuko Bródno (Warszawa) – udrażnianie kanalizacji i czyszczenie rur metodą ciśnieniową. Bródno: zatory w kuchni, łazience i pionach, inspekcja kamerą TV, dojazd lokalny.',
     heroIntro:
       'Wuko Bródno to usługa czyszczenia i udrażniania kanalizacji dla mieszkańców osiedla Bródno – kiedy odpływ zwalnia, bulgocze lub woda cofa się w łazience. Lokalny dojazd, udrażnianie bez rozkuwania.',
     areas: ['Bródno (Targówek)', 'Bródno-Podgrodzie', 'Stare Bródno'],
@@ -220,7 +220,7 @@ export const districts: DistrictData[] = [
     fullName: 'Wuko Wawer',
     metaTitle: 'Wuko Wawer – udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
-      'Profesjonalne udrażnianie i czyszczenie kanalizacji metodą Wuko w dzielnicy Wawer. Skutecznie, bezpiecznie, bez chemii. Tel. 888 806 921.',
+      'Profesjonalne udrażnianie i czyszczenie kanalizacji metodą Wuko w dzielnicy Wawer. Skutecznie, bezpiecznie, bez chemii.',
     heroIntro:
       'Skuteczne, bezpieczne i szybkie czyszczenie kanalizacji w Wawrze z wykorzystaniem strumienia wody pod wysokim ciśnieniem. Usuwamy tłuszcz, osady i kamień bez agresywnej chemii i z dbałością o instalację.',
     areas: ['Anin', 'Falenica', 'Marysin Wawerski', 'Międzylesie', 'Miedzeszyn', 'Radość', 'Sadul', 'Zerzeń'],
@@ -273,7 +273,7 @@ export const districts: DistrictData[] = [
     fullName: 'Wuko Ochota',
     metaTitle: 'Wuko Ochota – udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
-      'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na warszawskiej Ochocie. Zatory w zlewie, toalecie, pionach i rurach zewnętrznych. Telefon: 888 806 921.',
+      'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na warszawskiej Ochocie. Zatory w zlewie, toalecie, pionach i rurach zewnętrznych.',
     heroIntro:
       'Pracujemy w blokach, kamienicach, domach jednorodzinnych i lokalach usługowych na terenie Ochoty i sąsiednich dzielnic. Korzystamy z Wuko i sprężyny mechanicznej, dobierając metodę do instalacji.',
     areas: ['Stara Ochota', 'Filtry', 'Rakowiec', 'Szczęśliwice', 'okolice Grójeckiej'],
@@ -313,7 +313,7 @@ export const districts: DistrictData[] = [
     fullName: 'Wuko Praga Północ',
     metaTitle: 'Wuko Praga Północ – udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
-      'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na warszawskiej Pradze Północ. Stare kamienice, zabytkowe instalacje, nowe lokale. Telefon: 888 806 921.',
+      'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na warszawskiej Pradze Północ. Stare kamienice, zabytkowe instalacje, nowe lokale.',
     heroIntro:
       'Pracujemy w kamienicach, blokach, lokalach usługowych i restauracjach na terenie Pragi Północ. Stara zabudowa z przedwojnia spotyka tu nowe lokale gastronomiczne – mamy doświadczenie z różnymi typami instalacji.',
     areas: ['Stara Praga', 'Nowa Praga', 'Szmulowizna', 'Pelcowizna', 'okolice Konesera'],
@@ -360,7 +360,7 @@ export const districts: DistrictData[] = [
     fullName: 'Wuko Praga Południe',
     metaTitle: 'Wuko Praga Południe – udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
-      'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na Pradze Południe. Zatory w zlewie, toalecie, pionach i rurach zewnętrznych. Telefon: 888 806 921.',
+      'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na Pradze Południe. Zatory w zlewie, toalecie, pionach i rurach zewnętrznych.',
     heroIntro:
       'Pracujemy w blokach, kamienicach, domach jednorodzinnych i lokalach usługowych na terenie Pragi Południe i sąsiednich dzielnic. Korzystamy z Wuko i sprężyny mechanicznej, dobierając metodę do instalacji.',
     areas: ['Grochów', 'Gocław', 'Saska Kępa', 'Kamionek', 'Rondo Wiatraczna'],
@@ -403,7 +403,7 @@ export const districts: DistrictData[] = [
     fullName: 'Wuko Rembertów',
     metaTitle: 'Wuko Rembertów – udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
-      'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko w Rembertowie. Domy jednorodzinne, szamba, przyłącza, sprężyna elektryczna. Telefon: 888 806 921.',
+      'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko w Rembertowie. Domy jednorodzinne, szamba, przyłącza, sprężyna elektryczna.',
     heroIntro:
       'Dojeżdżamy do Rembertowa przy zatorach w domach jednorodzinnych, na działkach z szambami, w blokach i lokalach usługowych. Dzielnica z dużą ilością zabudowy jednorodzinnej – mamy doświadczenie w czyszczeniu przyłączy i rur od szamba.',
     areas: ['Stary Rembertów', 'Nowy Rembertów', 'Kawęczyn-Wygoda', 'Pociski', 'Wygoda'],
@@ -443,7 +443,7 @@ export const districts: DistrictData[] = [
     fullName: 'Wuko Ursus',
     metaTitle: 'Wuko Ursus – udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
-      'Profesjonalne Wuko Ursus – szybkie udrażnianie rur, ciśnieniowe czyszczenie kanalizacji, kamerowanie. Tel. 888 806 921.',
+      'Profesjonalne Wuko Ursus – szybkie udrażnianie rur, ciśnieniowe czyszczenie kanalizacji, kamerowanie.',
     heroIntro:
       'Sprawdzona usługa czyszczenia i udrażniania kanalizacji metodą ciśnieniową na terenie całej dzielnicy Ursus. Działamy szybko, skutecznie i bezinwazyjnie.',
     areas: ['Niedźwiadek', 'Czechowice', 'Skorosze', 'Gołąbki', 'Szamoty'],
