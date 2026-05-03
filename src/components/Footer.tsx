@@ -122,15 +122,6 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href={`tel:${siteConfig.phoneTel}`}
-                  className="flex items-center gap-3 text-slate-400 hover:text-sky-400 transition-colors text-sm"
-                >
-                  <Phone className="w-5 h-5 text-sky-500 flex-shrink-0" />
-                  <span>{siteConfig.phone}</span>
-                </a>
-              </li>
-              <li>
-                <a
                   href={`mailto:${siteConfig.email}`}
                   className="flex items-center gap-3 text-slate-400 hover:text-sky-400 transition-colors text-sm"
                 >
