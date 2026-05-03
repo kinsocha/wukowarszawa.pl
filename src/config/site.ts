@@ -1,0 +1,74 @@
+// Centralna konfiguracja danych firmowych.
+// Zmiana w jednym miejscu = zmiana na całej stronie.
+
+export const siteConfig = {
+  name: 'Wuko Warszawa',
+  shortName: 'WUKO',
+  tagline: 'Ciśnieniowe udrażnianie kanalizacji',
+
+  // Kontakt
+  phone: '888 806 921',
+  phoneTel: '+48888806921',
+  email: 'wukowarszawa@gmail.com',
+
+  // Dane firmowe (z https://wuko.waw.pl)
+  legalName: 'Warszawskie Usługi Kanalizacyjne WUKO',
+  ownerName: 'Damian Kwiatkowski',
+  address: {
+    street: 'ul. Leśna 30a',
+    postalCode: '05-502',
+    city: 'Jazgarzew',
+    region: 'gmina Piaseczno',
+  },
+  nip: 'PL 1132815774',
+  regon: '142674317',
+  bank: 'Alior Bank S.A.',
+
+  // Domena
+  domain: 'wukowarszawa.pl',
+  url: 'https://wukowarszawa.pl',
+
+  // Historia
+  experienceSince: 1979, // praca w MPWiK Warszawa
+  ownCompanySince: 1991, // własna firma
+
+  // Social
+  social: {
+    facebook: 'https://www.facebook.com/WukoWarszawa/',
+    instagram: 'https://www.instagram.com/WukoWarszawa/',
+  },
+
+  // Obsługiwane dzielnice (główne, z osobnymi podstronami)
+  mainDistricts: [
+    'Targówek',
+    'Białołęka',
+    'Wawer',
+    'Ochota',
+    'Ursus',
+    'Praga Południe',
+  ],
+
+  // Wszystkie dzielnice Warszawy (dla sekcji Locations)
+  allDistricts: [
+    'Mokotów',
+    'Praga Południe',
+    'Ursynów',
+    'Wola',
+    'Śródmieście',
+    'Białołęka',
+    'Praga Północ',
+    'Bemowo',
+    'Targówek',
+    'Bielany',
+    'Wawer',
+    'Wilanów',
+    'Ochota',
+    'Ursus',
+    'Rembertów',
+    'Włochy',
+    'Wesoła',
+    'Żoliborz',
+  ],
+} as const;
+
+export default siteConfig;

@@ -1,0 +1,50 @@
+# Automatyczny build i deploy strony wukowarszawa.pl na serwer Seohost (FTP)
+# Wzorzec ten sam co w udraznianiekanalizacji.eu, montaz-serwis-klimatyzacji.pl, i-hydraulik.pl
+
+name: Deploy wukowarszawa.pl
+
+on:
+  # Uruchamia się automatycznie po każdym push do main
+  push:
+    branches: ["main"]
+  # Pozwala uruchomić ręcznie z zakładki Actions na GitHubie
+  workflow_dispatch:
+
+# Tylko jedno wdrożenie naraz - kolejne czeka, nie kasuje trwającego
+concurrency:
+  group: "deploy-wukowarszawa"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔨 Build (Vite)
+        run: npm run build
+
+      - name: 📂 Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          password: ${{ secrets.REMOTE_PASSWORD }}
+          server-dir: /public_html/
+          local-dir: ./dist/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**

@@ -1,0 +1,72 @@
+# =====================================================================
+# .htaccess - konfiguracja Apache dla wukowarszawa.pl
+# =====================================================================
+#
+# WAŻNE: Ten plik MUSI być w katalogu /public_html/ na serwerze.
+# Vite kopiuje wszystko z folderu /public/ do /dist/ przy buildzie,
+# więc ten plik wyląduje tam automatycznie po `npm run build`.
+
+# ---------------------------------------------------------------------
+# 1. SPA fallback - WAŻNE dla React Router (podstrony dzielnic)
+# ---------------------------------------------------------------------
+# Bez tego wejście na https://wukowarszawa.pl/wukotargowek bezpośrednio
+# (np. z Google) da błąd 404. Te reguły mówią Apache: jeśli żądany plik
+# lub folder nie istnieje, podaj index.html zamiast 404 - dzięki temu
+# React Router może obsłużyć trasę po stronie przeglądarki.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Nie przekierowuj realnych plików ani folderów (np. /assets/...)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Wszystko inne -> index.html (React obsłuży routing)
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# ---------------------------------------------------------------------
+# 2. Kompresja Gzip - szybsze ładowanie
+# ---------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------------
+# 3. Cache statycznych plików (JS, CSS, obrazy)
+# ---------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML - nie cache'uj (zawsze świeże)
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # CSS i JS - cache 1 rok (Vite robi unikalne hash w nazwie pliku, więc bezpiecznie)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # Obrazy - cache 1 miesiąc
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+
+  # Fonty - cache 1 rok
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# ---------------------------------------------------------------------
+# 4. Bezpieczeństwo - podstawowe nagłówki
+# ---------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ---------------------------------------------------------------------
+# 5. Domyślny dokument
+# ---------------------------------------------------------------------
+DirectoryIndex index.html
