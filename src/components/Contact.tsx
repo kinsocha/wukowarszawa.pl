@@ -325,19 +325,7 @@ const Contact: React.FC = () => {
               ))}
             </div>
 
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <div className="flex items-start gap-3">
-                <FileText className="w-6 h-6 text-sky-500 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-slate-900 mb-2">Dane firmy</h4>
-                  <div className="text-sm text-slate-600 space-y-1">
-                    <p>{siteConfig.legalName}</p>
-                    <p>{siteConfig.ownerName}</p>
-                    <p>NIP: {siteConfig.nip}</p>
-                    <p>REGON: {siteConfig.regon}</p>
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
