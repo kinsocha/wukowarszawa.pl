@@ -129,28 +129,7 @@ const Footer: React.FC = () => {
                   <span className="break-all">{siteConfig.email}</span>
                 </a>
               </li>
-              <li>
-                <div className="flex items-start gap-3 text-slate-400 text-sm">
-                  <MapPin className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                  <span>
-                    {siteConfig.address.street}
-                    <br />
-                    {siteConfig.address.postalCode} {siteConfig.address.city}
-                    <br />
-                    <span className="text-slate-500 text-xs">({siteConfig.address.region})</span>
-                  </span>
-                </div>
-              </li>
             </ul>
-          </div>
-        </div>
-
-        {/* Firmowe dane */}
-        <div className="mt-12 pt-8 border-t border-slate-800">
-          <div className="text-slate-500 text-xs leading-relaxed text-center">
-            <p>
-              <strong>{siteConfig.legalName}</strong>
-            </p>
           </div>
         </div>
       </div>
