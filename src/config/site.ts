@@ -13,12 +13,6 @@ export const siteConfig = {
 
   // Dane firmowe
   legalName: 'Warszawskie Usługi Kanalizacyjne WUKO',
-  address: {
-    street: 'ul. Leśna 30a',
-    postalCode: '05-502',
-    city: 'Jazgarzew',
-    region: 'gmina Piaseczno',
-  },
   bank: 'Alior Bank S.A.',
 
   // Domena
