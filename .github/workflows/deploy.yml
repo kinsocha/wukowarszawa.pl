@@ -33,7 +33,7 @@ jobs:
       - name: 📦 Install dependencies
         run: npm ci
 
-      - name: 🔨 Build (Vite)
+      - name: 🔨 Build (Astro)
         run: npm run build
 
       - name: 📂 Sync files via FTP
@@ -44,6 +44,8 @@ jobs:
           password: ${{ secrets.REMOTE_PASSWORD }}
           server-dir: ./
           local-dir: ./dist/
+          security: loose
+          timeout: 60000
           exclude: |
             **/.git*
             **/.git*/**
