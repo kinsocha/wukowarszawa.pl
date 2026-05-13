@@ -42,11 +42,11 @@ jobs:
           server: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           password: ${{ secrets.REMOTE_PASSWORD }}
-          server-dir: ./
           local-dir: ./dist/
-          security: loose
-          timeout: 60000
+          passive: true
+          timeout: 30000
           exclude: |
             **/.git*
             **/.git*/**
+            **/src/**
             **/node_modules/**
