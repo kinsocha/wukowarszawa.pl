@@ -1,0 +1,93 @@
+---
+import Icon from './Icon.astro';
+
+const testimonials = [
+  { name: 'Klient z Tarchomina', location: 'Białołęka', rating: 5, content: 'Bardzo szybka interwencja i profesjonalne podejście. Zator w kuchni usunięty w 30 minut, a przyjechali w ciągu godziny od zgłoszenia. Polecam bez wahania.' },
+  { name: 'Klientka z Wawra', location: 'Wawer', rating: 5, content: 'Pan zjawił się o umówionej godzinie i miał profesjonalny sprzęt. Kilka minut i kanalizacja znów działa bez zarzutu, a wcześniej problem ciągnął się tygodniami.' },
+  { name: 'Klient z Pragi Południe', location: 'Praga Południe', rating: 5, content: 'Po płukaniu Wuko odpływ działa normalnie, a w pionie przestało bulgotać. Cena zgodna z ustaleniami. Porządek po pracy.' },
+  { name: 'Klient z Choszczówki', location: 'Białołęka', rating: 5, content: 'Profesjonalizm, punktualność i uczciwe podejście do klienta. Cena zgodna z ustaleniami. Udrażnianie pionu kanalizacyjnego wykonane wzorowo.' },
+  { name: 'Klient z Ursusa', location: 'Ursus', rating: 5, content: 'Pan był przygotowany, cierpliwy i dokładny. Wytłumaczył, gdzie leżał problem, i zasugerował, jak uniknąć podobnych sytuacji w przyszłości.' },
+];
+---
+
+<section id="opinie" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">Opinie</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Co mówią klienci</h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Opinie z różnych dzielnic Warszawy – mieszkania, domy, lokale usługowe.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto relative">
+      <div class="bg-gradient-to-br from-sky-50 to-cyan-50 rounded-3xl p-8 lg:p-12 relative">
+        <Icon name="quote" class="w-16 h-16 text-sky-200 mb-6" />
+
+        {testimonials.map((t, i) => (
+          <div class="testimonial-item" class:list={[i !== 0 && 'hidden']}>
+            <div class="flex items-center gap-1 mb-6">
+              {Array.from({ length: t.rating }).map(() => (
+                <Icon name="star" class="w-5 h-5 fill-amber-400 text-amber-400" />
+              ))}
+            </div>
+            <p class="text-xl lg:text-2xl text-slate-800 leading-relaxed mb-8 font-medium">"{t.content}"</p>
+            <div class="flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <div class="font-bold text-slate-900">{t.name}</div>
+                <div class="text-slate-500 text-sm">Warszawa, {t.location}</div>
+              </div>
+              <div class="flex items-center gap-2">
+                <button id="prev-btn" aria-label="Poprzednia opinia" class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow">
+                  <Icon name="chevron-left" class="w-5 h-5 text-slate-700" />
+                </button>
+                <button id="next-btn" aria-label="Następna opinia" class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow">
+                  <Icon name="chevron-right" class="w-5 h-5 text-slate-700" />
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="flex items-center justify-center gap-2 mt-6">
+        {testimonials.map((_, i) => (
+          <button
+            class:list={['testimonial-dot transition-all rounded-full h-2', i === 0 ? 'w-8 bg-sky-500' : 'w-2 bg-slate-300 hover:bg-slate-400']}
+            data-index={i}
+            aria-label={`Przejdź do opinii ${i + 1}`}
+          ></button>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const items = document.querySelectorAll<HTMLElement>('.testimonial-item');
+  const dots  = document.querySelectorAll<HTMLElement>('.testimonial-dot');
+  let current = 0;
+  let timer: ReturnType<typeof setInterval>;
+
+  function show(idx: number) {
+    items[current]?.classList.add('hidden');
+    dots[current]?.classList.replace('w-8', 'w-2');
+    dots[current]?.classList.replace('bg-sky-500', 'bg-slate-300');
+
+    current = (idx + items.length) % items.length;
+
+    items[current]?.classList.remove('hidden');
+    dots[current]?.classList.replace('w-2', 'w-8');
+    dots[current]?.classList.replace('bg-slate-300', 'bg-sky-500');
+  }
+
+  function startAuto() {
+    timer = setInterval(() => show(current + 1), 6000);
+  }
+
+  document.getElementById('prev-btn')?.addEventListener('click', () => { clearInterval(timer); show(current - 1); });
+  document.getElementById('next-btn')?.addEventListener('click', () => { clearInterval(timer); show(current + 1); });
+  dots.forEach((d, i) => d.addEventListener('click', () => { clearInterval(timer); show(i); }));
+
+  startAuto();
+</script>

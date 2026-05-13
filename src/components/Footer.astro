@@ -1,0 +1,117 @@
+---
+import Icon from './Icon.astro';
+import { siteConfig } from '../config/site';
+import { districts } from '../data/districts';
+
+const year = new Date().getFullYear();
+
+const services = [
+  'Hydrodynamiczne Wuko',
+  'Sprężyna elektryczna',
+  'Inspekcja kamerą TV',
+  'Mieszkania i domy',
+  'Wspólnoty mieszkaniowe',
+  'Lokale usługowe',
+];
+---
+
+<footer class="bg-slate-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+
+      <!-- Brand -->
+      <div class="lg:col-span-2">
+        <a href="/" class="flex items-center gap-2 mb-6">
+          <div class="p-2 bg-sky-500 rounded-xl">
+            <Icon name="droplets" class="w-6 h-6 text-white" />
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold">{siteConfig.shortName}</span>
+            <span class="text-xs font-medium tracking-wider text-sky-400">WARSZAWA</span>
+          </div>
+        </a>
+        <p class="text-slate-400 mb-6 leading-relaxed max-w-md">
+          Ciśnieniowe udrażnianie i czyszczenie kanalizacji w Warszawie i okolicach.
+          Doświadczenie od {siteConfig.experienceSince} r. – Wuko, sprężyna elektryczna,
+          inspekcja kamerą TV.
+        </p>
+        <div class="flex items-center gap-4">
+          <a
+            href={siteConfig.social.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            class="p-2 bg-slate-800 rounded-lg hover:bg-sky-500 transition-colors"
+          >
+            <Icon name="facebook" class="w-5 h-5" />
+          </a>
+          <a
+            href={siteConfig.social.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            class="p-2 bg-slate-800 rounded-lg hover:bg-sky-500 transition-colors"
+          >
+            <Icon name="instagram" class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="text-lg font-bold mb-6">Usługi</h3>
+        <ul class="space-y-3">
+          {services.map(s => (
+            <li>
+              <a href="/#uslugi" class="text-slate-400 hover:text-sky-400 transition-colors text-sm">
+                {s}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Districts -->
+      <div>
+        <h3 class="text-lg font-bold mb-6">Dzielnice</h3>
+        <ul class="space-y-3">
+          {districts.map(d => (
+            <li>
+              <a href={`/${d.slug}`} class="text-slate-400 hover:text-sky-400 transition-colors text-sm">
+                Wuko {d.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-lg font-bold mb-6">Kontakt</h3>
+        <ul class="space-y-4">
+          <li>
+            <a
+              href={`mailto:${siteConfig.email}`}
+              class="flex items-center gap-3 text-slate-400 hover:text-sky-400 transition-colors text-sm"
+            >
+              <Icon name="mail" class="w-5 h-5 text-sky-500 flex-shrink-0" />
+              <span class="break-all">{siteConfig.email}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-slate-500 text-sm text-center md:text-left">
+        © {year} {siteConfig.name}. Wszystkie prawa zastrzeżone.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+        <a href="#" class="text-slate-500 text-sm hover:text-sky-400 transition-colors">Polityka prywatności</a>
+        <a href="#" class="text-slate-500 text-sm hover:text-sky-400 transition-colors">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>

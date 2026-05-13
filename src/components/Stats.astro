@@ -1,0 +1,73 @@
+---
+import Icon from './Icon.astro';
+import { siteConfig } from '../config/site';
+
+const year = new Date().getFullYear();
+const stats = [
+  { icon: 'calendar',   value: year - siteConfig.experienceSince, suffix: '+', label: 'Lat doświadczenia' },
+  { icon: 'briefcase',  value: year - siteConfig.ownCompanySince,  suffix: '+', label: 'Lat własnej firmy' },
+  { icon: 'building2',  value: 18,  suffix: '',  label: 'Dzielnic Warszawy' },
+  { icon: 'thumbs-up',  value: 100, suffix: '%', label: 'Wycena przed pracą' },
+];
+---
+
+<section class="relative py-20 lg:py-24 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0 bg-[linear-gradient(90deg,transparent_79px,#1e293b_79px,#1e293b_81px,transparent_81px),linear-gradient(transparent_79px,#1e293b_79px,#1e293b_81px,transparent_81px)] bg-[size:80px_80px]"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
+      {stats.map((s, i) => (
+        <div
+          class="stat-item flex flex-col items-center p-6 lg:p-8 group"
+          data-value={s.value}
+          data-suffix={s.suffix}
+          data-delay={i * 150}
+          style="opacity:0;transform:translateY(20px);transition:all 0.6s ease-out"
+        >
+          <div class="p-4 bg-sky-500/20 rounded-2xl mb-4 group-hover:bg-sky-500/30 transition-colors">
+            <Icon name={s.icon} class="w-8 h-8 text-sky-400" />
+          </div>
+          <div class="stat-count text-4xl lg:text-5xl font-bold text-white mb-2">0{s.suffix}</div>
+          <div class="text-white/60 text-center">{s.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const items = document.querySelectorAll<HTMLElement>('.stat-item');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target as HTMLElement;
+      const value  = parseInt(el.dataset.value ?? '0');
+      const suffix = el.dataset.suffix ?? '';
+      const delay  = parseInt(el.dataset.delay ?? '0');
+      const counter = el.querySelector('.stat-count') as HTMLElement;
+
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+
+      setTimeout(() => {
+        let start: number;
+        const duration = 2000;
+        function tick(now: number) {
+          if (!start) start = now;
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 4);
+          counter.textContent = Math.floor(eased * value).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }, delay);
+
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  items.forEach(el => observer.observe(el));
+</script>

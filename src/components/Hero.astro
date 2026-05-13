@@ -1,0 +1,81 @@
+---
+import Icon from './Icon.astro';
+import { siteConfig } from '../config/site';
+
+const years = new Date().getFullYear() - siteConfig.experienceSince;
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-sky-900">
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay:1s"></div>
+    <div class="absolute top-20 left-1/4 animate-bounce" style="animation-duration:3s">
+      <Icon name="droplets" class="w-8 h-8 text-sky-400/30" />
+    </div>
+    <div class="absolute top-40 right-1/3 animate-bounce" style="animation-duration:4s;animation-delay:.5s">
+      <Icon name="droplets" class="w-6 h-6 text-cyan-400/30" />
+    </div>
+    <div class="absolute bottom-32 left-1/3 animate-bounce" style="animation-duration:3.5s;animation-delay:1s">
+      <Icon name="droplets" class="w-10 h-10 text-sky-300/20" />
+    </div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(14,165,233,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
+    <div class="text-center">
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8 animate-fade-in">
+        <Icon name="shield" class="w-4 h-4 text-amber-400" />
+        <span class="text-white/90 text-sm font-medium">Ponad {years} lat doświadczenia w udrażnianiu rur</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
+        Wuko Warszawa
+        <span class="block bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
+          ciśnieniowe udrażnianie
+        </span>
+        kanalizacji
+      </h1>
+
+      <p class="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Pomagamy przy niedrożnych odpływach, zatorach w rurach, problemach z kanalizacją zewnętrzną
+        i wewnętrzną. Wuko, sprężyna elektryczna, inspekcja kamerą TV.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <a
+          href={`tel:${siteConfig.phoneTel}`}
+          class="group flex items-center gap-3 bg-gradient-to-r from-sky-500 to-cyan-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-sky-500/40 transition-all hover:scale-105"
+        >
+          <Icon name="phone" class="w-5 h-5" />
+          <span>Zadzwoń: {siteConfig.phone}</span>
+          <Icon name="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </a>
+        <a
+          href="#uslugi"
+          class="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all"
+        >
+          Zobacz usługi
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 lg:gap-8">
+        {[
+          { icon: 'clock',  text: 'Szybki dojazd' },
+          { icon: 'shield', text: `Doświadczenie od ${siteConfig.experienceSince} r.` },
+          { icon: 'award',  text: 'Wycena przed przyjazdem' },
+        ].map(b => (
+          <div class="flex items-center gap-2 text-white/70 hover:text-white transition-colors">
+            <Icon name={b.icon} class="w-5 h-5 text-sky-400" />
+            <span class="text-sm font-medium">{b.text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+      <div class="w-1.5 h-3 bg-white/50 rounded-full mt-2 animate-scroll"></div>
+    </div>
+  </div>
+</section>

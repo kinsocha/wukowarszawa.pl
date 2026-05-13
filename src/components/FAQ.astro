@@ -1,0 +1,113 @@
+---
+import Icon from './Icon.astro';
+import { siteConfig } from '../config/site';
+
+const faqs = [
+  {
+    question: 'Ile kosztuje udrażnianie kanalizacji?',
+    answer: 'Ceny zależą od rodzaju instalacji, dostępu do rur i skali problemu. Przepychanie zlewu lub WC zaczyna się od ok. 300 zł, hydrodynamiczne Wuko od ok. 450 zł, inspekcja kamerą TV od ok. 450 zł. Wycenę zawsze podajemy przed przyjazdem – wystarczy krótki opis problemu.',
+  },
+  {
+    question: 'Czy zatkany zlew można udrożnić samemu?',
+    answer: 'Pierwszym krokiem nie musi być od razu telefon po Wuko. Bezpiecznym działaniem jest zdjęcie syfonu i jego dokładne wyczyszczenie oraz przelanie instalacji gorącą wodą. Pomóc może też zwykła ręczna przepychaczka. Często powtarzane „patenty" z sodą i octem w praktyce nie rozwiązują zatoru – wtedy warto zadzwonić.',
+  },
+  {
+    question: 'Jaka jest różnica między Wuko a sprężyną?',
+    answer: 'Wuko (czyszczenie hydrodynamiczne) to woda pod wysokim ciśnieniem – do 200 bar. Świetnie usuwa tłuszcz, osady mineralne i organiczne, kamień. Sprężyna elektryczna to mechaniczne rozbijanie zatoru – sprawdza się przy włosach, resztkach jedzenia, papierze. Dobieramy metodę do problemu po obejrzeniu instalacji.',
+  },
+  {
+    question: 'Czy metoda Wuko jest bezpieczna dla rur?',
+    answer: 'Tak. Hydrodynamiczne Wuko jest bezpieczne dla wszystkich typowych instalacji kanalizacyjnych – PVC, kamionka, żeliwo. Ciśnienie regulujemy do typu rury i średnicy. Metoda nie wymaga rozkuwania ścian i nie używamy agresywnej chemii.',
+  },
+  {
+    question: 'Gdzie dokładnie działacie?',
+    answer: 'Cała Warszawa i okolice. Dojeżdżamy m.in. na Pragę, Bielany, Mokotów, Ursynów, Wolę, Bemowo, Białołękę, Targówek, Wawer, Ochotę, Ursus, Rembertów i okoliczne gminy. Najlepiej zadzwonić i podać dokładny adres.',
+  },
+  {
+    question: 'Czy wystawiacie fakturę VAT?',
+    answer: 'Tak. Wystawiamy faktury VAT dla firm, wspólnot mieszkaniowych i klientów indywidualnych. Można umówić się na cyklicznie powtarzane prace – np. okresową konserwację pionów w budynku.',
+  },
+  {
+    question: 'Co jeśli problem wróci?',
+    answer: 'Po pracy zostawiamy porządek i przekazujemy wskazówki na przyszłość. Jeśli mimo to zator wraca, zwykle oznacza to głębsze problemy z instalacją (uszkodzenie, wrastające korzenie, zła geometria rur). Wtedy warto wykonać inspekcję kamerą TV.',
+  },
+  {
+    question: 'Jak szybko możecie przyjechać?',
+    answer: `Zawsze ustalamy termin przed przyjazdem. Często udaje się dojechać tego samego dnia, w pilnych sytuacjach staramy się reagować priorytetowo. Zadzwoń: ${siteConfig.phone} – podamy najszybszy realny termin.`,
+  },
+];
+---
+
+<section class="py-20 lg:py-28 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">FAQ</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Najczęstsze pytania</h2>
+      <p class="text-lg text-slate-600">Krótko i konkretnie. Jeśli nie znajdziesz odpowiedzi – po prostu zadzwoń.</p>
+    </div>
+
+    <div class="bg-slate-50 rounded-2xl p-6 lg:p-8">
+      {faqs.map((faq, i) => (
+        <div class="faq-item border-b border-slate-200 last:border-b-0">
+          <button
+            class="faq-btn w-full flex items-center justify-between py-5 text-left hover:text-sky-600 transition-colors"
+            data-index={i}
+          >
+            <span class="text-lg font-semibold text-slate-900 pr-4">{faq.question}</span>
+            <span class="faq-icon flex-shrink-0 p-2 rounded-full bg-slate-100 text-slate-500 transition-colors">
+              <Icon name="plus" class="w-5 h-5 icon-open" />
+              <Icon name="minus" class="w-5 h-5 icon-close hidden" />
+            </span>
+          </button>
+          <div class:list={['faq-content overflow-hidden transition-all duration-300', i === 0 ? 'max-h-96 pb-5' : 'max-h-0']}>
+            <p class="text-slate-600 leading-relaxed">{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const items = document.querySelectorAll<HTMLElement>('.faq-item');
+
+  // Open first item
+  const firstIcon = items[0]?.querySelector<HTMLElement>('.faq-icon');
+  if (firstIcon) {
+    firstIcon.classList.replace('bg-slate-100', 'bg-sky-100');
+    firstIcon.classList.replace('text-slate-500', 'text-sky-600');
+    firstIcon.querySelector('.icon-open')?.classList.add('hidden');
+    firstIcon.querySelector('.icon-close')?.classList.remove('hidden');
+  }
+
+  items.forEach((item, i) => {
+    const btn     = item.querySelector<HTMLElement>('.faq-btn')!;
+    const content = item.querySelector<HTMLElement>('.faq-content')!;
+    const icon    = item.querySelector<HTMLElement>('.faq-icon')!;
+
+    btn.addEventListener('click', () => {
+      const isOpen = !content.classList.contains('max-h-0');
+
+      // Close all
+      items.forEach(it => {
+        const c  = it.querySelector<HTMLElement>('.faq-content')!;
+        const ic = it.querySelector<HTMLElement>('.faq-icon')!;
+        c.classList.add('max-h-0');
+        c.classList.remove('max-h-96', 'pb-5');
+        ic.classList.replace('bg-sky-100', 'bg-slate-100');
+        ic.classList.replace('text-sky-600', 'text-slate-500');
+        ic.querySelector('.icon-open')?.classList.remove('hidden');
+        ic.querySelector('.icon-close')?.classList.add('hidden');
+      });
+
+      if (!isOpen) {
+        content.classList.remove('max-h-0');
+        content.classList.add('max-h-96', 'pb-5');
+        icon.classList.replace('bg-slate-100', 'bg-sky-100');
+        icon.classList.replace('text-slate-500', 'text-sky-600');
+        icon.querySelector('.icon-open')?.classList.add('hidden');
+        icon.querySelector('.icon-close')?.classList.remove('hidden');
+      }
+    });
+  });
+</script>

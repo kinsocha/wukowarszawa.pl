@@ -1,0 +1,251 @@
+---
+import Icon from './Icon.astro';
+import { siteConfig } from '../config/site';
+import { districts } from '../data/districts';
+
+const isHomePage = Astro.url.pathname === '/';
+
+const navLinks = [
+  { href: '#uslugi', label: 'Usługi' },
+  { href: '#dlaczego-my', label: 'Dlaczego my' },
+  { href: '#proces', label: 'Proces' },
+  { href: '#cennik', label: 'Cennik' },
+  { href: '#opinie', label: 'Opinie' },
+  { href: '#kontakt', label: 'Kontakt' },
+];
+---
+
+<nav
+  id="navbar"
+  data-solid={isHomePage ? 'false' : 'true'}
+  class:list={[
+    'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+    isHomePage ? 'bg-transparent' : 'bg-white/95 backdrop-blur-md shadow-lg',
+  ]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 group">
+        <div
+          id="logo-bg"
+          class:list={[
+            'p-2 rounded-xl transition-colors',
+            isHomePage ? 'bg-white/20 backdrop-blur-sm' : 'bg-sky-500',
+          ]}
+        >
+          <Icon
+            name="droplets"
+            id="logo-icon"
+            class:list={['w-6 h-6', isHomePage ? 'text-sky-300' : 'text-white']}
+          />
+        </div>
+        <div class="flex flex-col">
+          <span
+            id="logo-name"
+            class:list={[
+              'text-xl lg:text-2xl font-bold tracking-tight transition-colors',
+              isHomePage ? 'text-white' : 'text-slate-900',
+            ]}
+          >
+            {siteConfig.shortName}
+          </span>
+          <span
+            id="logo-sub"
+            class:list={[
+              'text-xs font-medium tracking-wider transition-colors',
+              isHomePage ? 'text-sky-200' : 'text-sky-600',
+            ]}
+          >
+            WARSZAWA
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden lg:flex items-center gap-6">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            data-nav-link
+            class:list={[
+              'nav-link relative font-medium transition-colors hover:text-sky-500',
+              isHomePage ? 'text-white/90' : 'text-slate-700',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+
+        <!-- Districts dropdown -->
+        <div class="relative" id="districts-wrap">
+          <button
+            id="districts-btn"
+            class:list={[
+              'flex items-center gap-1 font-medium transition-colors hover:text-sky-500',
+              isHomePage ? 'text-white/90' : 'text-slate-700',
+            ]}
+          >
+            Dzielnice
+            <Icon name="chevron-down" class="w-4 h-4" />
+          </button>
+          <div id="districts-menu" class="absolute top-full right-0 pt-2 w-56 hidden">
+            <div class="bg-white rounded-xl shadow-xl border border-slate-100 py-2">
+              {districts.map(d => (
+                <a
+                  href={`/${d.slug}`}
+                  class="block px-4 py-2 text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-colors"
+                >
+                  Wuko {d.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a
+          href={`tel:${siteConfig.phoneTel}`}
+          class="flex items-center gap-2 bg-gradient-to-r from-sky-500 to-cyan-500 text-white px-5 py-2.5 rounded-full font-semibold hover:shadow-lg hover:shadow-sky-500/30 transition-all hover:scale-105"
+        >
+          <Icon name="phone" class="w-4 h-4" />
+          <span>{siteConfig.phone}</span>
+        </a>
+      </div>
+
+      <!-- Mobile button -->
+      <button
+        id="mobile-btn"
+        class:list={[
+          'lg:hidden p-2 rounded-lg transition-colors',
+          isHomePage ? 'text-white hover:bg-white/10' : 'text-slate-700 hover:bg-slate-100',
+        ]}
+        aria-label="Menu"
+      >
+        <Icon name="menu" id="icon-menu" class="w-6 h-6" />
+        <Icon name="x" id="icon-close" class="w-6 h-6 hidden" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="lg:hidden hidden absolute top-full left-0 right-0 bg-white shadow-xl">
+    <div class="px-4 py-6 space-y-1 max-h-[80vh] overflow-y-auto">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          data-nav-link
+          class="block py-2 text-slate-700 font-medium hover:text-sky-500 transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+      <div class="border-t border-slate-200 pt-4 mt-4">
+        <p class="text-sm font-semibold text-slate-500 mb-2">Dzielnice:</p>
+        {districts.map(d => (
+          <a
+            href={`/${d.slug}`}
+            class="block py-2 text-slate-700 hover:text-sky-500 transition-colors"
+          >
+            Wuko {d.name}
+          </a>
+        ))}
+      </div>
+      <a
+        href={`tel:${siteConfig.phoneTel}`}
+        class="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-sky-500 to-cyan-500 text-white px-5 py-3 rounded-full font-semibold mt-4"
+      >
+        <Icon name="phone" class="w-4 h-4" />
+        <span>{siteConfig.phone}</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const navbar   = document.getElementById('navbar') as HTMLElement;
+  const logoBg   = document.getElementById('logo-bg') as HTMLElement;
+  const logoIcon = document.getElementById('logo-icon') as HTMLElement;
+  const logoName = document.getElementById('logo-name') as HTMLElement;
+  const logoSub  = document.getElementById('logo-sub') as HTMLElement;
+  const distBtn  = document.getElementById('districts-btn') as HTMLElement;
+  const navLinks = document.querySelectorAll<HTMLElement>('[data-nav-link]');
+
+  const isHP = navbar?.dataset.solid === 'false';
+
+  function applyState(solid: boolean) {
+    navbar?.setAttribute('data-solid', solid ? 'true' : 'false');
+    if (solid) {
+      navbar?.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+      navbar?.classList.remove('bg-transparent');
+      logoBg?.classList.replace('bg-white/20', 'bg-sky-500');
+      logoBg?.classList.remove('backdrop-blur-sm');
+      logoIcon?.classList.replace('text-sky-300', 'text-white');
+      logoName?.classList.replace('text-white', 'text-slate-900');
+      logoSub?.classList.replace('text-sky-200', 'text-sky-600');
+      navLinks.forEach(l => { l.classList.replace('text-white/90', 'text-slate-700'); });
+      distBtn?.classList.replace('text-white/90', 'text-slate-700');
+    } else {
+      navbar?.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+      navbar?.classList.add('bg-transparent');
+      logoBg?.classList.replace('bg-sky-500', 'bg-white/20');
+      logoBg?.classList.add('backdrop-blur-sm');
+      logoIcon?.classList.replace('text-white', 'text-sky-300');
+      logoName?.classList.replace('text-slate-900', 'text-white');
+      logoSub?.classList.replace('text-sky-600', 'text-sky-200');
+      navLinks.forEach(l => { l.classList.replace('text-slate-700', 'text-white/90'); });
+      distBtn?.classList.replace('text-slate-700', 'text-white/90');
+    }
+  }
+
+  if (isHP) {
+    window.addEventListener('scroll', () => applyState(window.scrollY > 20), { passive: true });
+  }
+
+  // Mobile menu
+  const mobileBtn  = document.getElementById('mobile-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconMenu   = document.getElementById('icon-menu');
+  const iconClose  = document.getElementById('icon-close');
+
+  mobileBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    iconMenu?.classList.toggle('hidden');
+    iconClose?.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll('#mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+      iconMenu?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+    });
+  });
+
+  // Districts dropdown (hover)
+  const wrap = document.getElementById('districts-wrap');
+  const menu = document.getElementById('districts-menu');
+  wrap?.addEventListener('mouseenter', () => menu?.classList.remove('hidden'));
+  wrap?.addEventListener('mouseleave', () => menu?.classList.add('hidden'));
+
+  // Smooth scroll / redirect for hash links
+  document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      if (window.location.pathname === '/') {
+        e.preventDefault();
+        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+        mobileMenu?.classList.add('hidden');
+        iconMenu?.classList.remove('hidden');
+        iconClose?.classList.add('hidden');
+      } else {
+        e.preventDefault();
+        window.location.href = '/' + href;
+      }
+    });
+  });
+</script>

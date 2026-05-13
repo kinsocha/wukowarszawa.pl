@@ -1,0 +1,97 @@
+---
+import Icon from './Icon.astro';
+import { siteConfig } from '../config/site';
+
+const services = [
+  {
+    name: 'Przepychanie zlewu / WC',
+    from: 'od 300 zł',
+    description: 'Typowe zatory w kuchni lub łazience, dojazd na terenie Warszawy.',
+    features: ['Zlewy, umywalki, brodziki, wanny', 'Sprężyna elektryczna lub mechaniczna', 'Dobór metody do instalacji', 'Wycena przed pracą'],
+    isPopular: false,
+  },
+  {
+    name: 'Hydrodynamiczne Wuko',
+    from: 'od 450 zł',
+    description: 'Ciśnieniowe czyszczenie pionów, poziomów, przyłączy i studzienek.',
+    features: ['Woda pod ciśnieniem do 200 bar', 'Skuteczne na tłuszcz, osady, kamień', 'Bez agresywnej chemii', 'Bez rozkuwania', 'Faktura VAT'],
+    isPopular: true,
+  },
+  {
+    name: 'Inspekcja kamerą TV',
+    from: 'od 450 zł',
+    description: 'Diagnostyka kamerą do trudnych przypadków lub przed remontem.',
+    features: ['Kamera o wysokiej rozdzielczości', 'Lokalizacja uszkodzeń', 'Wykrywanie korzeni i pęknięć', 'Raport po inspekcji'],
+    isPopular: false,
+  },
+];
+---
+
+<section id="cennik" class="py-20 lg:py-28 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">Cennik</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Orientacyjne ceny usług</h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Ceny zależą od rodzaju instalacji, dostępu do rur i skali problemu.
+        <strong class="block mt-2 text-slate-700">Wycenę zawsze podajemy przed przyjazdem.</strong>
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      {services.map(s => (
+        <div class:list={[
+          'relative bg-white rounded-2xl p-8 shadow-sm border transition-all hover:shadow-xl hover:-translate-y-1',
+          s.isPopular ? 'border-sky-500 ring-4 ring-sky-500/10 lg:scale-105' : 'border-slate-200 hover:border-sky-200',
+        ]}>
+          {s.isPopular && (
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+              <div class="bg-gradient-to-r from-sky-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                Najczęściej wybierane
+              </div>
+            </div>
+          )}
+          <div class="text-center mb-8">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">{s.name}</h3>
+            <p class="text-slate-500 text-sm">{s.description}</p>
+          </div>
+          <div class="text-center mb-8">
+            <div class="text-4xl lg:text-5xl font-bold text-slate-900">{s.from}</div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            {s.features.map(f => (
+              <li class="flex items-start gap-3">
+                <Icon name="check" class="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
+                <span class="text-slate-600">{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={`tel:${siteConfig.phoneTel}`}
+            class:list={[
+              'flex items-center justify-center gap-2 w-full py-3.5 rounded-full text-center font-semibold transition-all',
+              s.isPopular
+                ? 'bg-gradient-to-r from-sky-500 to-cyan-500 text-white hover:shadow-lg hover:shadow-sky-500/30 hover:scale-[1.02]'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200',
+            ]}
+          >
+            <Icon name="phone" class="w-4 h-4" />
+            <span>Zapytaj o wycenę</span>
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 max-w-3xl mx-auto bg-amber-50 border border-amber-200 rounded-2xl p-6 flex items-start gap-4">
+      <Icon name="info" class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+      <p class="text-slate-700 leading-relaxed">
+        <strong>Skomplikowane przypadki</strong> (zatory w pionach wielorodzinnych, awarie przyłączy,
+        prace nocne, dojazdy do okolicznych gmin) wyceniamy indywidualnie. Zadzwoń –&nbsp;
+        <a href={`tel:${siteConfig.phoneTel}`} class="text-sky-600 font-semibold hover:underline">
+          {siteConfig.phone}
+        </a>
+        &nbsp;– i krótko opisz sytuację.
+      </p>
+    </div>
+  </div>
+</section>
