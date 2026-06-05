@@ -43,7 +43,6 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           password: ${{ secrets.REMOTE_PASSWORD }}
           local-dir: ./dist/
-          passive: true
           timeout: 30000
           exclude: |
             **/.git*
