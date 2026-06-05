@@ -159,6 +159,37 @@ const others = siteConfig.mainDistricts.filter(n => n !== district.name);
   </div>
 </section>
 
+<!-- FAQ -->
+{district.faq && district.faq.length > 0 && (
+  <>
+    <Fragment set:html={'<script type="application/ld+json">' + JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": district.faq.map(f => ({
+        "@type": "Question",
+        "name": f.question,
+        "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+      }))
+    }) + '</script>'} />
+    <section class="py-20 lg:py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">Pytania i odpowiedzi</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">FAQ – Wuko {district.name}</h2>
+        </div>
+        <div class="space-y-4">
+          {district.faq.map(f => (
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+              <h3 class="text-lg font-bold text-slate-900 mb-3">{f.question}</h3>
+              <p class="text-slate-600 leading-relaxed">{f.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </>
+)}
+
 <!-- CTA -->
 <section class="py-16 lg:py-20 bg-gradient-to-br from-sky-600 to-cyan-600">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

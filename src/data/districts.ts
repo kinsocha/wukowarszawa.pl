@@ -16,6 +16,10 @@ export interface DistrictData {
     text: string;
     location: string;
   }>;
+  faq?: Array<{
+    question: string;
+    answer: string;
+  }>;
 }
 
 export const districts: DistrictData[] = [
@@ -477,6 +481,92 @@ export const districts: DistrictData[] = [
       {
         text: 'Pan był przygotowany, cierpliwy i dokładny. Wytłumaczył, gdzie leżał problem.',
         location: 'Ursus',
+      },
+    ],
+  },
+  {
+    slug: 'wukomokotow',
+    name: 'Mokotów',
+    fullName: 'Wuko Mokotów',
+    metaTitle: 'Wuko Mokotów – ciśnieniowe udrażnianie kanalizacji | Wuko Warszawa',
+    metaDescription:
+      'Wuko Mokotów – szybkie udrażnianie kanalizacji w kamienicach, blokach i biurowcach. Stary Mokotów, Służewiec, Sadyba. Wycena przed przyjazdem, faktura VAT.',
+    heroIntro:
+      'Obsługujemy całą dzielnicę Mokotów – od przedwojennych kamienic przy Puławskiej i Wiśniowej, przez bloki na Wierzbnie i Sielcach, aż po biurowce i lokale gastronomiczne na Służewcu. Dobieramy metodę do instalacji i podajemy cenę przed przyjazdem.',
+    areas: [
+      'Stary Mokotów',
+      'Górny Mokotów',
+      'Dolny Mokotów',
+      'Sielce',
+      'Czerniaków',
+      'Sadyba',
+      'Służewiec',
+      'Wierzbno',
+      'Ksawerów',
+    ],
+    streets: [
+      'Puławska',
+      'Racławicka',
+      'Wiśniowa',
+      'Różana',
+      'Madalińskiego',
+      'al. Niepodległości',
+      'Odyńca',
+      'Malczewskiego',
+      'Woronicza',
+      'Wołoska',
+      'Konstruktorska',
+      'Chełmska',
+      'Dąbrowskiego',
+      'Sobieskiego',
+      'Belwederska',
+      'Idzikowskiego',
+      'Bobrowiecka',
+      'Szustra',
+      'Podchorążych',
+      'Olszewska',
+    ],
+    description:
+      'Mokotów to dzielnica o silnym kontraście zabudowy. Stary Mokotów – okolice Puławskiej, Wiśniowej i Odyńca – to kamienice z lat 20.–40. z żeliwnymi pionami i ceramicznymi odpływami, gdzie osady narastają latami. Zupełnie inaczej wygląda Służewiec: biurowce, centra handlowe i restauracje generujące intensywne zatykanie pionów tłuszczem z kuchni. Do tego nowe osiedla na Sadybie, Sielcach i Czerniakowie z nowoczesnymi instalacjami PVC. Każdy typ budynku wymaga innego podejścia. W kamienicach dobieramy ciśnienie ostrożnie – nie każda stara rura zniesie pełne 200 barów. W lokalach gastronomicznych sprawdza się pełne płukanie pionu z czyszczeniem separatora tłuszczu. W domach jednorodzinnych na Sadybie częstym problemem są korzenie drzew wrastające w przyłącza. Przyjeżdżamy z kamerą i sprzętem Wuko, dobieramy metodę na miejscu.',
+    testimonials: [
+      {
+        text: 'Kamienica przy Wiśniowej, stary pion żeliwny. Pan wiedział, że nie można dawać pełnego ciśnienia na takie rury – podchodził ostrożnie. Zator usunięty, porządek po pracy.',
+        location: 'Stary Mokotów',
+      },
+      {
+        text: 'Restauracja przy Woronicza, zatkany odpływ w kuchni. Wycena przez telefon, faktura VAT bez problemu. Polecam.',
+        location: 'Służewiec',
+      },
+      {
+        text: 'Korzenie wrosły w przyłącze przy domu na Sadybie. Kamera pokazała gdzie, Wuko wypłukało resztę. Nie trzeba było kopać.',
+        location: 'Sadyba',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Mokotowie?',
+        answer:
+          'Przy typowym zatorze w mieszkaniu orientacyjna cena Wuko na Mokotowie zaczyna się od 400–500 zł. Dokładną wycenę podajemy telefonicznie po krótkim opisie problemu – przed przyjazdem, nie na miejscu.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Mokotów?',
+        answer:
+          'Najczęściej w ciągu 1–2 godzin od zgłoszenia. Znamy dobrze dzielnicę i docieramy sprawnie zarówno do Starego Mokotowa, jak i na Służewiec czy Sadybę.',
+      },
+      {
+        question: 'Czy obsługujecie stare kamienice na Puławskiej i Wiśniowej?',
+        answer:
+          'Tak. Stary Mokotów to głównie przedwojenne kamienice z pionami żeliwnymi i ceramicznymi. Znamy te instalacje i dobieramy ciśnienie ostrożnie, żeby nie uszkodzić starych rur.',
+      },
+      {
+        question: 'Czy działacie w biurowcach i lokalach gastronomicznych na Służewcu?',
+        answer:
+          'Tak. W restauracjach i biurowcach na Służewcu typowy problem to osady tłuszczu w pionach kuchennych. Wuko sprawdza się tu najlepiej. Wystawiamy faktury VAT.',
+      },
+      {
+        question: 'Co zrobić, gdy zator w kanalizacji wraca po kilku tygodniach?',
+        answer:
+          'Powtarzający się zator to sygnał, że problem nie leży tylko w jednym miejscu. Najczęściej to warstwa osadów na długim odcinku pionu. Polecamy wtedy pełne czyszczenie hydrodynamiczne z inspekcją kamerą TV – żeby usunąć przyczynę, nie tylko korek.',
       },
     ],
   },

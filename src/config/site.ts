@@ -41,6 +41,7 @@ export const siteConfig = {
     'Praga Południe',
     'Rembertów',
     'Ursus',
+    'Mokotów',
   ],
 
   // Wszystkie dzielnice Warszawy (dla sekcji Locations)
