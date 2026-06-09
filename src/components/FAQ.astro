@@ -36,8 +36,19 @@ const faqs = [
     answer: `Zawsze ustalamy termin przed przyjazdem. Często udaje się dojechać tego samego dnia, w pilnych sytuacjach staramy się reagować priorytetowo. Zadzwoń: ${siteConfig.phone} – podamy najszybszy realny termin.`,
   },
 ];
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+});
 ---
 
+<script type="application/ld+json" is:inline set:html={faqSchema} />
 <section class="py-20 lg:py-28 bg-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">

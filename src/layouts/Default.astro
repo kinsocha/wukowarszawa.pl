@@ -1,6 +1,7 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import { siteConfig } from '../config/site';
 import '../styles/global.css';
 
 interface Props {
@@ -10,16 +11,50 @@ interface Props {
 
 const { title, description } = Astro.props;
 
-const schema = JSON.stringify({
+const ratingValue = siteConfig.rating.value as number;
+const ratingCount = siteConfig.rating.count as number;
+
+const sameAs = [
+  siteConfig.social.facebook,
+  siteConfig.social.instagram,
+  ...(siteConfig.googleMapsUrl ? [siteConfig.googleMapsUrl] : []),
+];
+
+const schemaObj: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Wuko Warszawa',
+  name: siteConfig.name,
+  legalName: siteConfig.legalName,
   description: 'Ciśnieniowe udrażnianie i czyszczenie kanalizacji w Warszawie i okolicach.',
-  url: 'https://wukowarszawa.pl',
-  email: 'wukowarszawa@gmail.com',
+  url: siteConfig.url,
+  email: siteConfig.email,
+  ...(siteConfig.phoneTel ? { telephone: siteConfig.phoneTel } : {}),
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Warszawa',
+    addressRegion: 'mazowieckie',
+    addressCountry: 'PL',
+  },
   areaServed: { '@type': 'City', name: 'Warszawa' },
+  openingHours: siteConfig.openingHours,
   priceRange: '$$',
-});
+  foundingDate: String(siteConfig.experienceSince),
+  sameAs,
+};
+
+if (ratingValue > 0 && ratingCount > 0) {
+  schemaObj.aggregateRating = {
+    '@type': 'AggregateRating',
+    ratingValue,
+    reviewCount: ratingCount,
+    bestRating: 5,
+    worstRating: 1,
+  };
+}
+
+const schema = JSON.stringify(schemaObj);
+
+const canonical = new URL(Astro.url.pathname, siteConfig.url).href;
 ---
 <!doctype html>
 <html lang="pl">
@@ -32,7 +67,9 @@ const schema = JSON.stringify({
     <meta name="geo.placename" content="Warszawa" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pl_PL" />
+    <meta property="og:url" content={canonical} />
     <title>{title}</title>
+    <link rel="canonical" href={canonical} />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -44,7 +81,7 @@ const schema = JSON.stringify({
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <script type="application/ld+json" set:html={schema} />
+    <script type="application/ld+json" is:inline set:html={schema} />
   </head>
   <body class="min-h-screen bg-white font-sans antialiased">
     <Navigation />

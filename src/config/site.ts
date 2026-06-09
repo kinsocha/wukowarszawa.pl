@@ -20,13 +20,21 @@ export const siteConfig = {
   url: 'https://wukowarszawa.pl',
 
   // Historia
-  experienceSince: 1979, // praca w MPWiK Warszawa
+  experienceSince: 1983, // praca w MPWiK Warszawa
   ownCompanySince: 1991, // własna firma
 
   // Social
   social: {
     facebook: 'https://www.facebook.com/WukoWarszawa/',
     instagram: 'https://www.instagram.com/WukoWarszawa/',
+  },
+
+  // SEO / Schema – uzupełnij przed wdrożeniem
+  openingHours: 'Mo-Su 08:00-20:00', // godziny pracy – sprawdź i zaktualizuj
+  googleMapsUrl: '',                   // wklej URL z Google Maps (Twój profil firmy)
+  rating: {
+    value: 0,   // średnia ocena (np. 4.9) – 0 = wyłączone
+    count: 0,   // liczba opinii (np. 87)  – 0 = wyłączone
   },
 
   // Obsługiwane dzielnice (główne, z osobnymi podstronami)

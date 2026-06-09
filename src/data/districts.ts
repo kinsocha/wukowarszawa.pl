@@ -60,6 +60,28 @@ export const districts: DistrictData[] = [
         location: 'Targówek Mieszkaniowy',
       },
     ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Targówku?',
+        answer: 'Przy typowym zatorze w mieszkaniu orientacyjnie od 400–500 zł. Wycenę podajemy telefonicznie – przed przyjazdem, po krótkim opisie problemu. Na miejscu nie ma niespodzianek.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Targówek?',
+        answer: 'Najczęściej w ciągu 1–2 godzin od zgłoszenia. Znamy dobrze dzielnicę – zarówno bloki w Targówku Mieszkaniowym, jak i starszą zabudowę przy Radzymińskiej.',
+      },
+      {
+        question: 'Obsługujecie bloki i kamienice na całym Targówku?',
+        answer: 'Tak. Pracujemy w blokach spółdzielczych, kamienicach i nowych osiedlach. Obsługujemy Bródno, Targówek Mieszkaniowy, Fabryczny, Zacisze i Elsnerów. Jeśli nie jesteś pewny, czy dojedziemy na Twój adres – zadzwoń, sprawdzimy.',
+      },
+      {
+        question: 'Pion w bloku na Targówku zatyka się co kilka miesięcy – co z tym zrobić?',
+        answer: 'Powtarzające się zatory w pionie to zwykle osady narastające na długim odcinku rury, nie jednorazowy korek. Przepchnięcie sprężyną daje chwilową ulgę. Płukanie hydrodynamiczne Wuko usuwa osady ze ścianek – efekt jest trwalszy. Przy opornych przypadkach warto też zrobić inspekcję kamerą TV.',
+      },
+      {
+        question: 'Czy wystawiacie faktury VAT na Targówku?',
+        answer: 'Tak. Wystawiamy faktury dla osób prywatnych, firm, spółdzielni i wspólnot mieszkaniowych. Można też umówić się na cykliczne przeglądy pionów.',
+      },
+    ],
   },
   {
     slug: 'wukobialoleka',
@@ -119,6 +141,28 @@ export const districts: DistrictData[] = [
         location: 'Choszczówka',
       },
     ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Białołęce?',
+        answer: 'Orientacyjnie od 400–500 zł przy typowym zatorze w mieszkaniu lub domu jednorodzinnym. Wycena telefonicznie, przed przyjazdem – po krótkim opisie problemu i adresie.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Tarchomin, Choszczówkę lub Nowodwory?',
+        answer: 'Zazwyczaj w ciągu 1–2 godzin. Białołęka jest rozległą dzielnicą – czas dojazdu zależy od aktualnej trasy, ale staramy się reagować szybko. Zadzwoń i podaj adres, ustalimy realny termin.',
+      },
+      {
+        question: 'Czy Wuko nadaje się do nowych domów jednorodzinnych na Białołęce?',
+        answer: 'Tak. Nowe instalacje PVC bez problemu znoszą ciśnienie Wuko. W nowych budynkach na Białołęce częstym problemem są osady tłuszczu i resztki budowlane pozostałe po odbiorze. Wuko je wypłucze bez ryzyka dla instalacji.',
+      },
+      {
+        question: 'Korzenie drzew w rurach – czy to problem na Białołęce?',
+        answer: 'Owszem, szczególnie w starszych częściach dzielnicy i na działkach z drzewami blisko domu. Korzenie wrastają w nieszczelności na połączeniach rur. Kamera TV wskazuje dokładne miejsce, a Wuko usuwa włókna korzeni. Przy mocno przerośniętych rurach może być potrzebna wymiana odcinka.',
+      },
+      {
+        question: 'Czy po udrożnieniu możecie zrobić inspekcję kamerą?',
+        answer: 'Tak. Inspekcję kamerą TV można wykonać przed czyszczeniem (diagnostyka) lub po nim (potwierdzenie, że rura jest czysta). Nagranie możemy przekazać na pendrive. Przydatne szczególnie przy starszych przyłączach i rurach biegnących przez ogród.',
+      },
+    ],
   },
   {
     slug: 'wukobielany',
@@ -157,6 +201,28 @@ export const districts: DistrictData[] = [
       {
         text: 'Sprawnie i konkretnie. Stare Bielany, kamienica – przepychanie zlewu w 40 minut.',
         location: 'Stare Bielany',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Bielanach?',
+        answer: 'Typowy zator w mieszkaniu to orientacyjnie 400–500 zł. Wycenę podajemy przed przyjazdem, telefonicznie – wystarczy krótki opis sytuacji. Żadnych dopłat doliczanych na miejscu.',
+      },
+      {
+        question: 'Czy obsługujecie stare kamienice na Bielanach?',
+        answer: 'Tak. Na Starych Bielanach i przy Kasprowicza czy Marymonckiej spotykamy stare piony żeliwne i ceramiczne odpływy. Znamy te instalacje. Dobieramy ciśnienie ostrożnie, żeby nie uszkodzić rur liczących kilkadziesiąt lat.',
+      },
+      {
+        question: 'Jak szybko możecie przyjechać na Chomiczówkę lub Wawrzyszew?',
+        answer: 'Zwykle w ciągu 1–2 godzin od zgłoszenia. Bielany to dzielnica, którą dobrze znamy – od Słodowca po Młociny. Zadzwoń i podaj adres, podamy realny czas.',
+      },
+      {
+        question: 'Pion w bloku na Bielanach bulgocze – co to znaczy?',
+        answer: 'Bulgotanie w pionie to znak, że gdzieś jest zwężenie utrudniające spływ. Może to być osad tłuszczu, ciało obce albo nieszczelność z wrosłymi korzeniami. Samo bulgotanie rzadko ustępuje samoistnie – lepiej zdiagnozować wcześniej, zanim doprowadzi do cofki.',
+      },
+      {
+        question: 'Czy Wuko działa w nowych blokach na Bielanach?',
+        answer: 'Tak. Nowe instalacje PVC są odporne na ciśnienie Wuko. W nowych budynkach typowe problemy to tłuszcz z kuchni i osady z twardej wody. Wuko usuwa je bez problemu.',
       },
     ],
   },
@@ -217,6 +283,28 @@ export const districts: DistrictData[] = [
         location: 'Bródno',
       },
     ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Bródnie?',
+        answer: 'Orientacyjnie od 400–500 zł przy typowym zatorze w mieszkaniu. Wycena przed przyjazdem, po krótkiej rozmowie telefonicznej. Cena zależy od rodzaju instalacji i skali problemu.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Bródno?',
+        answer: 'Najczęściej w ciągu 1–2 godzin. Bródno to osiedle, które dobrze znamy – dotrzemy zarówno do bloków przy Kondratowicza, jak i do starszej zabudowy przy Wysockiego.',
+      },
+      {
+        question: 'Dlaczego zatory na Bródnie tak często wracają po kilku tygodniach?',
+        answer: 'To typowe przy samym przepychaniu sprężyną – przebija się przez korek, ale osady na ścianach rury zostają. Wuko wypłukuje całą warstwę tłuszczu i nagromadzonych resztek, więc efekt jest trwalszy. W blokach z intensywnie użytkowanymi pionami polecamy pełne płukanie Wuko zamiast samego przepychania.',
+      },
+      {
+        question: 'Wuko czy sprężyna – co lepsze w blokach na Bródnie?',
+        answer: 'Sprężyna sprawdza się przy punktowym, twardym zatorze – np. ciało obce w odpływie. Wuko jest lepsze przy rozległych osadach w dłuższym odcinku pionu. Często stosujemy obie metody: najpierw sprężyna, potem płukanie Wuko. Wszystko zależy od tego, co kamera lub opis problemu pokazuje.',
+      },
+      {
+        question: 'Czy po czyszczeniu możecie zrobić inspekcję kamerą TV?',
+        answer: 'Tak. Inspekcja kamerą po Wuko potwierdza, że rura jest faktycznie czysta, nie tylko drożna. Przy powracających zatorach to dobra inwestycja – pozwala zobaczyć, czy w rurze nie ma pęknięcia lub innego defektu.',
+      },
+    ],
   },
   {
     slug: 'wukowawer',
@@ -270,6 +358,28 @@ export const districts: DistrictData[] = [
         location: 'Wawer',
       },
     ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko w Wawrze?',
+        answer: 'Orientacyjnie od 400–500 zł przy typowym zatorze w domu lub mieszkaniu. Wycenę podajemy telefonicznie – przed przyjazdem, po opisie problemu. Przy dłuższych przyłączach zewnętrznych cena może być wyższa – wtedy ustalamy ją po krótkim opisie.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Anin, Falęnicę lub Marysin?',
+        answer: 'Zazwyczaj w ciągu 1–2 godzin. Wawer jest rozległą dzielnicą – czas dojazdu na Zerzeń czy Radość może się trochę różnić od dojazdu na Anin. Podaj adres, ustalimy realny termin.',
+      },
+      {
+        question: 'Czy Wuko sprawdza się w domach jednorodzinnych w Wawrze?',
+        answer: 'Tak, i to bardzo dobrze. Domy mają zwykle dłuższe odcinki rur zewnętrznych niż mieszkania w blokach. Wuko dosięga dalej niż sprężyna – 50, 80, a nawet 100 metrów elastycznym wężem pod ciśnieniem. Przy osadach na długich przyłączach to jedyna skuteczna metoda.',
+      },
+      {
+        question: 'Korzenie drzew w rurze – czy Wuko sobie poradzi?',
+        answer: 'Z cienką siatką korzeni – tak. Wuko wyrywa drobne włókna korzeniowe i wypłukuje je. Gdy korzeń jest gruby i mocno wpluty w rurę – potrzebna jest wymiana odcinka. Kamera TV przed czyszczeniem pokazuje dokładnie, z czym mamy do czynienia. To oszczędza czas i pieniądze.',
+      },
+      {
+        question: 'Czy obsługujecie też rury deszczowe i studzienki w Wawrze?',
+        answer: 'Tak. Czyszczenie rur deszczowych, studzienek rewizyjnych i przyłączy zewnętrznych to część naszych usług. W domach jednorodzinnych jesienią częste blokady wywołują liście i piasek po opadach. Wuko radzi sobie z takimi zanieczyszczeniami sprawnie.',
+      },
+    ],
   },
   {
     slug: 'wukoochota',
@@ -308,6 +418,28 @@ export const districts: DistrictData[] = [
       {
         text: 'Diagnostyka kamerą i wskazówki na przyszłość. Polecam.',
         location: 'Stara Ochota',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Ochocie?',
+        answer: 'Przy typowym zatorze w mieszkaniu orientacyjnie od 400–500 zł. Wycena przed przyjazdem, po krótkim opisie sytuacji. Przy kamienicach z długimi pionami lub starymi rurami cena może być inna – ustalamy ją przed wyjazdem.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Rakowiec, Szczęśliwice lub Filtry?',
+        answer: 'Zwykle w ciągu 1–2 godzin od zgłoszenia. Dobrze znamy Ochotę – od Filtrowej i Wawelskiej po Opaczewską i Drawską. Podaj adres, powiemy realny czas dojazdu.',
+      },
+      {
+        question: 'Czy Wuko nadaje się do starych instalacji w kamienicach na Ochocie?',
+        answer: 'Tak, ale z wyczuciem. Kamienice przy Filtrowej czy Niemcewicza mają stare piony żeliwne lub kamionkowe. Ciśnienie dobieramy do stanu rury. Nie używamy maksymalnego – to mogłoby zaszkodzić starym połączeniom.',
+      },
+      {
+        question: 'Pion w kamienicy na Ochocie ciągle ma problem – co z tym?',
+        answer: 'Powtarzające się zatory w tym samym pionie to sygnał, że jest nagromadzony osad na dłuższym odcinku. Samo przepychanie przynosi chwilową ulgę. Pełne płukanie Wuko z inspekcją kamerą pozwala zobaczyć, gdzie i dlaczego problem wraca.',
+      },
+      {
+        question: 'Czy wystawiacie faktury VAT dla biur i firm na Ochocie?',
+        answer: 'Tak. Obsługujemy biura, lokale usługowe i restauracje. Faktury VAT bez problemu. Można też umówić się na cykliczne konserwacje pionów – przydatne w budynkach z dużym ruchem.',
       },
     ],
   },
@@ -357,6 +489,28 @@ export const districts: DistrictData[] = [
         location: 'Stara Praga',
       },
     ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Pradze Północ?',
+        answer: 'Przy typowym zatorze w mieszkaniu orientacyjnie 400–500 zł. W lokalach gastronomicznych ze zbiornikami tłuszczu i długimi pionami kuchennymi cena może być wyższa – wyceniamy przed przyjazdem, telefonicznie.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Ząbkowską, Brzeską czy Targową?',
+        answer: 'Zazwyczaj w ciągu 1–2 godzin. Praga Północ to zwarta dzielnica i dobrze ją znamy. Przy kamienicach na wąskich ulicach mamy odpowiedni sprzęt – nie jest potrzebny wjazd dla dużego auta.',
+      },
+      {
+        question: 'Czy Wuko sprawdza się w starych instalacjach kamienicowych na Pradze?',
+        answer: 'Tak, ale dobieramy ciśnienie do stanu rury. Stare kamionkowe i żeliwne instalacje przy Ząbkowskiej czy Brzeskiej wymagają ostrożności. Jeśli jest wątpliwość co do stanu rur, zaczynamy od inspekcji kamerą TV.',
+      },
+      {
+        question: 'Obsługujecie lokale gastronomiczne i restauracje na Pradze Północ?',
+        answer: 'Tak. Piony kuchenne w restauracjach to specyficzny przypadek – tłuszcz odkłada się szybko, szczególnie latem. Czyścimy odpływy zlewozmywaków, separatory tłuszczu, piony kuchenne. Faktury VAT i możliwość cyklicznych przeglądów.',
+      },
+      {
+        question: 'Co gdy kilka lokali w jednej kamienicy ma problem z kanalizacją naraz?',
+        answer: 'To klasyczny objaw zatoru w głównym pionie budynku. Warto wtedy zgłosić sprawę zarządcy – czyszczenie całego pionu to lepsza opcja niż kolejne interwencje w każdym lokalu osobno. Obsługujemy zarówno zarządców kamienic, jak i poszczególnych lokatorów.',
+      },
+    ],
   },
   {
     slug: 'wukopragapoludnie',
@@ -400,6 +554,28 @@ export const districts: DistrictData[] = [
         location: 'Saska Kępa',
       },
     ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Pradze Południe?',
+        answer: 'Orientacyjnie od 400–500 zł przy typowym zatorze w mieszkaniu. Wycena przed przyjazdem – zadzwoń, opisz problem. Na miejscu cena nie zmienia się bez powodu.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Grochów, Gocław lub Saską Kępę?',
+        answer: 'Zazwyczaj w ciągu 1–2 godzin od zgłoszenia. Praga Południe jest rozległa, ale dobrze ją znamy. Wiatraczna, Grochowska, Waszyngtona – dojazd mamy sprawdzony.',
+      },
+      {
+        question: 'Czy obsługujecie starszą zabudowę na Kamionku i Grochowie?',
+        answer: 'Tak. Na Kamionku i Grochowie są kamienice z różnorodną instalacją. Starsze rury kamionkowe i żeliwne wymagają odpowiedniego ciśnienia. Dobieramy metodę po opisie problemu i jeśli trzeba, weryfikujemy kamerą TV.',
+      },
+      {
+        question: 'Zator w bloku pojawia się u kilku mieszkańców naraz – co to oznacza?',
+        answer: 'Prawie zawsze to zatkany wspólny pion lub poziom odprowadzający ścieki. Problem leży poza mieszkaniem. Zazwyczaj czyszczenie wspólnego odcinka rozwiązuje sprawę od razu u wszystkich. Zarządca lub spółdzielnia mogą zlecić taką usługę.',
+      },
+      {
+        question: 'Czy Wuko jest bezpieczne dla rur w kamienicach na Saskiej Kępie?',
+        answer: 'Tak, przy odpowiednio dobranym ciśnieniu. Saska Kępa ma zwartą zabudowę z lat 30.–40. – eleganckie kamienice, ale stare instalacje. Dobieramy ciśnienie ostrożnie. Przy wątpliwościach co do stanu rur robimy najpierw inspekcję kamerą.',
+      },
+    ],
   },
   {
     slug: 'wukorembertow',
@@ -438,6 +614,28 @@ export const districts: DistrictData[] = [
       {
         text: 'Korzenie wrastały w rurę – kamera pokazała problem, Wuko wypłukało resztę. Polecam.',
         location: 'Rembertów',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko w Rembertowie?',
+        answer: 'Przy typowym zatorze w domu jednorodzinnym orientacyjnie od 400–500 zł. Przy dłuższych przyłączach zewnętrznych lub rurach od szamba – wycena po opisie problemu przez telefon.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie do Starego i Nowego Rembertowa?',
+        answer: 'Zazwyczaj w ciągu 1–2 godzin. Rembertów to dzielnica z przewagą zabudowy jednorodzinnej – mamy sprzęt dostosowany do pracy przy domach, nie tylko blokach.',
+      },
+      {
+        question: 'Czy Wuko sprawdza się przy czyszczeniu przyłączy do szamba?',
+        answer: 'Tak, i bardzo dobrze. Długie przyłącza zewnętrzne – często kilkanaście, a nawet kilkadziesiąt metrów – to idealne warunki dla Wuko. Sprężyna mechaniczna może nie dosięgnąć dalej niż 10–15 metrów. Wuko pracuje na 50–100 metrach elastycznym wężem pod ciśnieniem, bez kopania.',
+      },
+      {
+        question: 'Korzenie drzew wrosły w rurę – co teraz?',
+        answer: 'Kamera TV pokaże, jak głęboko i jak mocno. Przy cienkich włóknach korzeniowych Wuko je wypłucze. Gdy korzeń jest gruby lub rura jest uszkodzona w miejscu wrastania – potrzebna jest wymiana odcinka. Zadzwoń, opiszemy opcje po obejrzeniu nagrania.',
+      },
+      {
+        question: 'Rury zewnętrzne w domu: kiedy Wuko, kiedy sprężyna?',
+        answer: 'Sprężyna przy twardym, punktowym zatorze i krótkim odcinku. Wuko przy osadach na długim odcinku rury, korzeniach, piasku po opadach i zanieczyszczeniach organicznych. W domach jednorodzinnych z długimi przyłączami najczęściej sięgamy po Wuko.',
       },
     ],
   },
@@ -481,6 +679,28 @@ export const districts: DistrictData[] = [
       {
         text: 'Pan był przygotowany, cierpliwy i dokładny. Wytłumaczył, gdzie leżał problem.',
         location: 'Ursus',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko w Ursusie?',
+        answer: 'Orientacyjnie od 400–500 zł przy typowym zatorze w mieszkaniu lub domu. Wycenę podajemy telefonicznie – przed przyjazdem. Cena zależy od rodzaju i skali problemu.',
+      },
+      {
+        question: 'Jak szybko możecie przyjechać na Niedźwiadek, Czechowice lub Skorosze?',
+        answer: 'Zazwyczaj w ciągu 1–2 godzin od zgłoszenia. Ursus to dzielnica, którą dobrze znamy. Od Ryżowej przez Dzieci Warszawy po Posag 7 Panien – dojazd sprawny.',
+      },
+      {
+        question: 'Czy Wuko działa w nowych blokach w Ursusie?',
+        answer: 'Tak. Nowe bloki w Ursusie mają instalacje PVC – bezproblemowe dla Wuko. Typowe problemy w nowych budynkach to tłuszcz kuchenny, włosy i osady wapienne narastające stopniowo. Wuko usuwa je skutecznie i bez ryzyka dla instalacji.',
+      },
+      {
+        question: 'Odpływ w łazience jest coraz wolniejszy – co to sygnalizuje?',
+        answer: 'To najczęściej warstwa włosów, mydła i osadów wapiennych zbierających się na ściance rury lub w syfonie. Na początek warto zdjąć syfon i go wyczyścić – często to wystarczy. Jeśli nie, problem leży głębiej. Wtedy Wuko lub sprężyna w zależności od lokalizacji zatoru.',
+      },
+      {
+        question: 'Czy wystawiacie faktury VAT dla firm i spółdzielni w Ursusie?',
+        answer: 'Tak. Faktury VAT bez problemu – dla osób prywatnych, firm, spółdzielni i wspólnot. Obsługujemy też cykliczne przeglądy pionów w budynkach wielorodzinnych.',
       },
     ],
   },
