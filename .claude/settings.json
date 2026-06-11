@@ -4,7 +4,16 @@
       "Bash(curl -I http://wukowarszawa.pl)",
       "Bash(curl -I --insecure https://wukowarszawa.pl)",
       "Bash(curl -sI https://wukowarszawa.pl/index.html)",
-      "Bash(curl -sI https://wukowarszawa.pl/public_html/index.html)"
+      "Bash(curl -sI https://wukowarszawa.pl/public_html/index.html)",
+      "WebSearch",
+      "PowerShell(node scripts/generate-og.mjs)",
+      "PowerShell(npm run build)",
+      "PowerShell(git add public/robots.txt public/favicon.svg public/og-image.png public/apple-touch-icon.png scripts/generate-og.mjs src/layouts/Default.astro)",
+      "PowerShell(git push)",
+      "PowerShell(git add src/components/WukoMethod.astro src/pages/index.astro)",
+      "PowerShell(npm install @astrojs/mdx)",
+      "PowerShell(npm install @astrojs/mdx@^4)",
+      "PowerShell(git add -A)"
     ]
   }
 }

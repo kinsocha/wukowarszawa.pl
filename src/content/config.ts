@@ -10,4 +10,19 @@ const reviews = defineCollection({
   }),
 });
 
-export const collections = { reviews };
+const poradnik = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().max(220),
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    category: z.string(),
+    readingTime: z.number().min(1),
+    faq: z
+      .array(z.object({ q: z.string(), a: z.string() }))
+      .min(4, 'Każdy artykuł musi mieć min. 4 pytania FAQ'),
+  }),
+});
+
+export const collections = { reviews, poradnik };
