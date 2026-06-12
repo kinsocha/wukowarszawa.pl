@@ -7,8 +7,8 @@ export const siteConfig = {
   tagline: 'Ciśnieniowe udrażnianie kanalizacji',
 
   // Kontakt
-  phone: '',
-  phoneTel: '',
+  phone: '660 360 170',
+  phoneTel: '+48660360170',
   email: 'wukowarszawa@gmail.com',
 
   // Dane firmowe
