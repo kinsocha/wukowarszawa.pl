@@ -63,7 +63,7 @@ export const districts: DistrictData[] = [
     faq: [
       {
         question: 'Ile kosztuje Wuko na Targówku?',
-        answer: 'Przy typowym zatorze w mieszkaniu orientacyjnie od 400–500 zł. Wycenę podajemy telefonicznie – przed przyjazdem, po krótkim opisie problemu. Na miejscu nie ma niespodzianek.',
+        answer: 'Każde zlecenie wyceniamy indywidualnie – orientacyjny cennik usług znajdziesz na stronie głównej, w sekcji Cennik. Dokładną kwotę podajemy telefonicznie, przed przyjazdem, po krótkim opisie problemu. Na miejscu nie ma niespodzianek.',
       },
       {
         question: 'Jak szybko przyjedziecie na Targówek?',
@@ -144,7 +144,7 @@ export const districts: DistrictData[] = [
     faq: [
       {
         question: 'Ile kosztuje Wuko na Białołęce?',
-        answer: 'Orientacyjnie od 400–500 zł przy typowym zatorze w mieszkaniu lub domu jednorodzinnym. Wycena telefonicznie, przed przyjazdem – po krótkim opisie problemu i adresie.',
+        answer: 'Cena zależy od rodzaju instalacji i skali zatoru. Orientacyjne stawki mamy zebrane na stronie głównej, w sekcji Cennik. Konkretną wycenę podajemy telefonicznie, przed przyjazdem – po krótkim opisie problemu i adresie.',
       },
       {
         question: 'Jak szybko przyjedziecie na Tarchomin, Choszczówkę lub Nowodwory?',
@@ -206,7 +206,7 @@ export const districts: DistrictData[] = [
     faq: [
       {
         question: 'Ile kosztuje Wuko na Bielanach?',
-        answer: 'Typowy zator w mieszkaniu to orientacyjnie 400–500 zł. Wycenę podajemy przed przyjazdem, telefonicznie – wystarczy krótki opis sytuacji. Żadnych dopłat doliczanych na miejscu.',
+        answer: 'Wyceniamy przed przyjazdem, telefonicznie – wystarczy krótki opis sytuacji. Orientacyjny cennik poszczególnych usług znajdziesz na stronie głównej. Żadnych dopłat doliczanych na miejscu.',
       },
       {
         question: 'Czy obsługujecie stare kamienice na Bielanach?',
@@ -286,7 +286,7 @@ export const districts: DistrictData[] = [
     faq: [
       {
         question: 'Ile kosztuje Wuko na Bródnie?',
-        answer: 'Orientacyjnie od 400–500 zł przy typowym zatorze w mieszkaniu. Wycena przed przyjazdem, po krótkiej rozmowie telefonicznej. Cena zależy od rodzaju instalacji i skali problemu.',
+        answer: 'Cena zależy od rodzaju instalacji i skali problemu. Pełny, orientacyjny cennik jest na stronie głównej, w sekcji Cennik. Dokładną kwotę ustalamy w krótkiej rozmowie telefonicznej, jeszcze przed przyjazdem.',
       },
       {
         question: 'Jak szybko przyjedziecie na Bródno?',
@@ -361,7 +361,7 @@ export const districts: DistrictData[] = [
     faq: [
       {
         question: 'Ile kosztuje Wuko w Wawrze?',
-        answer: 'Orientacyjnie od 400–500 zł przy typowym zatorze w domu lub mieszkaniu. Wycenę podajemy telefonicznie – przed przyjazdem, po opisie problemu. Przy dłuższych przyłączach zewnętrznych cena może być wyższa – wtedy ustalamy ją po krótkim opisie.',
+        answer: 'Wycenę podajemy telefonicznie, przed przyjazdem – po opisie problemu. Orientacyjny cennik usług znajdziesz na stronie głównej. Przy dłuższych przyłączach zewnętrznych kwota bywa wyższa, dlatego ustalamy ją indywidualnie.',
       },
       {
         question: 'Jak szybko przyjedziecie na Anin, Falęnicę lub Marysin?',
@@ -423,7 +423,7 @@ export const districts: DistrictData[] = [
     faq: [
       {
         question: 'Ile kosztuje Wuko na Ochocie?',
-        answer: 'Przy typowym zatorze w mieszkaniu orientacyjnie od 400–500 zł. Wycena przed przyjazdem, po krótkim opisie sytuacji. Przy kamienicach z długimi pionami lub starymi rurami cena może być inna – ustalamy ją przed wyjazdem.',
+        answer: 'Każdą usługę wyceniamy przed przyjazdem, po krótkim opisie sytuacji. Orientacyjne stawki znajdziesz w sekcji Cennik na stronie głównej. W kamienicach z długimi pionami lub starymi rurami kwota może być inna – ustalamy ją przed wyjazdem.',
       },
       {
         question: 'Jak szybko przyjedziecie na Rakowiec, Szczęśliwice lub Filtry?',
@@ -492,7 +492,7 @@ export const districts: DistrictData[] = [
     faq: [
       {
         question: 'Ile kosztuje Wuko na Pradze Północ?',
-        answer: 'Przy typowym zatorze w mieszkaniu orientacyjnie 400–500 zł. W lokalach gastronomicznych ze zbiornikami tłuszczu i długimi pionami kuchennymi cena może być wyższa – wyceniamy przed przyjazdem, telefonicznie.',
+        answer: 'Wyceniamy przed przyjazdem, telefonicznie. Orientacyjny cennik usług mamy na stronie głównej. W lokalach gastronomicznych ze zbiornikami tłuszczu i długimi pionami kuchennymi kwota bywa wyższa – dlatego liczymy ją indywidualnie.',
       },
       {
         question: 'Jak szybko przyjedziecie na Ząbkowską, Brzeską czy Targową?',
@@ -557,7 +557,7 @@ export const districts: DistrictData[] = [
     faq: [
       {
         question: 'Ile kosztuje Wuko na Pradze Południe?',
-        answer: 'Orientacyjnie od 400–500 zł przy typowym zatorze w mieszkaniu. Wycena przed przyjazdem – zadzwoń, opisz problem. Na miejscu cena nie zmienia się bez powodu.',
+        answer: 'Wycena przed przyjazdem – zadzwoń, opisz problem. Orientacyjny cennik znajdziesz na stronie głównej, w sekcji Cennik. Na miejscu kwota nie zmienia się bez powodu.',
       },
       {
         question: 'Jak szybko przyjedziecie na Grochów, Gocław lub Saską Kępę?',
@@ -619,7 +619,7 @@ export const districts: DistrictData[] = [
     faq: [
       {
         question: 'Ile kosztuje Wuko w Rembertowie?',
-        answer: 'Przy typowym zatorze w domu jednorodzinnym orientacyjnie od 400–500 zł. Przy dłuższych przyłączach zewnętrznych lub rurach od szamba – wycena po opisie problemu przez telefon.',
+        answer: 'Każde zlecenie liczymy indywidualnie, po opisie problemu przez telefon. Orientacyjne stawki są na stronie głównej, w sekcji Cennik. Przy dłuższych przyłączach zewnętrznych lub rurach od szamba kwota bywa wyższa.',
       },
       {
         question: 'Jak szybko przyjedziecie do Starego i Nowego Rembertowa?',
@@ -684,7 +684,7 @@ export const districts: DistrictData[] = [
     faq: [
       {
         question: 'Ile kosztuje Wuko w Ursusie?',
-        answer: 'Orientacyjnie od 400–500 zł przy typowym zatorze w mieszkaniu lub domu. Wycenę podajemy telefonicznie – przed przyjazdem. Cena zależy od rodzaju i skali problemu.',
+        answer: 'Wycenę podajemy telefonicznie, przed przyjazdem. Orientacyjny cennik usług znajdziesz na stronie głównej. Kwota zależy od rodzaju instalacji i skali problemu.',
       },
       {
         question: 'Jak szybko możecie przyjechać na Niedźwiadek, Czechowice lub Skorosze?',
@@ -766,7 +766,7 @@ export const districts: DistrictData[] = [
       {
         question: 'Ile kosztuje Wuko na Mokotowie?',
         answer:
-          'Przy typowym zatorze w mieszkaniu orientacyjna cena Wuko na Mokotowie zaczyna się od 400–500 zł. Dokładną wycenę podajemy telefonicznie po krótkim opisie problemu – przed przyjazdem, nie na miejscu.',
+          'Dokładną wycenę Wuko na Mokotowie podajemy telefonicznie, po krótkim opisie problemu – przed przyjazdem, nie na miejscu. Orientacyjny cennik wszystkich usług znajdziesz na stronie głównej, w sekcji Cennik.',
       },
       {
         question: 'Jak szybko przyjedziecie na Mokotów?',

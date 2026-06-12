@@ -20,8 +20,8 @@ export const siteConfig = {
   url: 'https://wukowarszawa.pl',
 
   // Historia
-  experienceSince: 1983, // praca w MPWiK Warszawa
-  ownCompanySince: 1991, // własna firma
+  experienceSince: 1976, // 50 lat doświadczenia
+  ownCompanySince: 1976, // 50 lat działalności firmy
 
   // Social
   social: {
