@@ -33,8 +33,8 @@ export const siteConfig = {
   openingHours: 'Mo-Su 08:00-20:00', // godziny pracy – sprawdź i zaktualizuj
   googleMapsUrl: '',                   // wklej URL z Google Maps (Twój profil firmy)
   rating: {
-    value: 0,   // średnia ocena (np. 4.9) – 0 = wyłączone
-    count: 0,   // liczba opinii (np. 87)  – 0 = wyłączone
+    value: 5.0,   // średnia ocena – 0 = wyłączone
+    count: 467,   // liczba opinii – 0 = wyłączone
   },
 
   // Obsługiwane dzielnice (główne, z osobnymi podstronami)
