@@ -50,6 +50,7 @@ export const siteConfig = {
     'Rembertów',
     'Ursus',
     'Mokotów',
+    'Wola',
   ],
 
   // Wszystkie dzielnice Warszawy (dla sekcji Locations)

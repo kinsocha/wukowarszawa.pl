@@ -790,6 +790,91 @@ export const districts: DistrictData[] = [
       },
     ],
   },
+  {
+    slug: 'wukowola',
+    name: 'Wola',
+    fullName: 'Wuko Wola',
+    metaTitle: 'Wuko Wola – ciśnieniowe udrażnianie kanalizacji | Wuko Warszawa',
+    metaDescription:
+      'Wuko Wola – udrażnianie kanalizacji w biurowcach, kamienicach i nowych osiedlach. Mirów, Odolany, Czyste, rondo Daszyńskiego. Wycena przed przyjazdem, faktura VAT.',
+    heroIntro:
+      'Działamy na całej Woli – od biurowców i lokali gastronomicznych wokół ronda Daszyńskiego, przez przedwojenne kamienice Mirowa, aż po nowe osiedla na Odolanach. Każdy z tych budynków zatyka się inaczej. Dobieramy metodę do instalacji i podajemy cenę przed przyjazdem.',
+    areas: [
+      'Mirów',
+      'Czyste',
+      'Odolany',
+      'Ulrychów',
+      'Koło',
+      'Młynów',
+      'Nowolipki',
+      'Powązki',
+    ],
+    streets: [
+      'Wolska',
+      'Górczewska',
+      'Kasprzaka',
+      'Płocka',
+      'Młynarska',
+      'Okopowa',
+      'Towarowa',
+      'Chłodna',
+      'Żelazna',
+      'Prosta',
+      'Grzybowska',
+      'Karolkowa',
+      'Jana Kazimierza',
+      'Obozowa',
+      'Powązkowska',
+      'al. Solidarności',
+      'Leszno',
+      'Wronia',
+      'Działdowska',
+      'Ordona',
+    ],
+    description:
+      'Wola zmieniła się przez ostatnią dekadę bardziej niż jakakolwiek inna część Warszawy. Wokół ronda Daszyńskiego wyrosły biurowce, a z nimi restauracje i bary, które każdego dnia spuszczają do pionów tłuszcz z kuchni. To najczęstsza przyczyna zatorów w tej części dzielnicy. Inaczej wygląda Mirów i okolice Chłodnej – ocalałe kamienice z żeliwnymi pionami i ceramicznymi odpływami, w których osad narasta latami. A obok, na Odolanach i przy Jana Kazimierza, stoją świeże osiedla z instalacją PVC, gdzie problemem bywa zaprawa albo gruz, który został w rurach po budowie. W kamienicach dobieramy ciśnienie ostrożnie – nie każda stara rura zniesie pełne 200 barów. W lokalach gastronomicznych sprawdza się pełne płukanie pionu razem z czyszczeniem separatora tłuszczu. Przyjeżdżamy z kamerą i sprzętem Wuko, a metodę dobieramy na miejscu, po obejrzeniu instalacji.',
+    testimonials: [
+      {
+        text: 'Restauracja przy Grzybowskiej, zatkany pion kuchenny pełen tłuszczu. Wycena przez telefon, faktura VAT od ręki. Wuko wypłukało wszystko, odpływ schodzi od razu.',
+        location: 'Czyste',
+      },
+      {
+        text: 'Kamienica na Chłodnej, stary żeliwny pion. Pan nie ryzykował pełnym ciśnieniem na takie rury, podchodził spokojnie. Zator zszedł, po pracy posprzątane.',
+        location: 'Mirów',
+      },
+      {
+        text: 'Nowe mieszkanie na Odolanach, a odpływ w łazience stał. Okazało się, że w rurze została zaprawa z budowy. Kamera pokazała gdzie, reszta poszła Wukiem. Polecam.',
+        location: 'Odolany',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Woli?',
+        answer:
+          'Dokładną wycenę Wuko na Woli podajemy telefonicznie, po krótkim opisie problemu – przed przyjazdem, nie na miejscu. Zadzwoń pod 660 360 170, a orientacyjny cennik wszystkich usług znajdziesz na stronie głównej, w sekcji Cennik.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Wolę?',
+        answer:
+          'Najczęściej w ciągu 1–2 godzin od zgłoszenia. Wola jest dobrze skomunikowana, więc docieramy sprawnie zarówno w okolice ronda Daszyńskiego, jak i na Odolany czy Koło.',
+      },
+      {
+        question: 'Obsługujecie biurowce i lokale gastronomiczne przy rondzie Daszyńskiego?',
+        answer:
+          'Tak. W restauracjach, barach i biurowcach typowy problem to osady tłuszczu w pionach kuchennych. Wuko sprawdza się tu najlepiej – płuczemy cały pion i czyścimy separator tłuszczu. Wystawiamy faktury VAT.',
+      },
+      {
+        question: 'Czy radzicie sobie ze starymi kamienicami na Mirowie?',
+        answer:
+          'Tak. Mirów i okolice Chłodnej to głównie przedwojenne kamienice z pionami żeliwnymi i ceramicznymi. Znamy te instalacje i dobieramy ciśnienie ostrożnie, żeby nie uszkodzić wysłużonych rur.',
+      },
+      {
+        question: 'Mam nowe mieszkanie, a odpływ się zatyka. Z czego to wynika?',
+        answer:
+          'W nowych osiedlach na Odolanach czy przy Jana Kazimierza częstą przyczyną jest zaprawa lub gruz, który został w rurach po budowie. Kamerą lokalizujemy przeszkodę, a następnie wypłukujemy ją Wukiem – bez kucia ścian.',
+      },
+    ],
+  },
 ];
 
 export function getDistrictBySlug(slug: string): DistrictData | undefined {
