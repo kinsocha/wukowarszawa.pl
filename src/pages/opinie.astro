@@ -8,12 +8,55 @@ const reviewEntries = await getCollection('reviews');
 const reviews = reviewEntries.map(e => e.data);
 
 const avg = reviews.length ? reviews.reduce((s, r) => s + r.rating, 0) / reviews.length : 5;
+
+const reviewsSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: siteConfig.name,
+  url: siteConfig.url,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: avg.toFixed(1),
+    bestRating: '5',
+    ratingCount: reviews.length,
+  },
+  review: reviews.map((r) => ({
+    '@type': 'Review',
+    reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: '5' },
+    author: {
+      '@type': 'Person',
+      name: r.location ? `Klient – ${r.location.split(',').at(-1)?.trim() ?? r.location}` : 'Klient Wuko Warszawa',
+    },
+    reviewBody: r.text,
+    ...(r.service ? { description: r.service } : {}),
+  })),
+});
+
+const videoSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: 'Udrażnianie rur Wuko Warszawa – ciśnieniowe przepychanie w praktyce',
+  description:
+    'Nagranie z realnej interwencji Wuko Warszawa: ciśnieniowe udrażnianie rury kanalizacyjnej krok po kroku.',
+  thumbnailUrl: 'https://i.ytimg.com/vi/FP1NWodBZow/hqdefault.jpg',
+  uploadDate: '2026-06-20',
+  duration: 'PT1M4S',
+  contentUrl: 'https://www.youtube.com/shorts/FP1NWodBZow',
+  embedUrl: 'https://www.youtube.com/embed/FP1NWodBZow',
+  publisher: {
+    '@type': 'Organization',
+    name: siteConfig.name,
+    url: siteConfig.url,
+  },
+});
 ---
 
 <Default
   title="Opinie klientów – Wuko Warszawa"
   description="Opinie klientów o usługach Wuko Warszawa: udrażnianie kanalizacji, sprężyna elektryczna, Wuko, inspekcja kamerą TV."
 >
+  <script type="application/ld+json" is:inline set:html={reviewsSchema} />
+  <script type="application/ld+json" is:inline set:html={videoSchema} />
   <!-- Hero -->
   <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-sky-900 overflow-hidden">
     <div class="absolute inset-0 overflow-hidden">
@@ -71,6 +114,65 @@ const avg = reviews.length ? reviews.reduce((s, r) => s + r.rating, 0) / reviews
       </div>
     </div>
   </section>
+
+  <!-- Wideo: udrażnianie w akcji -->
+  <section class="py-16 lg:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Zobacz, jak pracujemy</h2>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Krótkie nagranie z realnej interwencji – ciśnieniowe udrażnianie rury w praktyce.
+        </p>
+      </div>
+      <div class="flex justify-center">
+        <div
+          id="yt-lite"
+          class="relative w-full max-w-[320px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-900/10 cursor-pointer group bg-slate-900"
+          role="button"
+          tabindex="0"
+          aria-label="Odtwórz wideo: ciśnieniowe udrażnianie rury – Wuko Warszawa"
+          data-ytid="FP1NWodBZow"
+        >
+          <img
+            src="https://i.ytimg.com/vi/FP1NWodBZow/hqdefault.jpg"
+            alt="Ciśnieniowe udrażnianie rury – Wuko Warszawa"
+            loading="lazy"
+            width="320"
+            height="569"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <span class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></span>
+          <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-white/95 shadow-lg group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 24 24" class="w-7 h-7 text-sky-600 translate-x-0.5" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const liteBox = document.getElementById('yt-lite');
+    if (liteBox) {
+      const playVideo = () => {
+        const id = liteBox.dataset.ytid;
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+        iframe.title = 'Udrażnianie rur – Wuko Warszawa';
+        iframe.allow =
+          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.className = 'absolute inset-0 w-full h-full';
+        liteBox.innerHTML = '';
+        liteBox.appendChild(iframe);
+      };
+      liteBox.addEventListener('click', playVideo, { once: true });
+      liteBox.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          playVideo();
+        }
+      });
+    }
+  </script>
 
   <!-- CTA -->
   <section class="py-16 lg:py-20 bg-gradient-to-br from-sky-600 to-cyan-600">
