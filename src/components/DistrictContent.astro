@@ -159,6 +159,16 @@ const others = siteConfig.mainDistricts.filter(n => n !== district.name);
   </div>
 </section>
 
+<!-- Breadcrumb JSON-LD -->
+<script type="application/ld+json" is:inline set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Strona główna', item: siteConfig.url + '/' },
+    { '@type': 'ListItem', position: 2, name: district.fullName, item: siteConfig.url + '/' + district.slug },
+  ],
+})} />
+
 <!-- FAQ -->
 {district.faq && district.faq.length > 0 && (
   <>

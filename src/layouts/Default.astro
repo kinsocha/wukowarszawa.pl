@@ -27,6 +27,7 @@ const schemaObj: Record<string, unknown> = {
   legalName: siteConfig.legalName,
   description: 'Ciśnieniowe udrażnianie i czyszczenie kanalizacji w Warszawie i okolicach.',
   url: siteConfig.url,
+  image: new URL('/og-image.png', siteConfig.url).href,
   email: siteConfig.email,
   ...(siteConfig.phoneTel ? { telephone: siteConfig.phoneTel } : {}),
   address: {
