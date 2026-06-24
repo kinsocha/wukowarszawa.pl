@@ -27,7 +27,7 @@ export const districts: DistrictData[] = [
     slug: 'wukotargowek',
     name: 'Targówek',
     fullName: 'Wuko Targówek',
-    metaTitle: 'Wuko Targówek – udrażnianie kanalizacji | Wuko Warszawa',
+    metaTitle: 'Wuko Targówek – udrażnianie rur | Wuko Warszawa',
     metaDescription:
       'Profesjonalne Wuko Targówek – szybkie i skuteczne udrażnianie rur w dzielnicy Targówek. Ciśnieniowe udrażnianie rur, kamerowanie kanalizacji.',
     heroIntro:
@@ -87,7 +87,7 @@ export const districts: DistrictData[] = [
     slug: 'wukobialoleka',
     name: 'Białołęka',
     fullName: 'Wuko Białołęka',
-    metaTitle: 'Wuko Białołęka – udrażnianie kanalizacji | Wuko Warszawa',
+    metaTitle: 'Wuko Białołęka – udrażnianie rur | Wuko Warszawa',
     metaDescription:
       'Ciśnieniowe udrażnianie rur Wuko Białołęka. Monitoring rur kanalizacyjnych, sprężyna elektryczna, hydrodynamiczne czyszczenie.',
     heroIntro:
@@ -168,7 +168,7 @@ export const districts: DistrictData[] = [
     slug: 'wukobielany',
     name: 'Bielany',
     fullName: 'Wuko Bielany',
-    metaTitle: 'Wuko Bielany – udrażnianie kanalizacji | Wuko Warszawa',
+    metaTitle: 'Wuko Bielany – udrażnianie rur | Wuko Warszawa',
     metaDescription:
       'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na warszawskich Bielanach. Zatory w zlewie, toalecie, pionach i rurach zewnętrznych.',
     heroIntro:
@@ -230,7 +230,7 @@ export const districts: DistrictData[] = [
     slug: 'wukobrodno',
     name: 'Bródno',
     fullName: 'Wuko Bródno',
-    metaTitle: 'Wuko Bródno – udrażnianie kanalizacji | Wuko Warszawa',
+    metaTitle: 'Wuko Bródno – udrażnianie rur | Wuko Warszawa',
     metaDescription:
       'Wuko Bródno (Warszawa) – udrażnianie kanalizacji i czyszczenie rur metodą ciśnieniową. Bródno: zatory w kuchni, łazience i pionach, inspekcja kamerą TV, dojazd lokalny.',
     heroIntro:
@@ -310,7 +310,7 @@ export const districts: DistrictData[] = [
     slug: 'wukowawer',
     name: 'Wawer',
     fullName: 'Wuko Wawer',
-    metaTitle: 'Wuko Wawer – udrażnianie kanalizacji | Wuko Warszawa',
+    metaTitle: 'Wuko Wawer – udrażnianie rur | Wuko Warszawa',
     metaDescription:
       'Profesjonalne udrażnianie i czyszczenie kanalizacji metodą Wuko w dzielnicy Wawer. Skutecznie, bezpiecznie, bez chemii.',
     heroIntro:
@@ -385,7 +385,7 @@ export const districts: DistrictData[] = [
     slug: 'wukoochota',
     name: 'Ochota',
     fullName: 'Wuko Ochota',
-    metaTitle: 'Wuko Ochota – udrażnianie kanalizacji | Wuko Warszawa',
+    metaTitle: 'Wuko Ochota – udrażnianie rur | Wuko Warszawa',
     metaDescription:
       'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na warszawskiej Ochocie. Zatory w zlewie, toalecie, pionach i rurach zewnętrznych.',
     heroIntro:
@@ -447,7 +447,7 @@ export const districts: DistrictData[] = [
     slug: 'wukopragapolnoc',
     name: 'Praga Północ',
     fullName: 'Wuko Praga Północ',
-    metaTitle: 'Wuko Praga Północ – udrażnianie kanalizacji | Wuko Warszawa',
+    metaTitle: 'Wuko Praga Północ – udrażnianie rur | Wuko Warszawa',
     metaDescription:
       'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na warszawskiej Pradze Północ. Stare kamienice, zabytkowe instalacje, nowe lokale.',
     heroIntro:
@@ -516,7 +516,7 @@ export const districts: DistrictData[] = [
     slug: 'wukopragapoludnie',
     name: 'Praga Południe',
     fullName: 'Wuko Praga Południe',
-    metaTitle: 'Wuko Praga Południe – udrażnianie kanalizacji | Wuko Warszawa',
+    metaTitle: 'Wuko Praga Południe – udrażnianie rur | Wuko Warszawa',
     metaDescription:
       'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko na Pradze Południe. Zatory w zlewie, toalecie, pionach i rurach zewnętrznych.',
     heroIntro:
@@ -581,7 +581,7 @@ export const districts: DistrictData[] = [
     slug: 'wukorembertow',
     name: 'Rembertów',
     fullName: 'Wuko Rembertów',
-    metaTitle: 'Wuko Rembertów – udrażnianie kanalizacji | Wuko Warszawa',
+    metaTitle: 'Wuko Rembertów – udrażnianie rur | Wuko Warszawa',
     metaDescription:
       'Udrażnianie kanalizacji i czyszczenie rur metodą Wuko w Rembertowie. Domy jednorodzinne, szamba, przyłącza, sprężyna elektryczna.',
     heroIntro:
@@ -643,7 +643,7 @@ export const districts: DistrictData[] = [
     slug: 'wukoursus',
     name: 'Ursus',
     fullName: 'Wuko Ursus',
-    metaTitle: 'Wuko Ursus – udrażnianie kanalizacji | Wuko Warszawa',
+    metaTitle: 'Wuko Ursus – udrażnianie rur | Wuko Warszawa',
     metaDescription:
       'Profesjonalne Wuko Ursus – szybkie udrażnianie rur, ciśnieniowe czyszczenie kanalizacji, kamerowanie.',
     heroIntro:
