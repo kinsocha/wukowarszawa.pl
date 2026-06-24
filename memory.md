@@ -26,7 +26,11 @@ Zrobione (wg git, wieczór 2026-06-11):
 
 ## Do zrobienia / otwarte
 - [x] Numer 660 360 170 wstawiony w `src/config/site.ts` (phone + phoneTel) — propaguje na całą stronę.
-- [ ] Kolejne artykuły poradnika (tematy do ustalenia).
+- [ ] Kolejne artykuły poradnika. Tematy-kandydaci z researchu (2026-06-20), niekanibalizujące strony głównej ani dzielnic — uszeregowane wg priorytetu:
+  - „Tłuszcz w kanalizacji — jak się go pozbyć" (indywidualny + gastronomia)
+  - „Zatkany pion w bloku — kto odpowiada i jak udrożnić" (B2B, niska konkurencja)
+  - Zajęte (nie powtarzać): wuko czy sprężyna, ile kosztuje wuko, czyszczenie deszczówki, zapchana studzienka kanalizacyjna, zapchana kanalizacja krok po kroku.
+  - Uwaga researchu: brak twardych wolumenów (Ahrefs/GKP) — priorytet wnioskowany z gęstości treści konkurencji, nie z pomiaru.
 - [ ] Kolejne podstrony dzielnicowe (patrz lista brakujących — pilnować anty-kanibalizacji).
 
 ## Decyzje / ustalenia
