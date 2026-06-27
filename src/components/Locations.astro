@@ -7,61 +7,180 @@ const withPages = districts.map(d => d.name);
 const withoutPages = siteConfig.allDistricts.filter(d => !withPages.includes(d));
 ---
 
-<section class="py-20 lg:py-28 bg-gradient-to-br from-sky-50 to-cyan-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">Obsługujemy</span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Cała Warszawa i okolice</h2>
-      <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+<section class="loc">
+  <div class="loc-inner">
+    <div class="loc-head">
+      <span class="eyebrow">Obsługujemy</span>
+      <h2 class="loc-title">Cała Warszawa i okolice</h2>
+      <p class="loc-sub">
         Dojeżdżamy m.in. na Pragę, Bielany, Mokotów, Ursynów, Wolę, Bemowo, Białołękę, Targówek,
         Rembertów i okoliczne gminy. Najlepiej zadzwonić i podać dokładny adres.
       </p>
     </div>
 
-    <div class="mb-12">
-      <h3 class="text-xl font-bold text-slate-900 mb-6 text-center flex items-center justify-center gap-2">
-        <Icon name="star" class="w-5 h-5 text-amber-500 fill-amber-500" />
+    <div class="loc-block">
+      <h3 class="loc-h3 loc-h3-star">
+        <Icon name="star" class="loc-star" />
         Dzielnice z osobnymi stronami
       </h3>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="loc-grid">
         {districts.map(d => (
-          <a
-            href={`/${d.slug}`}
-            class="group bg-white rounded-xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
-          >
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <div class="p-2 bg-sky-100 rounded-lg group-hover:bg-sky-500 transition-colors">
-                  <Icon name="map-pin" class="w-5 h-5 text-sky-600 group-hover:text-white transition-colors" />
+          <a href={`/${d.slug}`} class="loc-card">
+            <div class="loc-card-row">
+              <div class="loc-card-left">
+                <div class="loc-pin-wrap">
+                  <Icon name="map-pin" class="loc-pin" />
                 </div>
                 <div>
-                  <div class="font-semibold text-slate-900 group-hover:text-sky-600 transition-colors">Wuko {d.name}</div>
-                  <div class="text-sm text-slate-500">Sprawdź szczegóły →</div>
+                  <div class="loc-card-name">Wuko {d.name}</div>
+                  <div class="loc-card-meta">Sprawdź szczegóły →</div>
                 </div>
               </div>
-              <Icon name="arrow-right" class="w-4 h-4 text-slate-300 group-hover:text-sky-500 group-hover:translate-x-1 transition-all" />
+              <Icon name="arrow-right" class="loc-card-arrow" />
             </div>
           </a>
         ))}
       </div>
     </div>
 
-    <div class="mb-12">
-      <h3 class="text-xl font-bold text-slate-900 mb-6 text-center">Dojeżdżamy także do innych dzielnic</h3>
-      <div class="flex flex-wrap justify-center gap-2">
+    <div class="loc-block">
+      <h3 class="loc-h3 loc-h3-center">Dojeżdżamy także do innych dzielnic</h3>
+      <div class="loc-tags">
         {withoutPages.map(d => (
-          <span class="px-4 py-2 bg-white text-slate-700 rounded-full border border-slate-200 text-sm">{d}</span>
+          <span class="loc-tag">{d}</span>
         ))}
       </div>
     </div>
 
-    <div class="text-center">
-      <div class="inline-flex flex-wrap items-center justify-center gap-6 bg-white rounded-full px-6 py-4 shadow-sm">
-        <a href={`tel:${siteConfig.phoneTel}`} class="flex items-center gap-2 text-slate-700 hover:text-sky-600 transition-colors">
-          <Icon name="phone" class="w-5 h-5 text-sky-500" />
-          <span class="font-semibold">Zadzwoń: {siteConfig.phone}</span>
+    <div class="loc-cta-wrap">
+      <div class="loc-cta">
+        <a href={`tel:${siteConfig.phoneTel}`} class="loc-cta-link">
+          <Icon name="phone" class="loc-cta-ico" />
+          <span>Zadzwoń: {siteConfig.phone}</span>
         </a>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .loc {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f0f9ff, #ecfeff);
+  }
+  @media (min-width: 1024px) { .loc { padding: 7rem 0; } }
+
+  .loc-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .loc-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .loc-inner { padding: 0 2rem; } }
+
+  .loc-head { text-align: center; margin-bottom: 4rem; }
+  .eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .loc-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 640px) { .loc-title { font-size: 2.25rem; } }
+  @media (min-width: 1024px) { .loc-title { font-size: 3rem; } }
+  .loc-sub { font-size: 1.125rem; color: #475569; max-width: 48rem; margin: 0 auto; }
+
+  .loc-block { margin-bottom: 3rem; }
+  .loc-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+  }
+  .loc-h3-center { text-align: center; }
+  .loc-h3-star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .loc-star { width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b; }
+
+  .loc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 640px) { .loc-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .loc-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .loc-card {
+    display: block;
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .loc-card:hover { transform: translateY(-0.25rem); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); }
+
+  .loc-card-row { display: flex; align-items: center; justify-content: space-between; }
+  .loc-card-left { display: flex; align-items: center; gap: 0.75rem; }
+  .loc-pin-wrap {
+    padding: 0.5rem;
+    background: #e0f2fe;
+    border-radius: 0.5rem;
+    transition: background 0.2s ease;
+  }
+  .loc-card:hover .loc-pin-wrap { background: var(--sky); }
+  .loc-pin { width: 1.25rem; height: 1.25rem; color: #0284c7; transition: color 0.2s ease; }
+  .loc-card:hover .loc-pin { color: #fff; }
+  .loc-card-name { font-weight: 600; color: #0f172a; transition: color 0.2s ease; }
+  .loc-card:hover .loc-card-name { color: #0284c7; }
+  .loc-card-meta { font-size: 0.875rem; color: #64748b; }
+  .loc-card-arrow { width: 1rem; height: 1rem; color: #cbd5e1; transition: color 0.25s ease, transform 0.25s ease; }
+  .loc-card:hover .loc-card-arrow { color: var(--sky); transform: translateX(0.25rem); }
+
+  .loc-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+  .loc-tag {
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #334155;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.875rem;
+  }
+
+  .loc-cta-wrap { text-align: center; }
+  .loc-cta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background: #fff;
+    border-radius: 999px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .loc-cta-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #334155;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .loc-cta-link:hover { color: #0284c7; }
+  .loc-cta-ico { width: 1.25rem; height: 1.25rem; color: var(--sky); }
+  .loc-cta-link span { font-weight: 600; }
+</style>

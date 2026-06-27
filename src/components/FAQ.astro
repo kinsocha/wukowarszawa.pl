@@ -53,29 +53,26 @@ const faqSchema = JSON.stringify({
 ---
 
 <script type="application/ld+json" is:inline set:html={faqSchema} />
-<section class="py-20 lg:py-28 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">FAQ</span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Najczęstsze pytania</h2>
-      <p class="text-lg text-slate-600">Krótko i konkretnie. Jeśli nie znajdziesz odpowiedzi – po prostu zadzwoń.</p>
+<section class="faq">
+  <div class="faq-inner">
+    <div class="faq-head">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="faq-title">Najczęstsze pytania</h2>
+      <p class="faq-sub">Krótko i konkretnie. Jeśli nie znajdziesz odpowiedzi – po prostu zadzwoń.</p>
     </div>
 
-    <div class="bg-slate-50 rounded-2xl p-6 lg:p-8">
+    <div class="faq-box">
       {faqs.map((faq, i) => (
-        <div class="faq-item border-b border-slate-200 last:border-b-0">
-          <button
-            class="faq-btn w-full flex items-center justify-between py-5 text-left hover:text-sky-600 transition-colors"
-            data-index={i}
-          >
-            <span class="text-lg font-semibold text-slate-900 pr-4">{faq.question}</span>
-            <span class="faq-icon flex-shrink-0 p-2 rounded-full bg-slate-100 text-slate-500 transition-colors">
-              <Icon name="plus" class="w-5 h-5 icon-open" />
-              <Icon name="minus" class="w-5 h-5 icon-close hidden" />
+        <div class:list={['faq-item', i === 0 && 'is-open']}>
+          <button class="faq-btn" data-index={i}>
+            <span class="faq-q">{faq.question}</span>
+            <span class="faq-icon">
+              <Icon name="plus" class="icon-open" />
+              <Icon name="minus" class="icon-close" />
             </span>
           </button>
-          <div class:list={['faq-content overflow-hidden transition-all duration-300', i === 0 ? 'max-h-96 pb-5' : 'max-h-0']}>
-            <p class="text-slate-600 leading-relaxed">{faq.answer}</p>
+          <div class="faq-content">
+            <p class="faq-a">{faq.answer}</p>
           </div>
         </div>
       ))}
@@ -83,46 +80,97 @@ const faqSchema = JSON.stringify({
   </div>
 </section>
 
+<style>
+  .faq { padding: 5rem 0; background: #fff; }
+  @media (min-width: 1024px) { .faq { padding: 7rem 0; } }
+
+  .faq-inner {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .faq-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .faq-inner { padding: 0 2rem; } }
+
+  .faq-head { text-align: center; margin-bottom: 4rem; }
+  .eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .faq-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 640px) { .faq-title { font-size: 2.25rem; } }
+  @media (min-width: 1024px) { .faq-title { font-size: 3rem; } }
+  .faq-sub { font-size: 1.125rem; color: #475569; }
+
+  .faq-box {
+    background: var(--bg-light);
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+  @media (min-width: 1024px) { .faq-box { padding: 2rem; } }
+
+  .faq-item { border-bottom: 1px solid #e2e8f0; }
+  .faq-item:last-child { border-bottom: none; }
+
+  .faq-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .faq-btn:hover { color: #0284c7; }
+  .faq-q { font-size: 1.125rem; font-weight: 600; color: #0f172a; padding-right: 1rem; }
+  .faq-btn:hover .faq-q { color: #0284c7; }
+
+  .faq-icon {
+    flex-shrink: 0;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #64748b;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .faq-item.is-open .faq-icon { background: #e0f2fe; color: #0284c7; }
+  .faq-icon :global(svg) { width: 1.25rem; height: 1.25rem; }
+  .faq-icon :global(.icon-close) { display: none; }
+  .faq-item.is-open .faq-icon :global(.icon-open) { display: none; }
+  .faq-item.is-open .faq-icon :global(.icon-close) { display: block; }
+
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+  .faq-item.is-open .faq-content { max-height: 24rem; padding-bottom: 1.25rem; }
+  .faq-a { color: #475569; line-height: 1.7; }
+</style>
+
 <script>
   const items = document.querySelectorAll<HTMLElement>('.faq-item');
 
-  // Open first item
-  const firstIcon = items[0]?.querySelector<HTMLElement>('.faq-icon');
-  if (firstIcon) {
-    firstIcon.classList.replace('bg-slate-100', 'bg-sky-100');
-    firstIcon.classList.replace('text-slate-500', 'text-sky-600');
-    firstIcon.querySelector('.icon-open')?.classList.add('hidden');
-    firstIcon.querySelector('.icon-close')?.classList.remove('hidden');
-  }
-
-  items.forEach((item, i) => {
-    const btn     = item.querySelector<HTMLElement>('.faq-btn')!;
-    const content = item.querySelector<HTMLElement>('.faq-content')!;
-    const icon    = item.querySelector<HTMLElement>('.faq-icon')!;
-
+  items.forEach(item => {
+    const btn = item.querySelector<HTMLElement>('.faq-btn')!;
     btn.addEventListener('click', () => {
-      const isOpen = !content.classList.contains('max-h-0');
-
-      // Close all
-      items.forEach(it => {
-        const c  = it.querySelector<HTMLElement>('.faq-content')!;
-        const ic = it.querySelector<HTMLElement>('.faq-icon')!;
-        c.classList.add('max-h-0');
-        c.classList.remove('max-h-96', 'pb-5');
-        ic.classList.replace('bg-sky-100', 'bg-slate-100');
-        ic.classList.replace('text-sky-600', 'text-slate-500');
-        ic.querySelector('.icon-open')?.classList.remove('hidden');
-        ic.querySelector('.icon-close')?.classList.add('hidden');
-      });
-
-      if (!isOpen) {
-        content.classList.remove('max-h-0');
-        content.classList.add('max-h-96', 'pb-5');
-        icon.classList.replace('bg-slate-100', 'bg-sky-100');
-        icon.classList.replace('text-slate-500', 'text-sky-600');
-        icon.querySelector('.icon-open')?.classList.add('hidden');
-        icon.querySelector('.icon-close')?.classList.remove('hidden');
-      }
+      const isOpen = item.classList.contains('is-open');
+      items.forEach(it => it.classList.remove('is-open'));
+      if (!isOpen) item.classList.add('is-open');
     });
   });
 </script>
