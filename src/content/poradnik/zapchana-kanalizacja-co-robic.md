@@ -19,7 +19,7 @@ faq:
 
 Najpierw woda schodzi odrobinę wolniej. Potem zostaje na chwilę w zlewie, zanim zniknie. Aż pewnego ranka stoi i nie rusza się wcale. Zapchana kanalizacja rzadko przychodzi z dnia na dzień — zwykle daje znać wcześniej, tylko łatwo te sygnały zbyć. Poniżej po kolei: skąd się to bierze, co możesz zrobić sam i kiedy lepiej oddać sprawę komuś ze sprzętem.
 
-<img src="/img/poradnik/zapchana-kanalizacja.webp" alt="Zapchany zlew kuchenny, obok przepychaczka i środki do udrażniania kanalizacji" class="rounded-xl w-full max-w-md mx-auto my-8 shadow-sm" loading="lazy" />
+<img src="/img/poradnik/zapchana-kanalizacja.webp" alt="Zapchany zlew kuchenny, obok przepychaczka i środki do udrażniania kanalizacji" class="article-img" loading="lazy" />
 
 ## Po czym poznać, że to już zator
 
