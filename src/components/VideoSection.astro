@@ -22,18 +22,18 @@ const videoSchema = JSON.stringify({
 
 <script type="application/ld+json" is:inline set:html={videoSchema} />
 
-<section class="py-16 lg:py-20 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-10">
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Zobacz, jak pracujemy</h2>
-      <p class="text-lg text-slate-600 leading-relaxed">
+<section class="video">
+  <div class="video-inner">
+    <div class="video-head">
+      <h2 class="video-title">Zobacz, jak pracujemy</h2>
+      <p class="video-sub">
         Krótkie nagranie z realnej interwencji – ciśnieniowe udrażnianie rury w praktyce.
       </p>
     </div>
-    <div class="flex justify-center">
+    <div class="video-wrap">
       <div
         id="yt-lite"
-        class="relative w-full max-w-[320px] aspect-[9/16] rounded-[5px] overflow-hidden shadow-2xl ring-1 ring-slate-900/10 cursor-pointer group bg-slate-900"
+        class="yt-lite"
         role="button"
         tabindex="0"
         aria-label="Odtwórz wideo: ciśnieniowe udrażnianie rury – Wuko Warszawa"
@@ -45,16 +45,83 @@ const videoSchema = JSON.stringify({
           loading="lazy"
           width="320"
           height="569"
-          class="absolute inset-0 w-full h-full object-cover"
+          class="yt-thumb"
         />
-        <span class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></span>
-        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-white/95 shadow-lg group-hover:scale-110 transition-transform">
-          <svg viewBox="0 0 24 24" class="w-7 h-7 text-sky-600 translate-x-0.5" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+        <span class="yt-overlay"></span>
+        <span class="yt-play">
+          <svg viewBox="0 0 24 24" class="yt-play-ico" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
         </span>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .video { padding: 4rem 0; background: var(--bg-light); }
+  @media (min-width: 1024px) { .video { padding: 5rem 0; } }
+
+  .video-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .video-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .video-inner { padding: 0 2rem; } }
+
+  .video-head { text-align: center; max-width: 42rem; margin: 0 auto 2.5rem; }
+  .video-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 640px) { .video-title { font-size: 2.25rem; } }
+  .video-sub { font-size: 1.125rem; color: #475569; line-height: 1.7; }
+
+  .video-wrap { display: flex; justify-content: center; }
+  .yt-lite {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 9 / 16;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(15, 23, 42, 0.1);
+    cursor: pointer;
+    background: #0f172a;
+  }
+  .yt-thumb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .yt-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.2);
+    transition: background 0.2s ease;
+  }
+  .yt-lite:hover .yt-overlay { background: rgba(15, 23, 42, 0.1); }
+  .yt-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease;
+  }
+  .yt-lite:hover .yt-play { transform: translate(-50%, -50%) scale(1.1); }
+  .yt-play-ico { width: 1.75rem; height: 1.75rem; color: #0284c7; transform: translateX(2px); }
+</style>
 
 <script>
   const liteBox = document.getElementById('yt-lite');
@@ -67,7 +134,7 @@ const videoSchema = JSON.stringify({
       iframe.allow =
         'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       iframe.allowFullscreen = true;
-      iframe.className = 'absolute inset-0 w-full h-full';
+      iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
       liteBox.innerHTML = '';
       liteBox.appendChild(iframe);
     };

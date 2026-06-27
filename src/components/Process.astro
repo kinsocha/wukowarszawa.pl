@@ -25,30 +25,116 @@ const steps = [
 ];
 ---
 
-<section id="proces" class="py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-sky-900">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <span class="inline-block text-sky-400 font-semibold text-sm tracking-wider uppercase mb-4">Jak działamy</span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Prostym językiem: 4 kroki</h2>
-      <p class="text-lg text-white/70 max-w-2xl mx-auto">
+<section id="proces" class="process">
+  <div class="process-inner">
+    <div class="process-head">
+      <span class="eyebrow">Jak działamy</span>
+      <h2 class="process-title">Prostym językiem: 4 kroki</h2>
+      <p class="process-sub">
         Bez ściany powtarzanych fraz – po prostu to, co faktycznie robimy u klientów.
         Od pierwszego telefonu do zakończenia prac.
       </p>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="process-grid">
       {steps.map((step, i) => (
-        <div class="group bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/15 transition-all flex flex-col">
-          <div class="flex items-start justify-between mb-7">
-            <div class="p-3.5 bg-sky-500/20 rounded-2xl">
-              <Icon name={step.icon} class="w-7 h-7 text-sky-400" />
+        <div class="step-card">
+          <div class="step-top">
+            <div class="step-ico-wrap">
+              <Icon name={step.icon} class="step-ico" />
             </div>
-            <span class="text-5xl font-black text-white/[0.07] group-hover:text-white transition-colors duration-300 leading-none select-none">{i + 1}</span>
+            <span class="step-num">{i + 1}</span>
           </div>
-          <h3 class="text-xl font-bold text-white mb-3">{step.title}</h3>
-          <p class="text-white/70 leading-relaxed">{step.description}</p>
+          <h3 class="step-name">{step.title}</h3>
+          <p class="step-desc">{step.description}</p>
         </div>
       ))}
     </div>
   </div>
 </section>
+
+<style>
+  .process {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
+  }
+  @media (min-width: 1024px) { .process { padding: 7rem 0; } }
+
+  .process-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .process-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .process-inner { padding: 0 2rem; } }
+
+  .process-head { text-align: center; margin-bottom: 4rem; }
+  .eyebrow {
+    display: inline-block;
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .process-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 640px) { .process-title { font-size: 2.25rem; } }
+  @media (min-width: 1024px) { .process-title { font-size: 3rem; } }
+  .process-sub { font-size: 1.125rem; color: rgba(255, 255, 255, 0.7); max-width: 42rem; margin: 0 auto; }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  @media (min-width: 640px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .process-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .step-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s ease;
+  }
+  .step-card:hover { background: rgba(255, 255, 255, 0.15); }
+
+  .step-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+  }
+  .step-ico-wrap {
+    padding: 0.875rem;
+    background: rgba(14, 165, 233, 0.2);
+    border-radius: 1rem;
+  }
+  .step-ico { width: 1.75rem; height: 1.75rem; color: #38bdf8; }
+  .step-num {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.07);
+    user-select: none;
+    transition: color 0.3s ease;
+  }
+  .step-card:hover .step-num { color: #fff; }
+
+  .step-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+  .step-desc { color: rgba(255, 255, 255, 0.7); line-height: 1.7; }
+</style>

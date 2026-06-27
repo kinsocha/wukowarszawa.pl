@@ -10,39 +10,37 @@ const testimonials = [
 ];
 ---
 
-<section id="opinie" class="py-20 lg:py-28 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">Opinie</span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Co mówią klienci</h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
-        Opinie z różnych dzielnic Warszawy – mieszkania, domy, lokale usługowe.
-      </p>
+<section id="opinie" class="tm">
+  <div class="tm-inner">
+    <div class="tm-head">
+      <span class="eyebrow">Opinie</span>
+      <h2 class="tm-title">Co mówią klienci</h2>
+      <p class="tm-sub">Opinie z różnych dzielnic Warszawy – mieszkania, domy, lokale usługowe.</p>
     </div>
 
-    <div class="max-w-4xl mx-auto relative">
-      <div class="bg-gradient-to-br from-sky-50 to-cyan-50 rounded-3xl p-8 lg:p-12 relative">
-        <Icon name="quote" class="w-16 h-16 text-sky-200 mb-6" />
+    <div class="tm-stage">
+      <div class="tm-card">
+        <Icon name="quote" class="tm-quote" />
 
         {testimonials.map((t, i) => (
-          <div class="testimonial-item" class:list={[i !== 0 && 'hidden']}>
-            <div class="flex items-center gap-1 mb-6">
+          <div class:list={['testimonial-item', i !== 0 && 'u-hidden']}>
+            <div class="tm-stars">
               {Array.from({ length: t.rating }).map(() => (
-                <Icon name="star" class="w-5 h-5 fill-amber-400 text-amber-400" />
+                <Icon name="star" class="tm-star" />
               ))}
             </div>
-            <p class="text-xl lg:text-2xl text-slate-800 leading-relaxed mb-8 font-medium">"{t.content}"</p>
-            <div class="flex items-center justify-between flex-wrap gap-4">
+            <p class="tm-text">"{t.content}"</p>
+            <div class="tm-foot">
               <div>
-                <div class="font-bold text-slate-900">{t.name}</div>
-                <div class="text-slate-500 text-sm">Warszawa, {t.location}</div>
+                <div class="tm-name">{t.name}</div>
+                <div class="tm-loc">Warszawa, {t.location}</div>
               </div>
-              <div class="flex items-center gap-2">
-                <button id="prev-btn" aria-label="Poprzednia opinia" class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow">
-                  <Icon name="chevron-left" class="w-5 h-5 text-slate-700" />
+              <div class="tm-nav">
+                <button id="prev-btn" aria-label="Poprzednia opinia" class="tm-arrow-btn">
+                  <Icon name="chevron-left" class="tm-arrow-ico" />
                 </button>
-                <button id="next-btn" aria-label="Następna opinia" class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow">
-                  <Icon name="chevron-right" class="w-5 h-5 text-slate-700" />
+                <button id="next-btn" aria-label="Następna opinia" class="tm-arrow-btn">
+                  <Icon name="chevron-right" class="tm-arrow-ico" />
                 </button>
               </div>
             </div>
@@ -50,10 +48,10 @@ const testimonials = [
         ))}
       </div>
 
-      <div class="flex items-center justify-center gap-2 mt-6">
+      <div class="tm-dots">
         {testimonials.map((_, i) => (
           <button
-            class:list={['testimonial-dot transition-all rounded-full h-2', i === 0 ? 'w-8 bg-sky-500' : 'w-2 bg-slate-300 hover:bg-slate-400']}
+            class:list={['testimonial-dot', i === 0 && 'is-active']}
             data-index={i}
             aria-label={`Przejdź do opinii ${i + 1}`}
           ></button>
@@ -63,6 +61,98 @@ const testimonials = [
   </div>
 </section>
 
+<style>
+  .tm { padding: 5rem 0; background: #fff; }
+  @media (min-width: 1024px) { .tm { padding: 7rem 0; } }
+
+  .tm-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .tm-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .tm-inner { padding: 0 2rem; } }
+
+  .tm-head { text-align: center; margin-bottom: 4rem; }
+  .eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .tm-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 640px) { .tm-title { font-size: 2.25rem; } }
+  @media (min-width: 1024px) { .tm-title { font-size: 3rem; } }
+  .tm-sub { font-size: 1.125rem; color: #475569; max-width: 42rem; margin: 0 auto; }
+
+  .tm-stage { max-width: 56rem; margin: 0 auto; position: relative; }
+  .tm-card {
+    position: relative;
+    background: linear-gradient(135deg, #f0f9ff, #ecfeff);
+    border-radius: 1.5rem;
+    padding: 2rem;
+  }
+  @media (min-width: 1024px) { .tm-card { padding: 3rem; } }
+
+  .tm-quote { width: 4rem; height: 4rem; color: #bae6fd; margin-bottom: 1.5rem; }
+
+  .tm-stars { display: flex; align-items: center; gap: 0.25rem; margin-bottom: 1.5rem; }
+  .tm-star { width: 1.25rem; height: 1.25rem; color: #fbbf24; fill: #fbbf24; }
+
+  .tm-text {
+    font-size: 1.25rem;
+    color: #1e293b;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  @media (min-width: 1024px) { .tm-text { font-size: 1.5rem; } }
+
+  .tm-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .tm-name { font-weight: 700; color: #0f172a; }
+  .tm-loc { color: #64748b; font-size: 0.875rem; }
+
+  .tm-nav { display: flex; align-items: center; gap: 0.5rem; }
+  .tm-arrow-btn {
+    padding: 0.75rem;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+  }
+  .tm-arrow-btn:hover { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+  .tm-arrow-ico { width: 1.25rem; height: 1.25rem; color: #334155; }
+
+  .tm-dots { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
+  .testimonial-dot {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 999px;
+    background: #cbd5e1;
+    border: none;
+    cursor: pointer;
+    transition: width 0.3s ease, background 0.3s ease;
+  }
+  .testimonial-dot:hover { background: #94a3b8; }
+  .testimonial-dot.is-active { width: 2rem; background: var(--sky); }
+</style>
+
 <script>
   const items = document.querySelectorAll<HTMLElement>('.testimonial-item');
   const dots  = document.querySelectorAll<HTMLElement>('.testimonial-dot');
@@ -70,15 +160,13 @@ const testimonials = [
   let timer: ReturnType<typeof setInterval>;
 
   function show(idx: number) {
-    items[current]?.classList.add('hidden');
-    dots[current]?.classList.replace('w-8', 'w-2');
-    dots[current]?.classList.replace('bg-sky-500', 'bg-slate-300');
+    items[current]?.classList.add('u-hidden');
+    dots[current]?.classList.remove('is-active');
 
     current = (idx + items.length) % items.length;
 
-    items[current]?.classList.remove('hidden');
-    dots[current]?.classList.replace('w-2', 'w-8');
-    dots[current]?.classList.replace('bg-slate-300', 'bg-sky-500');
+    items[current]?.classList.remove('u-hidden');
+    dots[current]?.classList.add('is-active');
   }
 
   function startAuto() {

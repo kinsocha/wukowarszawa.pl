@@ -27,64 +27,177 @@ const services = [
 ];
 ---
 
-<section id="cennik" class="py-20 lg:py-28 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">Cennik</span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Orientacyjne ceny usług</h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+<section id="cennik" class="pricing">
+  <div class="pricing-inner">
+    <div class="pricing-head">
+      <span class="eyebrow">Cennik</span>
+      <h2 class="pricing-title">Orientacyjne ceny usług</h2>
+      <p class="pricing-sub">
         Ceny zależą od rodzaju instalacji, dostępu do rur i skali problemu.
-        <strong class="block mt-2 text-slate-700">Wycenę zawsze podajemy przed przyjazdem.</strong>
+        <strong class="pricing-sub-strong">Wycenę zawsze podajemy przed przyjazdem.</strong>
       </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <div class="pricing-grid">
       {services.map(s => (
-        <div class:list={[
-          'relative bg-white rounded-2xl p-8 shadow-sm border transition-all hover:shadow-xl hover:-translate-y-1',
-          s.isPopular ? 'border-sky-500 ring-4 ring-sky-500/10 lg:scale-105' : 'border-slate-200 hover:border-sky-200',
-        ]}>
-          <div class="text-center mb-8">
-            <h3 class="text-xl font-bold text-slate-900 mb-2">{s.name}</h3>
-            <p class="text-slate-500 text-sm">{s.description}</p>
+        <div class:list={['price-card', s.isPopular && 'is-popular']}>
+          <div class="price-card-head">
+            <h3 class="price-name">{s.name}</h3>
+            <p class="price-desc">{s.description}</p>
           </div>
-          <div class="text-center mb-8">
-            <div class="text-4xl lg:text-5xl font-bold text-slate-900">{s.from}</div>
+          <div class="price-amount-wrap">
+            <div class="price-amount">{s.from}</div>
           </div>
-          <ul class="space-y-4 mb-8">
+          <ul class="price-features">
             {s.features.map(f => (
-              <li class="flex items-start gap-3">
-                <Icon name="check" class="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                <span class="text-slate-600">{f}</span>
+              <li>
+                <Icon name="check" class="price-check" />
+                <span>{f}</span>
               </li>
             ))}
           </ul>
-          <a
-            href={`tel:${siteConfig.phoneTel}`}
-            class:list={[
-              'flex items-center justify-center gap-2 w-full py-3.5 rounded-full text-center font-semibold transition-all',
-              s.isPopular
-                ? 'bg-gradient-to-r from-sky-500 to-cyan-500 text-white hover:shadow-lg hover:shadow-sky-500/30 hover:scale-[1.02]'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200',
-            ]}
-          >
-            <Icon name="phone" class="w-4 h-4" />
+          <a href={`tel:${siteConfig.phoneTel}`} class:list={['price-btn', s.isPopular ? 'price-btn-popular' : 'price-btn-plain']}>
+            <Icon name="phone" class="price-btn-ico" />
             <span>Zapytaj o wycenę</span>
           </a>
         </div>
       ))}
     </div>
 
-    <div class="mt-12 max-w-3xl mx-auto bg-amber-50 border border-amber-200 rounded-2xl p-6 flex items-start gap-4">
-      <Icon name="info" class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
-      <p class="text-slate-700 leading-relaxed">
+    <div class="pricing-note">
+      <Icon name="info" class="pricing-note-ico" />
+      <p>
         <strong>Skomplikowane przypadki</strong> (zatory w pionach wielorodzinnych, awarie przyłączy,
         prace nocne, dojazdy do okolicznych gmin) wyceniamy indywidualnie. Zadzwoń –&nbsp;
-        <a href={`tel:${siteConfig.phoneTel}`} class="text-sky-600 font-semibold hover:underline">
-          {siteConfig.phone}
-        </a>
+        <a href={`tel:${siteConfig.phoneTel}`} class="pricing-note-link">{siteConfig.phone}</a>
         &nbsp;– i krótko opisz sytuację.
       </p>
     </div>
   </div>
 </section>
+
+<style>
+  .pricing { padding: 5rem 0; background: var(--bg-light); }
+  @media (min-width: 1024px) { .pricing { padding: 7rem 0; } }
+
+  .pricing-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .pricing-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .pricing-inner { padding: 0 2rem; } }
+
+  .pricing-head { text-align: center; margin-bottom: 3rem; }
+  .eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .pricing-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 640px) { .pricing-title { font-size: 2.25rem; } }
+  @media (min-width: 1024px) { .pricing-title { font-size: 3rem; } }
+  .pricing-sub { font-size: 1.125rem; color: #475569; max-width: 42rem; margin: 0 auto; }
+  .pricing-sub-strong { display: block; margin-top: 0.5rem; color: #334155; }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .price-card {
+    position: relative;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .price-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  .price-card:not(.is-popular):hover { border-color: #bae6fd; }
+  .price-card.is-popular {
+    border-color: var(--sky);
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+  }
+  @media (min-width: 1024px) {
+    .price-card.is-popular { transform: scale(1.05); }
+    .price-card.is-popular:hover { transform: scale(1.05) translateY(-0.25rem); }
+  }
+
+  .price-card-head { text-align: center; margin-bottom: 2rem; }
+  .price-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+  }
+  .price-desc { color: #64748b; font-size: 0.875rem; }
+
+  .price-amount-wrap { text-align: center; margin-bottom: 2rem; }
+  .price-amount { font-size: 2.25rem; font-weight: 700; color: #0f172a; }
+  @media (min-width: 1024px) { .price-amount { font-size: 3rem; } }
+
+  .price-features { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+  .price-features li { display: flex; align-items: flex-start; gap: 0.75rem; }
+  .price-check { width: 1.25rem; height: 1.25rem; color: var(--sky); flex-shrink: 0; margin-top: 0.125rem; }
+  .price-features span { color: #475569; }
+
+  .price-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.875rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  }
+  .price-btn-ico { width: 1rem; height: 1rem; }
+  .price-btn-popular {
+    background: linear-gradient(90deg, var(--sky), var(--cyan));
+    color: #fff;
+  }
+  .price-btn-popular:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+  }
+  .price-btn-plain { background: #f1f5f9; color: #334155; }
+  .price-btn-plain:hover { background: #e2e8f0; }
+
+  .pricing-note {
+    margin-top: 3rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .pricing-note-ico { width: 1.5rem; height: 1.5rem; color: #d97706; flex-shrink: 0; margin-top: 0.25rem; }
+  .pricing-note p { color: #334155; line-height: 1.7; }
+  .pricing-note-link { color: #0284c7; font-weight: 600; text-decoration: none; }
+  .pricing-note-link:hover { text-decoration: underline; }
+</style>

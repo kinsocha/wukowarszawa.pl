@@ -1,5 +1,5 @@
 ---
-import Default from '../../layouts/Default.astro';
+import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import { getCollection } from 'astro:content';
 
@@ -14,27 +14,25 @@ const formatter = new Intl.DateTimeFormat('pl-PL', {
 });
 ---
 
-<Default
+<Layout
   title="Poradnik – czyszczenie i udrażnianie kanalizacji | Wuko Warszawa"
   description="Praktyczne porady o czyszczeniu kanalizacji: ceny, dobór metody, wuko czy sprężyna, deszczówka i rynny. Pisane na podstawie codziennej pracy w Warszawie."
 >
   <!-- Hero -->
-  <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-sky-900 overflow-hidden">
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute top-1/4 -left-32 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl animate-pulse"></div>
-      <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay:1s"></div>
+  <section class="pl-hero">
+    <div class="pl-hero-bg">
+      <div class="pl-orb pl-orb-1"></div>
+      <div class="pl-orb pl-orb-2"></div>
     </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-2 text-white/60 text-sm mb-6">
-        <a href="/" class="hover:text-sky-300 transition-colors flex items-center gap-1">
-          <Icon name="arrow-left" class="w-4 h-4" /> Strona główna
-        </a>
+    <div class="pl-hero-inner">
+      <div class="pl-crumbs">
+        <a href="/"><Icon name="arrow-left" class="pl-crumb-ico" /> Strona główna</a>
         <span>/</span>
-        <span class="text-white">Poradnik</span>
+        <span class="pl-crumbs-current">Poradnik</span>
       </div>
-      <div class="text-center max-w-3xl mx-auto">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">Poradnik</h1>
-        <p class="text-lg sm:text-xl text-white/80 leading-relaxed">
+      <div class="pl-hero-copy">
+        <h1 class="pl-h1">Poradnik</h1>
+        <p class="pl-hero-sub">
           Odpowiedzi na pytania, które klienci zadają nam najczęściej: ile to kosztuje,
           którą metodę wybrać i jak nie dopuścić do kolejnego zatoru. Bez teorii z podręczników —
           tylko to, co wynika z codziennej pracy przy kanalizacji.
@@ -44,35 +42,28 @@ const formatter = new Intl.DateTimeFormat('pl-PL', {
   </section>
 
   <!-- Articles -->
-  <section class="py-16 lg:py-20 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+  <section class="pl-list">
+    <div class="pl-wide">
+      <div class="pl-grid">
         {articles.map(article => (
-          <article class="group relative bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:shadow-sky-500/10 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-            <div class="h-1.5 bg-gradient-to-r from-sky-500 to-cyan-500"></div>
-            <div class="p-6 lg:p-8 flex flex-col flex-1">
-              <div class="flex items-center gap-3 text-sm mb-4">
-                <span class="inline-block bg-sky-50 text-sky-700 font-semibold px-3 py-1 rounded-full">
-                  {article.data.category}
-                </span>
-                <time class="text-slate-500" datetime={article.data.pubDate.toISOString()}>
+          <article class="pl-card">
+            <div class="pl-card-bar"></div>
+            <div class="pl-card-body">
+              <div class="pl-meta">
+                <span class="pl-cat">{article.data.category}</span>
+                <time class="pl-date" datetime={article.data.pubDate.toISOString()}>
                   {formatter.format(article.data.pubDate)}
                 </time>
               </div>
-              <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug">
-                <a href={`/poradnik/${article.slug}/`} class="hover:text-sky-700 transition-colors">
-                  {article.data.title}
-                </a>
+              <h2 class="pl-card-title">
+                <a href={`/poradnik/${article.slug}/`}>{article.data.title}</a>
               </h2>
-              <p class="text-slate-600 leading-relaxed mb-6 flex-1">{article.data.description}</p>
-              <div class="flex items-center justify-between border-t border-slate-100 pt-4">
-                <span class="text-sm text-slate-500">{article.data.readingTime} min czytania</span>
-                <a
-                  href={`/poradnik/${article.slug}/`}
-                  class="inline-flex items-center text-sky-600 font-semibold group-hover:text-sky-700"
-                >
+              <p class="pl-card-desc">{article.data.description}</p>
+              <div class="pl-card-foot">
+                <span class="pl-reading">{article.data.readingTime} min czytania</span>
+                <a href={`/poradnik/${article.slug}/`} class="pl-read">
                   Czytaj
-                  <Icon name="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <Icon name="arrow-right" class="pl-read-ico" />
                 </a>
               </div>
             </div>
@@ -81,4 +72,153 @@ const formatter = new Intl.DateTimeFormat('pl-PL', {
       </div>
     </div>
   </section>
-</Default>
+</Layout>
+
+<style>
+  .pl-wide {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .pl-wide { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .pl-wide { padding: 0 2rem; } }
+
+  /* Hero */
+  .pl-hero {
+    position: relative;
+    padding: 8rem 0 4rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
+    overflow: hidden;
+  }
+  @media (min-width: 1024px) { .pl-hero { padding: 10rem 0 5rem; } }
+  .pl-hero-bg { position: absolute; inset: 0; overflow: hidden; }
+  .pl-orb {
+    position: absolute;
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    filter: blur(64px);
+    animation: pl-pulse 4s ease-in-out infinite;
+  }
+  .pl-orb-1 { top: 25%; left: -8rem; background: rgba(14, 165, 233, 0.2); }
+  .pl-orb-2 { bottom: 25%; right: -8rem; background: rgba(6, 182, 212, 0.2); animation-delay: 1s; }
+
+  .pl-hero-inner {
+    position: relative;
+    z-index: 10;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .pl-hero-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .pl-hero-inner { padding: 0 2rem; } }
+
+  .pl-crumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  .pl-crumbs a {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .pl-crumbs a:hover { color: #7dd3fc; }
+  .pl-crumb-ico { width: 1rem; height: 1rem; }
+  .pl-crumbs-current { color: #fff; }
+
+  .pl-hero-copy { text-align: center; max-width: 48rem; margin: 0 auto; }
+  .pl-h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 640px) { .pl-h1 { font-size: 3rem; } }
+  @media (min-width: 1024px) { .pl-h1 { font-size: 3.75rem; } }
+  .pl-hero-sub { font-size: 1.125rem; color: rgba(255, 255, 255, 0.8); line-height: 1.7; }
+  @media (min-width: 640px) { .pl-hero-sub { font-size: 1.25rem; } }
+
+  /* Lista */
+  .pl-list { padding: 4rem 0; background: var(--bg-light); }
+  @media (min-width: 1024px) { .pl-list { padding: 5rem 0; } }
+  .pl-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) { .pl-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .pl-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+
+  .pl-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .pl-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
+  }
+  .pl-card-bar { height: 0.375rem; background: linear-gradient(90deg, var(--sky), var(--cyan)); }
+  .pl-card-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+  @media (min-width: 1024px) { .pl-card-body { padding: 2rem; } }
+
+  .pl-meta { display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem; margin-bottom: 1rem; }
+  .pl-cat {
+    display: inline-block;
+    background: var(--bg-sky);
+    color: #0369a1;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+  }
+  .pl-date { color: #64748b; }
+
+  .pl-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
+  }
+  .pl-card-title a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+  .pl-card-title a:hover { color: #0369a1; }
+  .pl-card-desc { color: #475569; line-height: 1.7; margin-bottom: 1.5rem; flex: 1; }
+
+  .pl-card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1rem;
+  }
+  .pl-reading { font-size: 0.875rem; color: #64748b; }
+  .pl-read {
+    display: inline-flex;
+    align-items: center;
+    color: #0284c7;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .pl-card:hover .pl-read { color: #0369a1; }
+  .pl-read-ico { width: 1rem; height: 1rem; margin-left: 0.5rem; transition: transform 0.25s ease; }
+  .pl-card:hover .pl-read-ico { transform: translateX(0.25rem); }
+
+  @keyframes pl-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+</style>

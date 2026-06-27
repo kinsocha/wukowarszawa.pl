@@ -9,56 +9,61 @@ interface Props {
 
 const { district } = Astro.props;
 const others = siteConfig.mainDistricts.filter(n => n !== district.name);
+
+const scope = [
+  { icon: 'droplets', title: 'Hydrodynamiczne Wuko', desc: 'Czyszczenie rur wodą pod wysokim ciśnieniem (do 200 bar). Skuteczne przy osadach, tłuszczach i zalegających zanieczyszczeniach.' },
+  { icon: 'wrench',   title: 'Sprężyna elektryczna', desc: 'Mechaniczne usuwanie zatorów w pionach, poziomach i przy zlewach, umywalkach, toaletach.' },
+  { icon: 'camera',   title: 'Inspekcja kamerą TV',  desc: 'Diagnostyka wnętrza rur kamerą o wysokiej rozdzielczości. Lokalizacja uszkodzeń, załamań, korzeni.' },
+];
+
+const reasons = [
+  `Doświadczenie od ${siteConfig.experienceSince} r. – praca z kanalizacją miejską (MPWiK Warszawa) i przydomową`,
+  'Sprzęt dopasowany do bloków, kamienic i domów jednorodzinnych',
+  'Jasne zasady rozliczeń i możliwość faktury VAT',
+  'Skupienie na usunięciu przyczyny problemu, nie tylko jego skutków',
+  'Dobra znajomość dzielnicy – szybki dojazd i sprawne wykonanie',
+];
 ---
 
 <!-- Hero -->
-<section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-slate-900 via-slate-800 to-sky-900 overflow-hidden">
-  <div class="absolute inset-0 overflow-hidden">
-    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay:1s"></div>
+<section class="dc-hero">
+  <div class="dc-hero-bg">
+    <div class="dc-orb dc-orb-1"></div>
+    <div class="dc-orb dc-orb-2"></div>
   </div>
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center gap-2 text-white/60 text-sm mb-6">
-      <a href="/" class="hover:text-sky-300 transition-colors">Strona główna</a>
+  <div class="dc-hero-inner">
+    <div class="dc-crumbs">
+      <a href="/">Strona główna</a>
       <span>/</span>
-      <span class="text-white">{district.fullName}</span>
+      <span class="dc-crumbs-current">{district.fullName}</span>
     </div>
-    <div class="max-w-4xl">
-      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-        <Icon name="map-pin" class="w-4 h-4 text-sky-300" />
-        <span class="text-white/90 text-sm font-medium">Warszawa, dzielnica {district.name}</span>
+    <div class="dc-hero-copy">
+      <div class="dc-badge">
+        <Icon name="map-pin" class="dc-badge-ico" />
+        <span>Warszawa, dzielnica {district.name}</span>
       </div>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+      <h1 class="dc-h1">
         {district.fullName}
-        <span class="block bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
-          udrażnianie rur
-        </span>
+        <span class="dc-h1-grad">udrażnianie rur</span>
       </h1>
-      <p class="text-lg sm:text-xl text-white/80 max-w-3xl mb-10 leading-relaxed">{district.heroIntro}</p>
-      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-        <a
-          href={`tel:${siteConfig.phoneTel}`}
-          class="group flex items-center gap-3 bg-gradient-to-r from-sky-500 to-cyan-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-sky-500/40 transition-all hover:scale-105"
-        >
-          <Icon name="phone" class="w-5 h-5" />
+      <p class="dc-hero-intro">{district.heroIntro}</p>
+      <div class="dc-hero-buttons">
+        <a href={`tel:${siteConfig.phoneTel}`} class="dc-btn-call">
+          <Icon name="phone" class="dc-btn-ico" />
           <span>Zadzwoń: {siteConfig.phone}</span>
         </a>
-        <a href="#zakres-prac" class="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all">
-          Zobacz, w czym pomagamy
-        </a>
+        <a href="#zakres-prac" class="dc-btn-ghost">Zobacz, w czym pomagamy</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Opis -->
-<section class="py-20 lg:py-24 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
-      Czyszczenie kanalizacji w dzielnicy {district.name}
-    </h2>
-    <p class="text-lg text-slate-600 leading-relaxed mb-6">{district.description}</p>
-    <p class="text-lg text-slate-600 leading-relaxed">
+<section class="dc-section dc-bg-white">
+  <div class="dc-narrow">
+    <h2 class="dc-h2 dc-h2-left">Czyszczenie kanalizacji w dzielnicy {district.name}</h2>
+    <p class="dc-p">{district.description}</p>
+    <p class="dc-p">
       Przed przyjazdem prosimy o krótki opis objawów i rodzaju budynku. Ułatwia to dobór sprzętu
       (Wuko lub sprężyna mechaniczna) i pozwala lepiej oszacować zakres prac na miejscu.
     </p>
@@ -66,24 +71,20 @@ const others = siteConfig.mainDistricts.filter(n => n !== district.name);
 </section>
 
 <!-- Zakres prac -->
-<section id="zakres-prac" class="py-20 lg:py-24 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">Co robimy w {district.name}</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Zakres prac</h2>
+<section id="zakres-prac" class="dc-section dc-bg-light">
+  <div class="dc-wide">
+    <div class="dc-head">
+      <span class="eyebrow">Co robimy w {district.name}</span>
+      <h2 class="dc-h2">Zakres prac</h2>
     </div>
-    <div class="grid md:grid-cols-3 gap-6">
-      {[
-        { icon: 'droplets', title: 'Hydrodynamiczne Wuko', desc: 'Czyszczenie rur wodą pod wysokim ciśnieniem (do 200 bar). Skuteczne przy osadach, tłuszczach i zalegających zanieczyszczeniach.' },
-        { icon: 'wrench',   title: 'Sprężyna elektryczna', desc: 'Mechaniczne usuwanie zatorów w pionach, poziomach i przy zlewach, umywalkach, toaletach.' },
-        { icon: 'camera',   title: 'Inspekcja kamerą TV',  desc: 'Diagnostyka wnętrza rur kamerą o wysokiej rozdzielczości. Lokalizacja uszkodzeń, załamań, korzeni.' },
-      ].map(item => (
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-          <div class="p-3 bg-sky-50 rounded-xl w-fit mb-4">
-            <Icon name={item.icon} class="w-7 h-7 text-sky-600" />
+    <div class="dc-grid-3">
+      {scope.map(item => (
+        <div class="dc-card">
+          <div class="dc-card-ico-wrap">
+            <Icon name={item.icon} class="dc-card-ico" />
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-          <p class="text-slate-600 leading-relaxed">{item.desc}</p>
+          <h3 class="dc-card-title">{item.title}</h3>
+          <p class="dc-card-desc">{item.desc}</p>
         </div>
       ))}
     </div>
@@ -91,23 +92,23 @@ const others = siteConfig.mainDistricts.filter(n => n !== district.name);
 </section>
 
 <!-- Obszar działania -->
-<section class="py-20 lg:py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">Obsługujemy</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">{district.name} – obszar działania</h2>
+<section class="dc-section dc-bg-white">
+  <div class="dc-wide">
+    <div class="dc-head">
+      <span class="eyebrow">Obsługujemy</span>
+      <h2 class="dc-h2">{district.name} – obszar działania</h2>
     </div>
-    <div class="mb-12">
-      <h3 class="text-xl font-semibold text-slate-700 mb-4">Osiedla i części dzielnicy:</h3>
-      <div class="flex flex-wrap gap-3">
+    <div class="dc-area-block">
+      <h3 class="dc-area-h3">Osiedla i części dzielnicy:</h3>
+      <div class="dc-tags">
         {district.areas.map(a => (
-          <span class="px-4 py-2 bg-sky-50 text-sky-700 rounded-full font-medium border border-sky-100">{a}</span>
+          <span class="dc-tag">{a}</span>
         ))}
       </div>
     </div>
     <div>
-      <h3 class="text-xl font-semibold text-slate-700 mb-4">Dojeżdżamy m.in. na ulice:</h3>
-      <p class="text-slate-600 leading-relaxed">
+      <h3 class="dc-area-h3">Dojeżdżamy m.in. na ulice:</h3>
+      <p class="dc-p">
         {district.streets.join(' • ')} i pozostałe ulice dzielnicy {district.name}.
       </p>
     </div>
@@ -116,19 +117,19 @@ const others = siteConfig.mainDistricts.filter(n => n !== district.name);
 
 <!-- Opinie lokalne -->
 {district.testimonials.length > 0 && (
-  <section class="py-20 lg:py-24 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">Opinie z {district.name}</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Co mówią klienci</h2>
+  <section class="dc-section dc-bg-light">
+    <div class="dc-wide">
+      <div class="dc-head">
+        <span class="eyebrow">Opinie z {district.name}</span>
+        <h2 class="dc-h2">Co mówią klienci</h2>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="dc-grid-3">
         {district.testimonials.map(t => (
-          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-            <Icon name="quote" class="w-8 h-8 text-sky-300 mb-4" />
-            <p class="text-slate-700 leading-relaxed mb-4 italic">"{t.text}"</p>
-            <div class="flex items-center gap-2 text-sm text-slate-500">
-              <Icon name="map-pin" class="w-4 h-4" />
+          <div class="dc-card">
+            <Icon name="quote" class="dc-quote" />
+            <p class="dc-review-text">"{t.text}"</p>
+            <div class="dc-review-meta">
+              <Icon name="map-pin" class="dc-review-ico" />
               <span>{t.location}</span>
             </div>
           </div>
@@ -139,20 +140,14 @@ const others = siteConfig.mainDistricts.filter(n => n !== district.name);
 )}
 
 <!-- Dlaczego my -->
-<section class="py-20 lg:py-24 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-12 text-center">Dlaczego warto wybrać nas w {district.name}</h2>
-    <div class="space-y-4">
-      {[
-        `Doświadczenie od ${siteConfig.experienceSince} r. – praca z kanalizacją miejską (MPWiK Warszawa) i przydomową`,
-        'Sprzęt dopasowany do bloków, kamienic i domów jednorodzinnych',
-        'Jasne zasady rozliczeń i możliwość faktury VAT',
-        'Skupienie na usunięciu przyczyny problemu, nie tylko jego skutków',
-        'Dobra znajomość dzielnicy – szybki dojazd i sprawne wykonanie',
-      ].map(p => (
-        <div class="flex items-start gap-3">
-          <Icon name="check-circle" class="w-6 h-6 text-sky-500 flex-shrink-0 mt-0.5" />
-          <p class="text-lg text-slate-700">{p}</p>
+<section class="dc-section dc-bg-white">
+  <div class="dc-narrow">
+    <h2 class="dc-h2 dc-h2-spaced">Dlaczego warto wybrać nas w {district.name}</h2>
+    <div class="dc-reasons">
+      {reasons.map(p => (
+        <div class="dc-reason">
+          <Icon name="check-circle" class="dc-reason-ico" />
+          <p class="dc-reason-text">{p}</p>
         </div>
       ))}
     </div>
@@ -181,17 +176,17 @@ const others = siteConfig.mainDistricts.filter(n => n !== district.name);
         "acceptedAnswer": { "@type": "Answer", "text": f.answer }
       }))
     }) + '</script>'} />
-    <section class="py-20 lg:py-24 bg-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <span class="inline-block text-sky-600 font-semibold text-sm tracking-wider uppercase mb-4">Pytania i odpowiedzi</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">FAQ – Wuko {district.name}</h2>
+    <section class="dc-section dc-bg-white">
+      <div class="dc-narrow">
+        <div class="dc-head">
+          <span class="eyebrow">Pytania i odpowiedzi</span>
+          <h2 class="dc-h2">FAQ – Wuko {district.name}</h2>
         </div>
-        <div class="space-y-4">
+        <div class="dc-reasons">
           {district.faq.map(f => (
-            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-              <h3 class="text-lg font-bold text-slate-900 mb-3">{f.question}</h3>
-              <p class="text-slate-600 leading-relaxed">{f.answer}</p>
+            <div class="dc-faq-item">
+              <h3 class="dc-faq-q">{f.question}</h3>
+              <p class="dc-faq-a">{f.answer}</p>
             </div>
           ))}
         </div>
@@ -201,39 +196,324 @@ const others = siteConfig.mainDistricts.filter(n => n !== district.name);
 )}
 
 <!-- CTA -->
-<section class="py-16 lg:py-20 bg-gradient-to-br from-sky-600 to-cyan-600">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Potrzebujesz Wuko w {district.name}?</h2>
-    <p class="text-xl text-white/90 mb-8">Zadzwoń – ustalimy termin i orientacyjny koszt.</p>
-    <a
-      href={`tel:${siteConfig.phoneTel}`}
-      class="inline-flex items-center gap-3 bg-white text-sky-600 px-10 py-5 rounded-full text-xl font-bold hover:shadow-2xl transition-all hover:scale-105"
-    >
-      <Icon name="phone" class="w-6 h-6" />
+<section class="dc-cta">
+  <div class="dc-cta-inner">
+    <h2 class="dc-cta-title">Potrzebujesz Wuko w {district.name}?</h2>
+    <p class="dc-cta-sub">Zadzwoń – ustalimy termin i orientacyjny koszt.</p>
+    <a href={`tel:${siteConfig.phoneTel}`} class="dc-cta-btn">
+      <Icon name="phone" class="dc-cta-ico" />
       <span>{siteConfig.phone}</span>
     </a>
   </div>
 </section>
 
 <!-- Inne dzielnice -->
-<section class="py-16 lg:py-20 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Działamy też w innych dzielnicach Warszawy</h2>
-    <div class="flex flex-wrap justify-center gap-3">
+<section class="dc-section-sm dc-bg-light">
+  <div class="dc-wide">
+    <h2 class="dc-others-title">Działamy też w innych dzielnicach Warszawy</h2>
+    <div class="dc-others">
       {others.map(name => {
         const d = districts.find(x => x.name === name);
         if (!d) return null;
         return (
-          <a
-            href={`/${d.slug}`}
-            class="group flex items-center gap-2 bg-white px-5 py-3 rounded-full border border-slate-200 hover:border-sky-300 hover:shadow-md transition-all"
-          >
-            <Icon name="map-pin" class="w-4 h-4 text-sky-500" />
-            <span class="font-medium text-slate-700 group-hover:text-sky-600">Wuko {name}</span>
-            <Icon name="arrow-right" class="w-4 h-4 text-slate-300 group-hover:text-sky-500 group-hover:translate-x-1 transition-all" />
+          <a href={`/${d.slug}`} class="dc-other">
+            <Icon name="map-pin" class="dc-other-pin" />
+            <span class="dc-other-name">Wuko {name}</span>
+            <Icon name="arrow-right" class="dc-other-arrow" />
           </a>
         );
       })}
     </div>
   </div>
 </section>
+
+<style>
+  .eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  /* Wspolne kontenery */
+  .dc-narrow, .dc-wide {
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .dc-narrow, .dc-wide { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .dc-narrow, .dc-wide { padding: 0 2rem; } }
+  .dc-narrow { max-width: 56rem; }
+  .dc-wide { max-width: 80rem; }
+
+  .dc-section { padding: 5rem 0; }
+  @media (min-width: 1024px) { .dc-section { padding: 6rem 0; } }
+  .dc-section-sm { padding: 4rem 0; }
+  @media (min-width: 1024px) { .dc-section-sm { padding: 5rem 0; } }
+  .dc-bg-white { background: #fff; }
+  .dc-bg-light { background: var(--bg-light); }
+
+  .dc-head { text-align: center; margin-bottom: 3rem; }
+  .dc-h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+  }
+  @media (min-width: 640px) { .dc-h2 { font-size: 2.25rem; } }
+  .dc-h2-left { text-align: left; margin-bottom: 1.5rem; }
+  .dc-h2-spaced { margin-bottom: 3rem; }
+  .dc-p { font-size: 1.125rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem; }
+  .dc-p:last-child { margin-bottom: 0; }
+
+  /* Hero */
+  .dc-hero {
+    position: relative;
+    padding: 8rem 0 5rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
+    overflow: hidden;
+  }
+  @media (min-width: 1024px) { .dc-hero { padding: 10rem 0 7rem; } }
+  .dc-hero-bg { position: absolute; inset: 0; overflow: hidden; }
+  .dc-orb {
+    position: absolute;
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    filter: blur(64px);
+    animation: dc-pulse 4s ease-in-out infinite;
+  }
+  .dc-orb-1 { top: 25%; left: -8rem; background: rgba(14, 165, 233, 0.2); }
+  .dc-orb-2 { bottom: 25%; right: -8rem; background: rgba(6, 182, 212, 0.2); animation-delay: 1s; }
+
+  .dc-hero-inner {
+    position: relative;
+    z-index: 10;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .dc-hero-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .dc-hero-inner { padding: 0 2rem; } }
+
+  .dc-crumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  .dc-crumbs a { color: rgba(255, 255, 255, 0.6); text-decoration: none; transition: color 0.2s ease; }
+  .dc-crumbs a:hover { color: #7dd3fc; }
+  .dc-crumbs-current { color: #fff; }
+
+  .dc-hero-copy { max-width: 56rem; }
+  .dc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .dc-badge-ico { width: 1rem; height: 1rem; color: #7dd3fc; }
+  .dc-badge span { color: rgba(255, 255, 255, 0.9); font-size: 0.875rem; font-weight: 500; }
+
+  .dc-h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 640px) { .dc-h1 { font-size: 3rem; } }
+  @media (min-width: 1024px) { .dc-h1 { font-size: 3.75rem; } }
+  .dc-h1-grad {
+    display: block;
+    background: linear-gradient(90deg, #38bdf8, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .dc-hero-intro {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 48rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+  @media (min-width: 640px) { .dc-hero-intro { font-size: 1.25rem; } }
+
+  .dc-hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  @media (min-width: 640px) { .dc-hero-buttons { flex-direction: row; align-items: center; } }
+  .dc-btn-call {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(90deg, var(--sky), var(--cyan));
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .dc-btn-call:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(14, 165, 233, 0.4); }
+  .dc-btn-ico { width: 1.25rem; height: 1.25rem; }
+  .dc-btn-ghost {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s ease;
+  }
+  .dc-btn-ghost:hover { background: rgba(255, 255, 255, 0.2); }
+
+  /* Karty 3-kolumnowe */
+  .dc-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) { .dc-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+  .dc-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+  }
+  .dc-card-ico-wrap {
+    padding: 0.75rem;
+    background: var(--bg-sky);
+    border-radius: 0.75rem;
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+  .dc-card-ico { width: 1.75rem; height: 1.75rem; color: #0284c7; }
+  .dc-card-title { font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
+  .dc-card-desc { color: #475569; line-height: 1.7; }
+
+  .dc-quote { width: 2rem; height: 2rem; color: #7dd3fc; margin-bottom: 1rem; }
+  .dc-review-text { color: #334155; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+  .dc-review-meta { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #64748b; }
+  .dc-review-ico { width: 1rem; height: 1rem; }
+
+  /* Obszar dzialania */
+  .dc-area-block { margin-bottom: 3rem; }
+  .dc-area-h3 { font-size: 1.25rem; font-weight: 600; color: #334155; margin-bottom: 1rem; }
+  .dc-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .dc-tag {
+    padding: 0.5rem 1rem;
+    background: var(--bg-sky);
+    color: #0369a1;
+    border-radius: 999px;
+    font-weight: 500;
+    border: 1px solid #e0f2fe;
+  }
+
+  /* Dlaczego / FAQ listy */
+  .dc-reasons { display: flex; flex-direction: column; gap: 1rem; }
+  .dc-reason { display: flex; align-items: flex-start; gap: 0.75rem; }
+  .dc-reason-ico { width: 1.5rem; height: 1.5rem; color: var(--sky); flex-shrink: 0; margin-top: 0.125rem; }
+  .dc-reason-text { font-size: 1.125rem; color: #334155; }
+
+  .dc-faq-item {
+    background: var(--bg-light);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #f1f5f9;
+  }
+  .dc-faq-q { font-size: 1.125rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
+  .dc-faq-a { color: #475569; line-height: 1.7; }
+
+  /* CTA */
+  .dc-cta {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #0284c7, #0891b2);
+  }
+  @media (min-width: 1024px) { .dc-cta { padding: 5rem 0; } }
+  .dc-cta-inner {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  @media (min-width: 640px) { .dc-cta-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .dc-cta-inner { padding: 0 2rem; } }
+  .dc-cta-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 640px) { .dc-cta-title { font-size: 2.25rem; } }
+  .dc-cta-sub { font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; }
+  .dc-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #fff;
+    color: #0284c7;
+    padding: 1.25rem 2.5rem;
+    border-radius: 999px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .dc-cta-btn:hover { transform: scale(1.05); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25); }
+  .dc-cta-ico { width: 1.5rem; height: 1.5rem; }
+
+  /* Inne dzielnice */
+  .dc-others-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .dc-others { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+  .dc-other {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .dc-other:hover { border-color: #7dd3fc; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); }
+  .dc-other-pin { width: 1rem; height: 1rem; color: var(--sky); }
+  .dc-other-name { font-weight: 500; color: #334155; transition: color 0.2s ease; }
+  .dc-other:hover .dc-other-name { color: #0284c7; }
+  .dc-other-arrow { width: 1rem; height: 1rem; color: #cbd5e1; transition: color 0.25s ease, transform 0.25s ease; }
+  .dc-other:hover .dc-other-arrow { color: var(--sky); transform: translateX(0.25rem); }
+
+  @keyframes dc-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+</style>
