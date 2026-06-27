@@ -51,6 +51,7 @@ export const siteConfig = {
     'Ursus',
     'Mokotów',
     'Wola',
+    'Ursynów',
   ],
 
   // Wszystkie dzielnice Warszawy (dla sekcji Locations)

@@ -6,6 +6,8 @@ export interface DistrictData {
   slug: string; // URL np. "wukowawer" → /wukowawer
   name: string; // "Wawer"
   fullName: string; // "Wuko Wawer"
+  h1Main?: string; // opcjonalna 1. linia H1 (domyślnie fullName)
+  h1Accent?: string; // opcjonalna 2. linia H1 w gradiencie (domyślnie "udrażnianie rur")
   metaTitle: string;
   metaDescription: string;
   heroIntro: string;
@@ -872,6 +874,95 @@ export const districts: DistrictData[] = [
         question: 'Mam nowe mieszkanie, a odpływ się zatyka. Z czego to wynika?',
         answer:
           'W nowych osiedlach na Odolanach czy przy Jana Kazimierza częstą przyczyną jest zaprawa lub gruz, który został w rurach po budowie. Kamerą lokalizujemy przeszkodę, a następnie wypłukujemy ją Wukiem – bez kucia ścian.',
+      },
+    ],
+  },
+  {
+    slug: 'wukoursynow',
+    name: 'Ursynów',
+    fullName: 'Wuko Ursynów',
+    h1Main: 'Wuko Ursynów',
+    h1Accent: 'ciśnieniowe udrażnianie i czyszczenie kanalizacji',
+    metaTitle: 'Wuko Ursynów – ciśnieniowe udrażnianie i czyszczenie kanalizacji | Wuko Warszawa',
+    metaDescription:
+      'Wuko Ursynów – udrażnianie kanalizacji w blokach, wspólnotach i domach. Imielin, Natolin, Kabaty, Stokłosy, Jeziorki. Wycena przed przyjazdem, faktura VAT.',
+    heroIntro:
+      'Obsługujemy cały Ursynów – od bloków z wielkiej płyty na Imielinie i Stokłosach, przez nowsze osiedla na Kabatach i Natolinie, po domy jednorodzinne w Pyrach, na Jeziorkach i Grabowie. Każdy z tych budynków zatyka się inaczej. Metodę dobieramy do instalacji, a cenę podajemy przed przyjazdem.',
+    areas: [
+      'Imielin',
+      'Natolin',
+      'Kabaty',
+      'Stokłosy',
+      'Ursynów Północny',
+      'Pyry',
+      'Grabów',
+      'Jeziorki',
+      'Wyczółki',
+      'Dąbrówka',
+    ],
+    streets: [
+      'al. KEN',
+      'Puławska',
+      'Rosoła',
+      'Stryjeńskich',
+      'Belgradzka',
+      'Indiry Gandhi',
+      'Płaskowickiej',
+      'Wąwozowa',
+      'Dereniowa',
+      'Surowieckiego',
+      'Cynamonowa',
+      'Migdałowa',
+      'Romera',
+      'Pileckiego',
+      'Nowoursynowska',
+      'Kabacki Dukt',
+      'Jeżewskiego',
+      'Wiolinowa',
+      'Lasek Brzozowy',
+      'Grzegorzewskiej',
+    ],
+    description:
+      'Ursynów to przede wszystkim bloki. Wielka płyta z lat 70. i 80. na Imielinie, Stokłosach i Ursynowie Północnym sąsiaduje tu z nowszymi osiedlami na Natolinie i Kabatach. W blokach najczęstszy problem to piony zarośnięte tłuszczem i osadami – ścieki z kilkudziesięciu mieszkań schodzą jednym przewodem, więc warstwa narasta szybciej, niż się wydaje. Tu sprawdza się płukanie hydrodynamiczne Wuko: strumień wody pod ciśnieniem zdziera osad ze ścianek na całej długości rury, a nie tylko przebija korek. Inaczej wygląda południe dzielnicy. Pyry, Jeziorki i Grabów to zabudowa jednorodzinna z dłuższymi przyłączami do studzienki albo szamba – tam Wuko dosięga dalej niż sprężyna i radzi sobie z piaskiem, korzeniami i osadami na kilkudziesięciu metrach rury. Cieńsze podejścia od zlewu czy umywalki, fi 40–50 mm, zwykle udrażniamy sprężyną elektryczną. Metodę dobieramy po objawach, a przy powracających zatorach sprawdzamy rurę kamerą TV.',
+    testimonials: [
+      {
+        text: 'Pion w bloku na Imielinie zatykał się co kilka miesięcy. Tym razem przepłukali go ciśnieniem i pokazali kamerą, że rura jest czysta. Od pół roku spokój. Polecam.',
+        location: 'Imielin',
+      },
+      {
+        text: 'Nowe mieszkanie na Kabatach, a odpływ w łazience stał. W rurze została zaprawa z budowy – kamera pokazała gdzie, reszta poszła Wukiem. Bez kucia.',
+        location: 'Kabaty',
+      },
+      {
+        text: 'Szybko i kulturalnie. Zlew w kuchni udrożniony sprężyną w niecałą godzinę.',
+        location: 'Natolin',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Ursynowie?',
+        answer:
+          'Wycenę podajemy telefonicznie, przed przyjazdem – po krótkim opisie problemu. Orientacyjny cennik wszystkich usług znajdziesz na stronie głównej, w sekcji Cennik. Na miejscu kwota nie zmienia się bez powodu.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Imielin, Natolin albo Kabaty?',
+        answer:
+          'Najczęściej w ciągu 1–2 godzin od zgłoszenia. Ursynów dobrze znamy – od al. KEN i Puławskiej po Kabacki Dukt. Zadzwoń, podaj adres, ustalimy realny czas dojazdu.',
+      },
+      {
+        question: 'Pion w bloku na Ursynowie zatyka się co kilka miesięcy – co z tym zrobić?',
+        answer:
+          'Powracający zator w tym samym pionie to zwykle osad narastający na długim odcinku rury, nie jednorazowy korek. Samo przepchnięcie daje chwilową ulgę. Płukanie Wuko usuwa warstwę tłuszczu ze ścianek, więc efekt jest trwalszy. Przy opornych przypadkach warto zrobić inspekcję kamerą TV.',
+      },
+      {
+        question: 'Mam nowe mieszkanie na Kabatach, a odpływ się zatyka. Dlaczego?',
+        answer:
+          'W nowych osiedlach częstą przyczyną jest zaprawa albo gruz, który został w rurach po budowie. Kamerą lokalizujemy przeszkodę, a potem wypłukujemy ją Wukiem – bez rozkuwania ścian.',
+      },
+      {
+        question: 'Obsługujecie domy jednorodzinne w Pyrach i na Jeziorkach?',
+        answer:
+          'Tak. Domy mają dłuższe przyłącza zewnętrzne niż mieszkania w blokach – do studzienki albo do szamba. Wuko dosięga dalej niż sprężyna, nawet na 50–100 metrów elastycznym wężem, i radzi sobie z piaskiem, korzeniami i osadami. Faktury VAT wystawiamy bez problemu.',
       },
     ],
   },

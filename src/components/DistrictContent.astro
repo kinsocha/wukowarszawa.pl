@@ -43,8 +43,8 @@ const reasons = [
         <span>Warszawa, dzielnica {district.name}</span>
       </div>
       <h1 class="dc-h1">
-        {district.fullName}
-        <span class="dc-h1-grad">udrażnianie rur</span>
+        {district.h1Main ?? district.fullName}
+        <span class="dc-h1-grad">{district.h1Accent ?? 'udrażnianie rur'}</span>
       </h1>
       <p class="dc-hero-intro">{district.heroIntro}</p>
       <div class="dc-hero-buttons">
