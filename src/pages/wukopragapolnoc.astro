@@ -1,10 +1,10 @@
 ---
-import Default from '../layouts/Default.astro';
+import Layout from '../layouts/Layout.astro';
 import DistrictContent from '../components/DistrictContent.astro';
 import { districts } from '../data/districts';
 
 const district = districts.find(d => d.slug === 'wukopragapolnoc')!;
 ---
-<Default title={district.metaTitle} description={district.metaDescription}>
+<Layout title={district.metaTitle} description={district.metaDescription}>
   <DistrictContent district={district} />
-</Default>
+</Layout>

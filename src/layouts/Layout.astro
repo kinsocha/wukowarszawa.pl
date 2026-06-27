@@ -100,7 +100,7 @@ const canonical = new URL(Astro.url.pathname, siteConfig.url).href;
     <script type="application/ld+json" is:inline set:html={schema} />
     {ratingSchema && <script type="application/ld+json" is:inline set:html={ratingSchema} />}
   </head>
-  <body class="min-h-screen bg-white font-sans antialiased">
+  <body>
     <Navigation />
     <main>
       <slot />
