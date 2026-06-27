@@ -1,9 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   site: 'https://wukowarszawa.pl',
-  integrations: [mdx(), sitemap()],
-  // CSS is handled via PostCSS (postcss.config.js) with Tailwind
+  integrations: [sitemap()],
 });
