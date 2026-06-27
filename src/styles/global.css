@@ -117,17 +117,8 @@ body {
   color: var(--accent);
 }
 
-/* === NAVBAR scroll transition (zachowane) === */
-#navbar[data-solid="true"] .nav-link {
-  color: rgb(51 65 85);
-}
-#navbar[data-solid="false"] .nav-link {
-  color: rgba(255 255 255 / 0.9);
-}
-#navbar[data-solid="true"] .nav-link:hover,
-#navbar[data-solid="false"] .nav-link:hover {
-  color: rgb(14 165 233);
-}
+/* Helper do przelaczania widocznosci z JS (dziala miedzy komponentami) */
+.u-hidden { display: none !important; }
 
 /* === ANIMACJE (zachowane) === */
 @keyframes fade-in {
