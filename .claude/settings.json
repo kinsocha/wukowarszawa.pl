@@ -13,7 +13,9 @@
       "PowerShell(git add src/components/WukoMethod.astro src/pages/index.astro)",
       "PowerShell(npm install @astrojs/mdx)",
       "PowerShell(npm install @astrojs/mdx@^4)",
-      "PowerShell(git add -A)"
+      "PowerShell(git add -A)",
+      "PowerShell(gh run list -L 3)",
+      "PowerShell(Invoke-RestMethod \"https://wukowarszawa.pl/poradnik/\" -Method Head -UseBasicParsing)"
     ]
   }
 }
