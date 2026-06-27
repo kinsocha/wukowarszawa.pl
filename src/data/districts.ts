@@ -22,6 +22,14 @@ export interface DistrictData {
     question: string;
     answer: string;
   }>;
+  extra?: {
+    heading: string;
+    intro: string;
+    image?: { src: string; alt: string };
+    askLine: string;
+    questions: string[]; // dopuszczalny HTML (np. <strong>)
+    outro: string;
+  };
 }
 
 export const districts: DistrictData[] = [
@@ -965,6 +973,23 @@ export const districts: DistrictData[] = [
           'Tak. Domy mają dłuższe przyłącza zewnętrzne niż mieszkania w blokach – do studzienki albo do szamba. Wuko dosięga dalej niż sprężyna, nawet na 50–100 metrów elastycznym wężem, i radzi sobie z piaskiem, korzeniami i osadami. Faktury VAT wystawiamy bez problemu.',
       },
     ],
+    extra: {
+      heading: 'Przepychanie rur wuko na Ursynowie',
+      intro:
+        'Zatkana rura na Ursynowie potrafi wyglądać tak samo w bloku i w domu, a leżeć w zupełnie innym miejscu. Czasem to korek tuż za syfonem. Czasem osad w pionie na wysokości kilku pięter, a czasem przeszkoda w przyłączu pod ogrodem. Dlatego zanim dobierzemy metodę – płukanie ciśnieniowe wuko, sprężynę albo jedno i drugie – pytamy o kilka szczegółów. <strong>Oferujemy profesjonalny i kompleksowy serwis kanalizacji nowoczesnym sprzętem oraz monitoring rur.</strong>',
+      image: {
+        src: '/img/przepychanie-rur-wuko-ursynow.webp',
+        alt: 'Samochód serwisowy z urządzeniem wuko – bębny z wężami wysokociśnieniowymi i pompa do ciśnieniowego przepychania rur oraz udrażniania kanalizacji na Ursynowie',
+      },
+      askLine: 'Te trzy odpowiedzi mówią nam najwięcej. Podaj je przez telefon:',
+      questions: [
+        'Czy awaria jest <strong>wewnątrz mieszkania lub domu</strong> (toaleta, zlew, brodzik), czy w <strong>sieci na zewnątrz</strong> (przyłącze, studzienka)?',
+        'Z czego są rury, jeśli wiesz – <strong>PVC, żeliwo, kamionka</strong>?',
+        'Czy to <strong>pierwszy raz</strong>, czy zatyka się <strong>regularnie</strong>?',
+      ],
+      outro:
+        'Na tej podstawie ładujemy właściwy sprzęt i podajemy orientacyjny koszt jeszcze przed dojazdem. Gdy zator wraca mimo czyszczenia, rurę sprawdzamy kamerą i pokazujemy, gdzie tkwi przyczyna. Zadzwoń: 660 360 170.',
+    },
   },
 ];
 

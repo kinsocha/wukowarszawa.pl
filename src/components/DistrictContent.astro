@@ -154,6 +154,33 @@ const reasons = [
   </div>
 </section>
 
+<!-- Dodatkowa sekcja (opcjonalna, np. przepychanie + pytania diagnostyczne) -->
+{district.extra && (
+  <section class="dc-section dc-bg-light">
+    <div class="dc-narrow">
+      <h2 class="dc-h2 dc-h2-left">{district.extra.heading}</h2>
+      <p class="dc-p" set:html={district.extra.intro} />
+      {district.extra.image && (
+        <img
+          class="dc-extra-img"
+          src={district.extra.image.src}
+          alt={district.extra.image.alt}
+          width="1200"
+          height="900"
+          loading="lazy"
+        />
+      )}
+      <p class="dc-p dc-q-ask">{district.extra.askLine}</p>
+      <ul class="dc-q-list">
+        {district.extra.questions.map(q => (
+          <li set:html={q} />
+        ))}
+      </ul>
+      <p class="dc-p">{district.extra.outro}</p>
+    </div>
+  </section>
+)}
+
 <!-- Breadcrumb JSON-LD -->
 <script type="application/ld+json" is:inline set:html={JSON.stringify({
   '@context': 'https://schema.org',
@@ -446,6 +473,42 @@ const reasons = [
   }
   .dc-faq-q { font-size: 1.125rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
   .dc-faq-a { color: #475569; line-height: 1.7; }
+
+  /* Sekcja extra – pytania diagnostyczne */
+  .dc-extra-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin: 1.75rem 0 2rem;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+  }
+  .dc-q-ask { font-weight: 600; color: #334155; margin-bottom: 1rem; }
+  .dc-q-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .dc-q-list li {
+    position: relative;
+    padding-left: 1.75rem;
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.7;
+  }
+  .dc-q-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--sky);
+  }
+  .dc-q-list li :global(strong) { color: #0f172a; }
 
   /* CTA */
   .dc-cta {
