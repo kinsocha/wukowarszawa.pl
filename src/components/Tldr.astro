@@ -1,0 +1,61 @@
+---
+import { siteConfig } from '../config/site';
+
+const speakableSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: siteConfig.url,
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['.tldr'],
+  },
+});
+---
+
+<script type="application/ld+json" is:inline set:html={speakableSchema} />
+
+<section class="tldr-section">
+  <div class="container">
+    <div class="tldr" aria-label="W skrócie">
+      <p>
+        <strong>Hydrodynamiczne udrażnianie i ciśnieniowe czyszczenie kanalizacji</strong>
+        przy użyciu specjalistycznego samochodu z pompą wysokociśnieniową. Świadczymy
+        <strong>kompleksowe usługi WUKO</strong>, które doskonale usuwają piasek, tłuszcz,
+        osady, korzenie oraz inne nieczystości osadzające się w rurach kanalizacyjnych
+        przez dziesiątki lat. Nasze <strong>pogotowie kanalizacyjne Warszawa 24/7</strong>
+        zapewnia całodobowe wsparcie w razie nagłej awarii — pod numerem
+        tel. <a href={`tel:${siteConfig.phoneTel}`}>{siteConfig.phone}</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tldr-section {
+    padding: 3rem 0;
+    background: var(--bg-white);
+  }
+
+  .tldr {
+    margin: 0;
+    padding: 18px 22px;
+    background: var(--bg-sky);
+    border-left: 5px solid var(--sky);
+    border-radius: 6px;
+    color: var(--primary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .tldr p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .tldr strong { color: var(--primary); }
+  .tldr a { color: var(--accent); font-weight: 600; white-space: nowrap; }
+
+  @media (max-width: 600px) {
+    .tldr p { font-size: 17px; }
+  }
+</style>
