@@ -19,6 +19,8 @@ const services = [
     title: 'Inspekcja kamerą TV',
     description: 'Diagnostyka wnętrza rur kamerą o wysokiej rozdzielczości. Pozwala precyzyjnie zlokalizować uszkodzenia, załamania, czy wrastające korzenie.',
     features: ['Diagnoza przed naprawą', 'Lokalizacja uszkodzeń', 'Przegląd techniczny'],
+    href: '/inspekcja-kamera-kanalizacji',
+    linkLabel: 'Zobacz szczegóły inspekcji',
   },
   {
     icon: 'home',
@@ -70,8 +72,8 @@ const services = [
               </li>
             ))}
           </ul>
-          <a href="#kontakt" class="service-link">
-            Zapytaj o szczegóły
+          <a href={s.href ?? '#kontakt'} class="service-link">
+            {s.linkLabel ?? 'Zapytaj o szczegóły'}
             <Icon name="arrow-right" class="service-arrow" />
           </a>
         </div>

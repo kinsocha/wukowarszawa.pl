@@ -1,0 +1,591 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import { siteConfig } from '../config/site';
+
+const metaTitle = 'Inspekcja kamerą kanalizacji Warszawa – monitoring i kamerowanie rur';
+const metaDescription =
+  'Inspekcja kamerą kanalizacji w Warszawie: monitoring rur, lokalizacja miejsca awarii i przyczyny nawracających zatorów. Nagranie z przeglądu, dojazd na terenie całej Warszawy. Tel. ' +
+  siteConfig.phone + '.';
+
+// Kiedy warto zrobić inspekcję
+const whenList = [
+  {
+    icon: 'home',
+    title: 'Przed zakupem mieszkania lub domu',
+    desc: 'Zanim podpiszesz umowę, warto sprawdzić stan instalacji, której nie widać. Ukryte pęknięcie potrafi kosztować więcej niż sama inspekcja.',
+  },
+  {
+    icon: 'alert-circle',
+    title: 'Gdy zatory wracają',
+    desc: 'Ta sama rura zapycha się co kilka tygodni? Kamera pokazuje, co siedzi w środku i dlaczego problem wraca, zamiast zgadywać.',
+  },
+  {
+    icon: 'droplets',
+    title: 'Brzydki zapach z odpływów',
+    desc: 'Nieprzyjemny zapach bywa objawem nieszczelności albo zalegających osadów. Przegląd wskazuje źródło.',
+  },
+  {
+    icon: 'wrench',
+    title: 'Przed remontem łazienki lub kuchni',
+    desc: 'Lepiej ocenić rury przed położeniem nowych płytek niż kuć je później. Inspekcja pomaga zaplanować zakres prac.',
+  },
+  {
+    icon: 'shield',
+    title: 'Po zalaniu lub podtopieniu',
+    desc: 'Kamera pomaga ustalić, skąd wzięła się woda i czy problem jest po Twojej stronie, czy w części wspólnej budynku.',
+  },
+  {
+    icon: 'search',
+    title: 'Lokalizacja rur i przyłączy',
+    desc: 'Nadajnik w głowicy pozwala określić przebieg i głębokość rury – przydatne przed wykopem czy przebudową.',
+  },
+];
+
+// Co wykrywa kamera
+const findings = [
+  'Pęknięcia, ubytki i skruszone odcinki rur',
+  'Załamania i przemieszczenia na łączeniach',
+  'Wrastające korzenie drzew i krzewów',
+  'Zalegające osady, tłuszcz i kamień',
+  'Miejsca, w których regularnie zbiera się zator',
+  'Nieszczelności i punktowe uszkodzenia',
+];
+
+// Jak przebiega
+const steps = [
+  { n: '1', title: 'Zgłoszenie i objawy', desc: 'Opisujesz problem i rodzaj budynku. Na tej podstawie dobieramy sprzęt do średnicy i przebiegu instalacji.' },
+  { n: '2', title: 'Wprowadzenie kamery', desc: 'Kamerę inspekcyjną na elastycznym przewodzie wprowadzamy do rury przez dostępny punkt rewizyjny.' },
+  { n: '3', title: 'Podgląd na żywo', desc: 'Obraz oglądamy razem na monitorze. Nadajnik w głowicy pozwala zlokalizować miejsce usterki nad ziemią.' },
+  { n: '4', title: 'Wnioski i zalecenia', desc: 'Tłumaczymy, co widać w rurze, i mówimy wprost, co dalej – czyszczenie, udrożnienie czy naprawa punktowa.' },
+];
+
+const faq = [
+  {
+    question: 'Ile kosztuje inspekcja kamerą kanalizacji w Warszawie?',
+    answer:
+      'Cena zależy od długości badanego odcinka, dostępu do rury i tego, czy potrzebna jest lokalizacja usterki nad ziemią. Dokładną kwotę podajemy po krótkiej rozmowie o objawach, jeszcze przed przyjazdem. Zadzwoń pod ' +
+      siteConfig.phone + ', opisz problem, a przedstawimy orientacyjny koszt.',
+  },
+  {
+    question: 'Czym różni się inspekcja kamerą od zwykłego udrażniania?',
+    answer:
+      'Udrażnianie usuwa zator. Inspekcja pokazuje, dlaczego on powstał i w jakim stanie jest rura. To dwie różne rzeczy – czasem wystarczy udrożnić, a czasem kamera wykrywa uszkodzenie, które trzeba naprawić, żeby problem nie wracał.',
+  },
+  {
+    question: 'Czy trzeba coś przygotować przed przyjazdem?',
+    answer:
+      'Nie. Wystarczy dostęp do punktu, przez który można wprowadzić kamerę, na przykład rewizji, studzienki lub odkręconego syfonu. Resztę robimy na miejscu. Jeśli masz zdjęcia instalacji, prześlij je – ułatwiają dobór sprzętu.',
+  },
+  {
+    question: 'Czy da się dokładnie wskazać miejsce awarii?',
+    answer:
+      'Tak. Głowica kamery ma nadajnik, który odbieramy lokalizatorem z powierzchni. Dzięki temu określamy, w którym miejscu i na jakiej głębokości jest usterka, więc ewentualny wykop jest mniejszy i tańszy.',
+  },
+  {
+    question: 'Do jakich rur można wprowadzić kamerę inspekcyjną?',
+    answer:
+      'Kamerę dobieramy do średnicy instalacji – od podejść przy przyborach, przez piony i poziomy, po przyłącza domowe. Przy bardzo wąskich rurach 40–50 mm z ostrymi łukami stosujemy sprzęt dopasowany do takiego przebiegu.',
+  },
+];
+
+const serviceSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Inspekcja kamerą kanalizacji',
+  name: 'Inspekcja kamerą kanalizacji Warszawa',
+  description:
+    'Monitoring i kamerowanie rur kanalizacyjnych w Warszawie: lokalizacja miejsca awarii, wykrywanie przyczyny nawracających zatorów, przegląd instalacji przed zakupem nieruchomości i remontem.',
+  url: new URL('/inspekcja-kamera-kanalizacji', siteConfig.url).href,
+  areaServed: { '@type': 'City', name: 'Warszawa' },
+  provider: {
+    '@type': 'LocalBusiness',
+    name: siteConfig.name,
+    telephone: siteConfig.phoneTel,
+    url: siteConfig.url,
+    areaServed: { '@type': 'City', name: 'Warszawa' },
+  },
+});
+
+const breadcrumbSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Strona główna', item: siteConfig.url + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Inspekcja kamerą kanalizacji', item: new URL('/inspekcja-kamera-kanalizacji', siteConfig.url).href },
+  ],
+});
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+});
+---
+
+<Layout title={metaTitle} description={metaDescription}>
+  <script type="application/ld+json" is:inline set:html={serviceSchema} />
+  <script type="application/ld+json" is:inline set:html={breadcrumbSchema} />
+  <script type="application/ld+json" is:inline set:html={faqSchema} />
+
+  <!-- Hero -->
+  <section class="ik-hero">
+    <div class="ik-hero-bg">
+      <div class="ik-orb ik-orb-1"></div>
+      <div class="ik-orb ik-orb-2"></div>
+    </div>
+    <div class="ik-hero-inner">
+      <div class="ik-crumbs">
+        <a href="/">Strona główna</a>
+        <span>/</span>
+        <span class="ik-crumbs-current">Inspekcja kamerą kanalizacji</span>
+      </div>
+      <div class="ik-hero-copy">
+        <div class="ik-badge">
+          <Icon name="camera" class="ik-badge-ico" />
+          <span>Monitoring i kamerowanie rur – Warszawa</span>
+        </div>
+        <h1 class="ik-h1">
+          Inspekcja kamerą kanalizacji
+          <span class="ik-h1-grad">Warszawa</span>
+        </h1>
+        <p class="ik-hero-intro">
+          Zaglądamy do wnętrza rury, zanim zacznie się kucie i zgadywanie. Kamerą inspekcyjną
+          znajdujemy przyczynę nawracających zatorów, lokalizujemy miejsce awarii i sprawdzamy
+          stan instalacji – w mieszkaniach, domach i budynkach wielorodzinnych na terenie całej Warszawy.
+        </p>
+        <div class="ik-hero-buttons">
+          <a href={`tel:${siteConfig.phoneTel}`} class="ik-btn-call">
+            <Icon name="phone" class="ik-btn-ico" />
+            <span>Zadzwoń: {siteConfig.phone}</span>
+          </a>
+          <a href="#co-wykrywa" class="ik-btn-ghost">Co sprawdzamy w rurze</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opis -->
+  <section class="ik-section ik-bg-white">
+    <div class="ik-narrow">
+      <h2 class="ik-h2 ik-h2-left">Czym jest inspekcja kamerą kanalizacji</h2>
+      <p class="ik-p">
+        To przegląd rury od środka. Kamerę na elastycznym przewodzie wprowadzamy do instalacji,
+        a obraz na żywo trafia na monitor – widać dokładnie to, czego nie da się ocenić z zewnątrz.
+        Dzięki temu nie działamy po omacku.
+      </p>
+      <p class="ik-p">
+        Sam zator to często tylko objaw. Prawdziwa przyczyna bywa głębiej: pęknięcie, wrośnięty
+        korzeń albo warstwa tłuszczu, która narasta miesiącami. Kamera pokazuje, gdzie leży problem,
+        a to pozwala dobrać właściwe rozwiązanie i nie płacić dwa razy za to samo.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kiedy warto -->
+  <section class="ik-section ik-bg-light">
+    <div class="ik-wide">
+      <div class="ik-head">
+        <span class="eyebrow">Kiedy się przydaje</span>
+        <h2 class="ik-h2">Kiedy warto wykonać inspekcję</h2>
+      </div>
+      <div class="ik-grid-3">
+        {whenList.map(item => (
+          <div class="ik-card">
+            <div class="ik-card-ico-wrap">
+              <Icon name={item.icon} class="ik-card-ico" />
+            </div>
+            <h3 class="ik-card-title">{item.title}</h3>
+            <p class="ik-card-desc">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Co wykrywa -->
+  <section id="co-wykrywa" class="ik-section ik-bg-white">
+    <div class="ik-narrow">
+      <div class="ik-head">
+        <span class="eyebrow">Co widać w rurze</span>
+        <h2 class="ik-h2">Co wykrywa kamera</h2>
+      </div>
+      <div class="ik-reasons">
+        {findings.map(f => (
+          <div class="ik-reason">
+            <Icon name="check-circle" class="ik-reason-ico" />
+            <p class="ik-reason-text">{f}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Jak przebiega -->
+  <section class="ik-section ik-bg-light">
+    <div class="ik-wide">
+      <div class="ik-head">
+        <span class="eyebrow">Krok po kroku</span>
+        <h2 class="ik-h2">Jak przebiega inspekcja</h2>
+      </div>
+      <div class="ik-grid-4">
+        {steps.map(s => (
+          <div class="ik-step">
+            <span class="ik-step-n">{s.n}</span>
+            <h3 class="ik-step-title">{s.title}</h3>
+            <p class="ik-step-desc">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Powiązanie z udrażnianiem -->
+  <section class="ik-section ik-bg-white">
+    <div class="ik-narrow">
+      <div class="ik-link-box">
+        <div class="ik-link-ico-wrap">
+          <Icon name="droplets" class="ik-link-ico" />
+        </div>
+        <div>
+          <h2 class="ik-h3">Kamera pokazała zator? Udrożnimy od razu</h2>
+          <p class="ik-p">
+            Nie musisz umawiać kolejnej wizyty. Jeśli w trakcie przeglądu okaże się, że rurę blokuje
+            osad albo tłuszcz, na miejscu usuwamy zator – ciśnieniowo metodą Wuko lub sprężyną
+            elektryczną, w zależności od instalacji. Więcej o metodach czyszczenia przeczytasz na
+            <a href="/#uslugi" class="ik-inline-link">stronie głównej</a> oraz w naszym
+            <a href="/poradnik/" class="ik-inline-link">poradniku</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ik-section ik-bg-light">
+    <div class="ik-narrow">
+      <div class="ik-head">
+        <span class="eyebrow">Pytania i odpowiedzi</span>
+        <h2 class="ik-h2">FAQ – inspekcja kamerą</h2>
+      </div>
+      <div class="ik-reasons">
+        {faq.map(f => (
+          <div class="ik-faq-item">
+            <h3 class="ik-faq-q">{f.question}</h3>
+            <p class="ik-faq-a">{f.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="ik-cta">
+    <div class="ik-cta-inner">
+      <h2 class="ik-cta-title">Potrzebujesz przeglądu kamerą w Warszawie?</h2>
+      <p class="ik-cta-sub">Zadzwoń – ustalimy termin i orientacyjny koszt jeszcze przed przyjazdem.</p>
+      <a href={`tel:${siteConfig.phoneTel}`} class="ik-cta-btn">
+        <Icon name="phone" class="ik-cta-ico" />
+        <span>{siteConfig.phone}</span>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .ik-narrow, .ik-wide { margin: 0 auto; padding: 0 1rem; }
+  @media (min-width: 640px) { .ik-narrow, .ik-wide { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .ik-narrow, .ik-wide { padding: 0 2rem; } }
+  .ik-narrow { max-width: 56rem; }
+  .ik-wide { max-width: 80rem; }
+
+  .ik-section { padding: 5rem 0; }
+  @media (min-width: 1024px) { .ik-section { padding: 6rem 0; } }
+  .ik-bg-white { background: #fff; }
+  .ik-bg-light { background: var(--bg-light); }
+
+  .ik-head { text-align: center; margin-bottom: 3rem; }
+  .ik-h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+  }
+  @media (min-width: 640px) { .ik-h2 { font-size: 2.25rem; } }
+  .ik-h2-left { text-align: left; margin-bottom: 1.5rem; }
+  .ik-h3 { font-size: 1.375rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
+  .ik-p { font-size: 1.125rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem; }
+  .ik-p:last-child { margin-bottom: 0; }
+  .ik-inline-link { color: #0284c7; font-weight: 600; text-decoration: none; }
+  .ik-inline-link:hover { text-decoration: underline; }
+
+  /* Hero */
+  .ik-hero {
+    position: relative;
+    padding: 8rem 0 5rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
+    overflow: hidden;
+  }
+  @media (min-width: 1024px) { .ik-hero { padding: 10rem 0 7rem; } }
+  .ik-hero-bg { position: absolute; inset: 0; overflow: hidden; }
+  .ik-orb {
+    position: absolute;
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    filter: blur(64px);
+    animation: ik-pulse 4s ease-in-out infinite;
+  }
+  .ik-orb-1 { top: 25%; left: -8rem; background: rgba(14, 165, 233, 0.2); }
+  .ik-orb-2 { bottom: 25%; right: -8rem; background: rgba(6, 182, 212, 0.2); animation-delay: 1s; }
+
+  .ik-hero-inner {
+    position: relative;
+    z-index: 10;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .ik-hero-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .ik-hero-inner { padding: 0 2rem; } }
+
+  .ik-crumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  .ik-crumbs a { color: rgba(255, 255, 255, 0.6); text-decoration: none; transition: color 0.2s ease; }
+  .ik-crumbs a:hover { color: #7dd3fc; }
+  .ik-crumbs-current { color: #fff; }
+
+  .ik-hero-copy { max-width: 56rem; }
+  .ik-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .ik-badge-ico { width: 1rem; height: 1rem; color: #7dd3fc; }
+  .ik-badge span { color: rgba(255, 255, 255, 0.9); font-size: 0.875rem; font-weight: 500; }
+
+  .ik-h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 640px) { .ik-h1 { font-size: 3rem; } }
+  @media (min-width: 1024px) { .ik-h1 { font-size: 3.75rem; } }
+  .ik-h1-grad {
+    display: block;
+    background: linear-gradient(90deg, #38bdf8, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .ik-hero-intro {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 48rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+  @media (min-width: 640px) { .ik-hero-intro { font-size: 1.25rem; } }
+
+  .ik-hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  @media (min-width: 640px) { .ik-hero-buttons { flex-direction: row; align-items: center; } }
+  .ik-btn-call {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(90deg, var(--sky), var(--cyan));
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .ik-btn-call:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(14, 165, 233, 0.4); }
+  .ik-btn-ico { width: 1.25rem; height: 1.25rem; }
+  .ik-btn-ghost {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s ease;
+  }
+  .ik-btn-ghost:hover { background: rgba(255, 255, 255, 0.2); }
+
+  /* Karty */
+  .ik-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) { .ik-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+  .ik-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+  }
+  .ik-card-ico-wrap {
+    padding: 0.75rem;
+    background: var(--bg-sky);
+    border-radius: 0.75rem;
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+  .ik-card-ico { width: 1.75rem; height: 1.75rem; color: #0284c7; }
+  .ik-card-title { font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
+  .ik-card-desc { color: #475569; line-height: 1.7; }
+
+  /* Listy */
+  .ik-reasons { display: flex; flex-direction: column; gap: 1rem; }
+  .ik-reason { display: flex; align-items: flex-start; gap: 0.75rem; }
+  .ik-reason-ico { width: 1.5rem; height: 1.5rem; color: var(--sky); flex-shrink: 0; margin-top: 0.125rem; }
+  .ik-reason-text { font-size: 1.125rem; color: #334155; }
+
+  /* Kroki */
+  .ik-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) { .ik-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .ik-grid-4 { grid-template-columns: repeat(4, 1fr); } }
+  .ik-step {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .ik-step-n {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, var(--sky), var(--cyan));
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .ik-step-title { font-size: 1.125rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+  .ik-step-desc { color: #475569; line-height: 1.7; font-size: 1rem; }
+
+  /* Box powiązania */
+  .ik-link-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: var(--bg-sky);
+    border: 1px solid #e0f2fe;
+    border-radius: 1.25rem;
+    padding: 2rem;
+  }
+  @media (min-width: 640px) { .ik-link-box { flex-direction: row; align-items: flex-start; } }
+  .ik-link-ico-wrap {
+    padding: 0.9rem;
+    background: #fff;
+    border-radius: 0.9rem;
+    width: fit-content;
+    flex-shrink: 0;
+  }
+  .ik-link-ico { width: 2rem; height: 2rem; color: #0284c7; }
+
+  /* FAQ */
+  .ik-faq-item {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #f1f5f9;
+  }
+  .ik-faq-q { font-size: 1.125rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
+  .ik-faq-a { color: #475569; line-height: 1.7; font-size: 1.0625rem; }
+
+  /* CTA */
+  .ik-cta {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #0284c7, #0891b2);
+  }
+  @media (min-width: 1024px) { .ik-cta { padding: 5rem 0; } }
+  .ik-cta-inner {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  @media (min-width: 640px) { .ik-cta-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .ik-cta-inner { padding: 0 2rem; } }
+  .ik-cta-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 640px) { .ik-cta-title { font-size: 2.25rem; } }
+  .ik-cta-sub { font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; }
+  .ik-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #fff;
+    color: #0284c7;
+    padding: 1.25rem 2.5rem;
+    border-radius: 999px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .ik-cta-btn:hover { transform: scale(1.05); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25); }
+  .ik-cta-ico { width: 1.5rem; height: 1.5rem; }
+
+  @keyframes ik-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+</style>

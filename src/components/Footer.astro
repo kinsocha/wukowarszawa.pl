@@ -6,12 +6,12 @@ import { districts } from '../data/districts';
 const year = new Date().getFullYear();
 
 const services = [
-  'Hydrodynamiczne Wuko',
-  'Sprężyna elektryczna',
-  'Inspekcja kamerą TV',
-  'Mieszkania i domy',
-  'Wspólnoty mieszkaniowe',
-  'Lokale usługowe',
+  { label: 'Hydrodynamiczne Wuko', href: '/#uslugi' },
+  { label: 'Sprężyna elektryczna', href: '/#uslugi' },
+  { label: 'Inspekcja kamerą TV', href: '/inspekcja-kamera-kanalizacji' },
+  { label: 'Mieszkania i domy', href: '/#uslugi' },
+  { label: 'Wspólnoty mieszkaniowe', href: '/#uslugi' },
+  { label: 'Lokale usługowe', href: '/#uslugi' },
 ];
 ---
 
@@ -62,7 +62,7 @@ const services = [
         <h3 class="footer-heading">Usługi</h3>
         <ul class="footer-list">
           {services.map(s => (
-            <li><a href="/#uslugi" class="footer-link">{s}</a></li>
+            <li><a href={s.href} class="footer-link">{s.label}</a></li>
           ))}
         </ul>
       </div>

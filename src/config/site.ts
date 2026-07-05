@@ -32,10 +32,8 @@ export const siteConfig = {
   // SEO / Schema – uzupełnij przed wdrożeniem
   openingHours: 'Mo-Su 08:00-20:00', // godziny pracy – sprawdź i zaktualizuj
   googleMapsUrl: '',                   // wklej URL z Google Maps (Twój profil firmy)
-  rating: {
-    value: 5.0,   // średnia ocena – 0 = wyłączone
-    count: 467,   // liczba opinii – 0 = wyłączone
-  },
+  // Ocena zbiorcza w schema jest liczona automatycznie z realnych opinii
+  // (src/content/reviews) w Layout.astro – nie wpisuj tu sztucznej liczby.
 
   // Obsługiwane dzielnice (główne, z osobnymi podstronami)
   mainDistricts: [
