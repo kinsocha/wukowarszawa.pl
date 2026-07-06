@@ -35,7 +35,8 @@ Zrobione (wg git, wieczór 2026-06-11):
 
 ## Podstrony usługowe (nowy typ, od 2026-07-06)
 - Pierwsza dedykowana podstrona usługowa (poza dzielnicami): **`/inspekcja-kamera-kanalizacji`** — `src/pages/inspekcja-kamera-kanalizacji.astro` (samodzielna, styl `ik-` wzorowany na DistrictContent). Celuje we frazę „inspekcja kamerą kanalizacji Warszawa" (klaster inspekcja/monitoring/kamerowanie — nie kanibalizuje strony głównej ani dzielnic).
-- Ma: Service + BreadcrumbList + FAQPage JSON-LD, FAQ (5 pytań, telefon w odpowiedzi o cenie), linki wewnętrzne ze stopki (każda strona) i z kafelka „Inspekcja kamerą TV" na stronie głównej (`Services.astro` — pole `href`/`linkLabel`).
+- Ma: Service + BreadcrumbList + FAQPage JSON-LD, FAQ (9 pytań — rozbudowa 2026-07-07 o: bez kucia pod posadzką, czy najpierw udrożnić, nagranie z inspekcji, jak długo trwa; telefon w odpowiedzi o cenie), linki wewnętrzne ze stopki (każda strona) i z kafelka „Inspekcja kamerą TV" na stronie głównej (`Services.astro` — pole `href`/`linkLabel`) oraz kontekstowe z 2 artykułów poradnika (`zapchana-studzienka`, `zapchana-kanalizacja`). Wszystkie linki + schema url ujednolicone do wersji z ukośnikiem (canonical). FAQ pisane wg reguły 5.27 (kamera ocenia stan/drożność, NIE „wykrywa wycieków na łączeniach").
+- **Nagranie z inspekcji: POTWIERDZONE (2026-07-07)** — właściciel potwierdził, że robicie nagranie/zdjęcia z przeglądu. FAQ „Czy z inspekcji można dostać nagranie?" + meta description są OK. Fakt zapisany też w globalnym CLAUDE.md (sekcja 5).
 - Wzorzec do powielenia na kolejne usługi. Kandydaci NIŻSZEGO priorytetu (odrzucone teraz przez konkurencję/kanibalizację): „pogotowie kanalizacyjne 24h" (rzeźnia exact-match domen), „przepychanie rur" (blisko strony głównej).
 
 ## Decyzje / ustalenia

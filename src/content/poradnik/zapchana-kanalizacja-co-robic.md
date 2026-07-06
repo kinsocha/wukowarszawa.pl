@@ -10,9 +10,9 @@ faq:
   - q: Czy Kret albo inna silna chemia udrożni rurę na stałe?
     a: Silna chemia często robi w zatorze prześwit — ale tylko jeśli zator nie jest duży — i woda znowu zaczyna schodzić. Rzadko czyści rurę do końca. Osad na ściankach zostaje, więc po kilku tygodniach kanalik potrafi zakleić się od nowa. To rozwiązanie na chwilę, nie naprawa instalacji. Stosować ostrożnie i zgodnie z opisem na opakowaniu.
   - q: Jak często czyścić odpływ w kuchni, żeby się nie zapychał?
-    a: W zwykłym mieszkaniu raz na rok w zupełności wystarczy. Co jakiś czas można przelać odpływ gorącą wodą — trochę to pomaga rozluźnić tłuszcz, ale nie naprawi instalacji ułożonej pod złym kątem. Jeśli rury mają zły spadek albo źle dobrane łączenie, żaden domowy sposób tego nie obejdzie.
+    a: W zwykłym mieszkaniu raz na rok w zupełności wystarczy. Najwięcej daje samo pilnowanie, co ląduje w odpływie — sitko na resztki i tłuszcz zbierany do słoika zamiast do zlewu. Żaden domowy trik nie naprawi za to instalacji ułożonej pod złym kątem — jeśli rury mają zły spadek albo źle dobrane łączenie, zator i tak będzie wracał.
   - q: Soda i ocet naprawdę działają na zapchany odpływ?
-    a: Na lekki, świeży zator z tłuszczu i mydła — czasem tak. Reakcja sody z octem trochę spienia i rusza miękki osad tuż przy wpuście. Na zbity zator albo coś, co utknęło głębiej w rurze, to za mało. Traktuj to jak domową profilaktykę, nie jak sposób na poważny zator.
+    a: Szczerze? To bardziej domowy rytuał niż udrażnianie. Owszem, przy świeżym, cienkim osadzie z tłuszczu trochę zaszumi i ruszy brud tuż przy wpuście — ale na zbity zator głębiej w rurze nie ma szans. Gorzej, że soda odkłada się na ściankach i z czasem sama dokłada osadu. A jak ktoś sypnie od serca całą paczkę „na pewniaka", potrafi zrobić w rurze korek, który trzeba potem wypłukać z całego odcinka — a to już wydatek większy niż jedna wizyta. Lepiej odpuścić.
   - q: Kiedy lepiej od razu zadzwonić po fachowca?
     a: Gdy woda stoi i nie schodzi wcale, cofa się do innego odpływu albo problem wraca co kilka tygodni mimo czyszczenia. Wtedy zator jest głębiej, niż sięgają domowe sposoby. Mamy różny sprzęt na różne sytuacje i dobieramy go po obejrzeniu instalacji. Zadzwoń pod 660 360 170 — podpowiemy metodę i podamy orientacyjny koszt przed przyjazdem.
 ---
@@ -41,12 +41,12 @@ Bywa i tak, że winna jest sama instalacja. Rura ułożona pod zbyt małym spadk
 
 Zanim sięgniesz po telefon, kilka rzeczy możesz zrobić sam. Działają na świeże, niezbyt zbite zatory blisko odpływu.
 
-1. **Zacznij od gorącej wody.** Zagotuj czajnik, odczekaj chwilę i lej wąskim strumieniem prosto do odpływu. Gorąca woda rozluźnia tłuszcz i mydło. Przy lekkim zatorze czasem to wystarcza.
-2. **Weź przepychaczkę.** Tę gumową, na kiju. Zatkaj przelew (ten mały otwór u góry zlewu czy umywalki) mokrą szmatką, żeby nie uciekało powietrze. Napełnij umywalkę odrobiną wody, tak by gumę zakrywało, i pompuj energicznie kilkanaście razy. Chodzi o nacisk, który ruszy zator.
-3. **Spróbuj sody z octem.** Wsyp do odpływu pół szklanki sody oczyszczonej, zalej szklanką octu. Zaszumi, spieni się. Zostaw na pół godziny i przepłucz gorącą wodą. Na miękki, świeży osad — bywa skuteczne.
-4. **Rozkręć syfon.** Pod zlewem czy umywalką siedzi syfon — to wygięta rura z plastikową nakrętką. Podstaw miskę, odkręć, wyczyść z tego, co się w nim zebrało. Bardzo często cały zator siedzi właśnie tam, na wyciągnięcie ręki.
+1. **Weź przepychaczkę.** Tę gumową, na kiju. Zatkaj przelew (ten mały otwór u góry zlewu czy umywalki) mokrą szmatką, żeby nie uciekało powietrze. Napełnij umywalkę odrobiną wody, tak by gumę zakrywało, i pompuj energicznie kilkanaście razy. Chodzi o nacisk, który ruszy zator.
+2. **Rozkręć syfon.** Pod zlewem czy umywalką siedzi syfon — to wygięta rura z plastikową nakrętką. Podstaw miskę, odkręć, wyczyść z tego, co się w nim zebrało. Bardzo często cały zator siedzi właśnie tam, na wyciągnięcie ręki.
 
-Jeśli sięgasz po chemię w rodzaju Kreta — używaj jej ostrożnie i zgodnie z opisem na opakowaniu. Silna chemia często robi w zatorze prześwit, jeśli zator nie jest duży, i woda zaczyna schodzić. Rurę zostawia jednak nieoczyszczoną. Po kilku tygodniach kanalik potrafi zakleić się od nowa.
+Sodę z octem lepiej za to odpuść. Owszem, efektownie zaszumi i przy cienkim, świeżym osadzie coś tam ruszy — ale to bardziej pokaz niż udrażnianie. Soda odkłada się na ściankach i z czasem sama dokłada osadu, a wsypana „na oko" w większej dawce potrafi zrobić w rurze korek, który później trzeba wypłukać z całego odcinka. Nie sypie się jej dużo naraz.
+
+Podobnie z chemią w rodzaju Kreta — jeśli już jej używasz, to ostrożnie i zgodnie z opisem na opakowaniu. Silna chemia często robi w zatorze prześwit, jeśli zator nie jest duży, i woda zaczyna schodzić. Rurę zostawia jednak nieoczyszczoną. Po kilku tygodniach kanalik potrafi zakleić się od nowa.
 
 ## Kiedy domowe sposoby to za mało
 
@@ -60,8 +60,8 @@ Sprzętu mamy kilka rodzajów, dobieranych do sytuacji — inny na wąski odpły
 
 Najtaniej jest nie zapychać. W kuchni — nie zlewaj tłuszczu do zlewu. Przestudzony, zebrany do słoika i wyrzucony z odpadami oszczędza najwięcej kłopotu. Na odpływ warto założyć sitko, które łapie resztki.
 
-W łazience to samo sitko zatrzyma włosy, zanim zwiążą się w kłąb. Raz na jakiś czas przelej odpływy gorącą wodą — krótka rzecz, a rozluźnia tłuszcz, zanim się ubije.
+W łazience to samo sitko zatrzyma włosy, zanim zwiążą się w kłąb. Prosta rzecz, a oszczędza najwięcej kłopotu — splątane włosy z mydłem to w łazience zator numer jeden.
 
-I jedno na koniec. Jeśli mimo wszystko zatory wracają regularnie, to nie kwestia czyszczenia, tylko instalacji. Wtedy zamiast walczyć z objawem co kilka tygodni, lepiej sprawdzić, jak ułożone są rury.
+I jedno na koniec. Jeśli mimo wszystko zatory wracają regularnie, to nie kwestia czyszczenia, tylko instalacji. Wtedy zamiast walczyć z objawem co kilka tygodni, lepiej sprawdzić, jak ułożone są rury — najprościej [inspekcją kamerą](/inspekcja-kamera-kanalizacji/), która pokazuje wnętrze rury od środka i podpowiada, dlaczego zator wraca w to samo miejsce.
 
 Masz odpływ, który stoi albo wraca mimo prób? Zadzwoń pod **660 360 170**. Obejrzymy instalację, dobierzemy metodę i podamy orientacyjny koszt, zanim zaczniemy. [Udrażnianiem rur w Warszawie](/) zajmujemy się na co dzień — działamy na terenie całej stolicy i okolic.

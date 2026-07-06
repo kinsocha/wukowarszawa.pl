@@ -87,6 +87,26 @@ const faq = [
     answer:
       'Kamerę dobieramy do średnicy instalacji – od podejść przy przyborach, przez piony i poziomy, po przyłącza domowe. Przy bardzo wąskich rurach 40–50 mm z ostrymi łukami stosujemy sprzęt dopasowany do takiego przebiegu.',
   },
+  {
+    question: 'Czy da się sprawdzić rurę pod posadzką bez kucia?',
+    answer:
+      'Tak. Kamerę wprowadzamy przez dostępny punkt – rewizję, studzienkę albo odkręcony syfon – i oglądamy rurę od środka, bez rozbijania podłogi. Głowica ma nadajnik, więc miejsce usterki namierzamy z powierzchni. Dzięki temu, jeśli naprawa okaże się potrzebna, kuje się jeden punkt, a nie całą posadzkę.',
+  },
+  {
+    question: 'Czy trzeba najpierw udrożnić rurę, żeby wprowadzić kamerę?',
+    answer:
+      'To zależy od stanu instalacji. Jeśli rura jest zatkana i pełna ścieków, kamera nie zajrzy dalej niż do zatoru – wtedy najpierw udrażniamy, a potem oglądamy czystą rurę i sprawdzamy, dlaczego się zapchała. Gdy rura jest drożna, wprowadzamy kamerę od razu. Decydujemy o tym na miejscu.',
+  },
+  {
+    question: 'Czy z inspekcji można dostać nagranie?',
+    answer:
+      'Tak, z przeglądu zapisujemy nagranie lub zdjęcia wnętrza rury. Przydają się przed remontem, w rozmowie z administracją budynku albo jako dokumentacja stanu instalacji przed zakupem mieszkania czy domu. Wystarczy powiedzieć przed przyjazdem, że zależy Ci na zapisie.',
+  },
+  {
+    question: 'Jak długo trwa inspekcja kamerą?',
+    answer:
+      'Zwykle niedługo. Sam przegląd zależy od długości sprawdzanego odcinka i liczby punktów, przez które wprowadzamy kamerę – krótkie podejście przy zlewie obejrzymy szybciej niż długi poziom czy przyłącze domowe. Obraz oglądamy na bieżąco, więc od razu mówimy, co widać i co z tym dalej zrobić.',
+  },
 ];
 
 const serviceSchema = JSON.stringify({
@@ -96,7 +116,7 @@ const serviceSchema = JSON.stringify({
   name: 'Inspekcja kamerą kanalizacji Warszawa',
   description:
     'Monitoring i kamerowanie rur kanalizacyjnych w Warszawie: lokalizacja miejsca awarii, wykrywanie przyczyny nawracających zatorów, przegląd instalacji przed zakupem nieruchomości i remontem.',
-  url: new URL('/inspekcja-kamera-kanalizacji', siteConfig.url).href,
+  url: new URL('/inspekcja-kamera-kanalizacji/', siteConfig.url).href,
   areaServed: { '@type': 'City', name: 'Warszawa' },
   provider: {
     '@type': 'LocalBusiness',
@@ -112,7 +132,7 @@ const breadcrumbSchema = JSON.stringify({
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Strona główna', item: siteConfig.url + '/' },
-    { '@type': 'ListItem', position: 2, name: 'Inspekcja kamerą kanalizacji', item: new URL('/inspekcja-kamera-kanalizacji', siteConfig.url).href },
+    { '@type': 'ListItem', position: 2, name: 'Inspekcja kamerą kanalizacji', item: new URL('/inspekcja-kamera-kanalizacji/', siteConfig.url).href },
   ],
 });
 

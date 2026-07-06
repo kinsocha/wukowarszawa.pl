@@ -53,6 +53,6 @@ W praktyce zapchana studzienka uderza najpierw w lokale na parterze i w piwnicy,
 
 Wybranie osadu z dna studzienki bywa kuszące do zrobienia samemu. Problem w tym, że to dopiero połowa roboty. Sama studzienka może być pusta, a kanał, który z niej wychodzi, dalej obrośnięty od środka.
 
-Tu zaczyna się nasza część — [ciśnieniowe udrażnianie rur w Warszawie](/). Studzienki leżą na zewnątrz i mają większe średnice niż domowe piony, więc to naturalne pole dla czyszczenia ciśnieniowego — wuko spłukuje osad ze ścianek rury na całej długości odcinka, a urobek ściąga z powrotem do studzienki, skąd go wybieramy. Gdy nie wiadomo, w którym miejscu siedzi zator albo skąd biorą się korzenie, najpierw puszczamy kamerę inspekcyjną i dopiero potem dobieramy sprzęt.
+Tu zaczyna się nasza część — [ciśnieniowe udrażnianie rur w Warszawie](/). Studzienki leżą na zewnątrz i mają większe średnice niż domowe piony, więc to naturalne pole dla czyszczenia ciśnieniowego — wuko spłukuje osad ze ścianek rury na całej długości odcinka, a urobek ściąga z powrotem do studzienki, skąd go wybieramy. Gdy nie wiadomo, w którym miejscu siedzi zator albo skąd biorą się korzenie, najpierw puszczamy [kamerę inspekcyjną](/inspekcja-kamera-kanalizacji/) i dopiero potem dobieramy sprzęt.
 
 Jeśli z Twoich odpływów zaczyna wracać woda albo studzienka od dawna nie była sprawdzana — zadzwoń pod **660 360 170**. Ustalimy termin i orientacyjny koszt, zanim drobny osad zamieni się w cofkę.
