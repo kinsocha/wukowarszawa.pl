@@ -3,7 +3,7 @@ title: Wuko czy sprężyna elektryczna? Tak dobieramy metodę do zatoru
 description: Sprężyna przebija korek, wuko myje całą rurę. Wyjaśniamy, kiedy która metoda działa lepiej – według średnicy rury, rodzaju zatoru i przebiegu instalacji.
 pubDate: 2026-06-03T16:22:48+02:00
 category: Metody
-readingTime: 6
+readingTime: 7
 faq:
   - q: Czy wuko może uszkodzić stare rury?
     a: Przy prawidłowej pracy nie. Ciśnienie i typ dyszy dobieramy do materiału i stanu instalacji – inaczej pracujemy w kruchej kamionce, inaczej w PVC. Przy bardzo zniszczonych rurach proponujemy najpierw inspekcję kamerą.
@@ -42,6 +42,14 @@ Włosy, papier, resztki jedzenia, szmata wciągnięta przez spłuczkę – robot
 Tłuszcz, osady mydlane, piach, muł – tu wygrywa wuko. Sprężyna zrobi w takim osadzie dziurę, ale ścianki zostaną oblepione i rura zarośnie ponownie w kilka tygodni.
 
 Korzenie wrastające przez nieszczelne złącza to osobna kategoria. Usuwamy je wuko z dyszą tnącą, która frezuje korzenie przy ściance rury. Sprężyna je tylko przewierci – odrosną szybciej, niż się spodziewasz.
+
+## Stare żeliwo i zapchany pion – tu sprężyna błyszczy
+
+Osobny temat to stare rury żeliwne. Częsty widok w kamienicach i starszej zabudowie. Wewnątrz żeliwa latami odkłada się twardy osad, kamień, rdza i naloty, które zwężają światło rury i spowalniają odpływ. Tu sprężyna elektryczna pokazuje, co potrafi – obracająca się spirala przeciera wnętrze rury i przywraca jej przekrój. Starą instalację często da się w ten sposób udrożnić, zamiast od razu ją wymieniać.
+
+Druga sytuacja to zapchany pion. Gdy woda cofa się w kilku mieszkaniach naraz albo wybija w najniżej położonym odpływie, korek siedzi w pionie – wspólnej rurze, do której podłączone są kolejne piętra. Dobrze dobrana sprężyna wchodzi w pion i rozbija zator, który go blokuje. Bloki, kamienice, domy jednorodzinne – zasada jest ta sama.
+
+[Wuko w Warszawie](/) robimy obiema metodami, na terenie całej stolicy. A jeśli szukasz konkretnie [wuko na Białołęce](/wukobialoleka), mamy dla tej dzielnicy osobną stronę z dojazdem i kontaktem.
 
 ## Kiedy łączymy obie metody
 

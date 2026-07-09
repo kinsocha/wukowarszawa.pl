@@ -38,6 +38,15 @@ Zrobione (wg git, wieczór 2026-06-11):
 - Ma: Service + BreadcrumbList + FAQPage JSON-LD, FAQ (9 pytań — rozbudowa 2026-07-07 o: bez kucia pod posadzką, czy najpierw udrożnić, nagranie z inspekcji, jak długo trwa; telefon w odpowiedzi o cenie), linki wewnętrzne ze stopki (każda strona) i z kafelka „Inspekcja kamerą TV" na stronie głównej (`Services.astro` — pole `href`/`linkLabel`) oraz kontekstowe z 2 artykułów poradnika (`zapchana-studzienka`, `zapchana-kanalizacja`). Wszystkie linki + schema url ujednolicone do wersji z ukośnikiem (canonical). FAQ pisane wg reguły 5.27 (kamera ocenia stan/drożność, NIE „wykrywa wycieków na łączeniach").
 - **Nagranie z inspekcji: POTWIERDZONE (2026-07-07)** — właściciel potwierdził, że robicie nagranie/zdjęcia z przeglądu. FAQ „Czy z inspekcji można dostać nagranie?" + meta description są OK. Fakt zapisany też w globalnym CLAUDE.md (sekcja 5).
 - Wzorzec do powielenia na kolejne usługi. Kandydaci NIŻSZEGO priorytetu (odrzucone teraz przez konkurencję/kanibalizację): „pogotowie kanalizacyjne 24h" (rzeźnia exact-match domen), „przepychanie rur" (blisko strony głównej).
+- **Wuko a sprężyna — NIE robić osobnej podstrony (decyzja 2026-07-10).** Najpierw powstała podstrona `/wuko-a-sprezyna-elektryczna`, ale właściciel słusznie uznał, że kanibalizuje istniejący artykuł poradnika `wuko-czy-sprezyna-elektryczna.md` — podstronę USUNIĘTO. Zamiast niej artykuł wzbogacono o sekcję „Stare żeliwo i zapchany pion" (tekst właściciela: żeliwo + pion, na którym woda cofa się w kilku mieszkaniach) z frazami „wuko w Warszawie" (link `/`) i „wuko na Białołęce" (link `/wukobialoleka`). Wniosek na przyszłość: temat wuko-vs-sprężyna należy do tego jednego artykułu, nie dublować go podstroną.
+
+## Do dostarczenia przez właściciela — podstrona kamery (otwarte na 2026-07-07)
+Gdy użytkownik zapyta „co mieliśmy zrobić" przy podstronie inspekcji kamerą, przypomnieć tę listę:
+- [ ] **Zdjęcia** na podstronę (kamera inspekcyjna, ekran z obrazem z rury, sprzęt/auto w pracy) — strona ma teraz 0 grafik.
+- [ ] **Nagrania z kamery** — krótki film/klip z inspekcji do osadzenia na stronie (nagrywanie potwierdzone).
+- [ ] **Realizacje** — 3-5 prawdziwych zleceń (objaw → co pokazała kamera → efekt); tytuł po PROBLEMIE, nie po dzielnicy (anty-kanibalizacja).
+- [ ] **GSC** — Inspekcja adresu URL → „Poproś o zindeksowanie" dla `/inspekcja-kamera-kanalizacji/` (realny powód niewidoczności, nie żaden loader).
+- [ ] **Decyzja o cenie** — zostawiamy „po rozmowie" czy podajemy widełki „od X zł".
 
 ## Decyzje / ustalenia
 - Ocena zbiorcza (gwiazdki) liczona automatycznie z realnych opinii w `src/content/reviews` (Layout.astro) — usunięto sztuczne 467 z `site.ts`. Nie wpisywać ręcznej liczby. Realny brak: pusty `googleMapsUrl` (brak podpiętej wizytówki Google) + brak pełnego NAP — czeka na dane od właściciela.
