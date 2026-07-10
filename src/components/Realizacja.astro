@@ -1,0 +1,151 @@
+---
+import { siteConfig } from '../config/site';
+---
+
+<section class="rz" id="realizacja">
+  <div class="rz-inner">
+    <div class="rz-head">
+      <span class="eyebrow">Realizacja z terenu</span>
+      <h2 class="rz-title">Cofająca się woda w domu z szambem</h2>
+      <p class="rz-sub">
+        Objaw, diagnoza i udrożnienie – krok po kroku z jednego zlecenia.
+      </p>
+    </div>
+
+    <div class="rz-body">
+      <p>
+        Telefon w środku tygodnia. Pan z domu jednorodzinnego na Białołęce, w głosie lekki niepokój –
+        woda z toalety zaczęła cofać się do brodzika, a w kuchni zlew stał pełny. Klasyczny obraz
+        zatoru, który nie siedzi w jednym odpływie, tylko dalej, na wspólnej rurze.
+      </p>
+
+      <h3 class="rz-h3">Objaw: cofa się w kilku miejscach naraz</h3>
+      <p>
+        Kiedy woda podnosi się tylko w jednym odpływie – powiedzmy w samym zlewie – zator jest zwykle
+        blisko, w podejściu pod tym przyborem. Ale gdy wybija w kilku miejscach jednocześnie, i to
+        w tych najniżej położonych, problem leży głębiej. W tym domu wszystko spływało do jednego
+        przyłącza, a stamtąd do szamba na działce. To przyłącze było zatkane.
+      </p>
+
+      <h3 class="rz-h3">Dlaczego akurat przyłącze do szamba</h3>
+      <p>
+        Tam, gdzie nie ma jeszcze kanalizacji miejskiej, ścieki idą do szamba. Rura od budynku do
+        zbiornika bywa długa i biegnie w gruncie. Latami odkłada się w niej osad i tłuszcz, a od strony
+        szamba dochodzi muł. Światło rury się zwęża. W pewnym momencie woda przestaje płynąć.
+      </p>
+      <p>
+        To nie stało się jednego dnia. Narastało miesiącami – dlatego objawy pojawiały się stopniowo,
+        aż odpływ całkiem odmówił posłuszeństwa.
+      </p>
+
+      <h3 class="rz-h3">Metoda: wuko, bo to rura na zewnątrz</h3>
+      <p>
+        Do przyłącza w gruncie nie wchodzi się sprężyną. Tu pracuje wuko. Głowica na wężu
+        wysokociśnieniowym wchodzi w rurę i myje ją strumieniem wody na całej długości. Zdziera osad
+        ze ścianek i spycha muł dalej, do zbiornika. Sprężyna zrobiłaby w takim namule jedynie tunel,
+        a sypki materiał rozsunąłby się i wrócił. Wypycha go dopiero ciśnienie wody.
+      </p>
+      <p>
+        Jedna uwaga z praktyki. Jeśli szambo jest pełne, najpierw jedzie wóz asenizacyjny – do pełnego
+        zbiornika nie ma czego przepłukać. Tutaj zbiornik miał zapas miejsca, więc weszliśmy od razu.
+      </p>
+
+      <h3 class="rz-h3">Efekt</h3>
+      <p>
+        Po udrożnieniu puściliśmy wodę i sprawdziliśmy odpływ. Schodzi od razu, bez cofania
+        i bulgotania. Przegląd przyłącza zajął kilkanaście minut – odcinek był długi, więc trochę
+        dłużej niż zwykłe podejście pod zlewem.
+      </p>
+    </div>
+
+    <div class="rz-cta">
+      <p class="rz-cta-text">
+        Mieszkasz w domu z szambem i woda schodzi wolniej w kilku miejscach? Nie czekaj, aż całkiem
+        stanie – im dłużej rura zarasta, tym twardszy osad i dłuższa robota. Obsługujemy domy
+        i mieszkania na terenie całej Warszawy; więcej o udrażnianiu w tej dzielnicy znajdziesz na
+        stronie <a href="/wukobialoleka" class="rz-link">Wuko Białołęka</a>.
+      </p>
+      <a href={`tel:${siteConfig.phoneTel}`} class="rz-call">
+        Woda się cofa? Zadzwoń: {siteConfig.phone}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .rz { padding: 5rem 0; background: #fff; }
+  @media (min-width: 1024px) { .rz { padding: 7rem 0; } }
+
+  .rz-inner {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .rz-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .rz-inner { padding: 0 2rem; } }
+
+  .rz-head { text-align: center; margin-bottom: 3rem; }
+  .eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .rz-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 640px) { .rz-title { font-size: 2.25rem; } }
+  @media (min-width: 1024px) { .rz-title { font-size: 2.75rem; } }
+  .rz-sub { font-size: 1.125rem; color: #475569; max-width: 40rem; margin: 0 auto; }
+
+  .rz-body p {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  .rz-h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .rz-cta {
+    margin-top: 3rem;
+    background: var(--bg-sky);
+    border: 1px solid #e0f2fe;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  .rz-cta-text {
+    font-size: 1.125rem;
+    color: #334155;
+    line-height: 1.8;
+    margin-bottom: 1.75rem;
+  }
+  .rz-link { color: #0284c7; font-weight: 600; text-decoration: none; }
+  .rz-link:hover { text-decoration: underline; }
+  .rz-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(90deg, var(--sky), var(--cyan));
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .rz-call:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3); }
+</style>
