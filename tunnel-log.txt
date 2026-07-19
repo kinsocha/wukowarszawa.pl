@@ -1,0 +1,3 @@
+npm warn Unknown project config "store-dir". This will stop working in the next major version of npm.
+npm warn Unknown project config "virtual-store-dir". This will stop working in the next major version of npm.
+your url is: https://tasty-rats-glow.loca.lt
