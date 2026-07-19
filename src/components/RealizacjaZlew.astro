@@ -1,0 +1,181 @@
+---
+import { siteConfig } from '../config/site';
+---
+
+<section class="rz2" id="realizacja-wezel">
+  <div class="rz2-inner">
+    <div class="rz2-head">
+      <span class="eyebrow">Kolejna realizacja z terenu</span>
+      <h2 class="rz2-title">Ścieki wybijały w zlewie w węźle cieplnym – czyszczenie przykanalika na Wawrze</h2>
+      <p class="rz2-sub">
+        Jedno zlecenie od zgłoszenia do sprawdzenia odpływu – co się działo w budynku i dlaczego
+        zator siedział poza nim.
+      </p>
+    </div>
+
+    <div class="rz2-body">
+      <p>
+        Zadzwoniła administracja bloku na Wawrze. W węźle cieplnym, w technicznym zlewie,
+        podchodziły ścieki. Zauważył to konserwator podczas obchodu – wieczorem w zlewie stała
+        cuchnąca woda, rano było jej wyraźnie mniej. Ktoś obstawiał, że to problem samego zlewu.
+        Nie był.
+      </p>
+
+      <h3 class="rz2-h3">Objaw: najniższy przybór w budynku puszcza pierwszy</h3>
+      <p>
+        Węzeł cieplny leży na poziomie piwnicy. Techniczny zlew, który tam stoi – konserwatorzy
+        korzystają z niego przy pracach na instalacji – jest wpięty do kanalizacji niżej niż
+        wszystkie przybory w mieszkaniach. Kiedy rura odprowadzająca ścieki z budynku robi się
+        ciasna, wieczorny szczyt – kąpiele, pralki, zmywanie w kilkudziesięciu mieszkaniach naraz –
+        przestaje się w niej mieścić. Ścieki muszą gdzieś ujść. Podnoszą się w najniższym punkcie,
+        czyli właśnie w tym zlewie. Dlatego w mieszkaniach wszystko wyglądało normalnie, a problem
+        widać było tylko w węźle. Syfon zlewu był zresztą drożny – cofka szła od strony instalacji,
+        z dołu, a to typowy znak, że niedrożny jest wspólny odcinek, nie podejście jednego przyboru.
+      </p>
+
+      <h3 class="rz2-h3">Diagnoza: przykanalik zarośnięty po latach</h3>
+      <p>
+        Przykanalik to odcinek między budynkiem a studzienką kanalizacyjną. Nad tą jedną rurą
+        pracuje kilkadziesiąt kuchni i łazienek. Tłuszcz spuszczany codziennie do zlewów osadza
+        się na ściankach, do tego dochodzi mydło i drobne resztki. Warstwa rośnie latami.
+        Woda ociera się o lepki, szorstki osad i traci prędkość, więc niesione zanieczyszczenia
+        odkładają się jeszcze szybciej. W końcu wieczorny zrzut przestaje przechodzić.
+      </p>
+
+      <h3 class="rz2-h3">Metoda: wuko od studzienki, bez wchodzenia do mieszkań</h3>
+      <p>
+        Taki odcinek czyścimy ciśnieniowo. Do studzienki przed budynkiem wprowadziliśmy wąż
+        wysokociśnieniowy z końcówką dobraną do średnicy rury – strumień wody tnie warstwę
+        tłuszczu przy samej ściance i spłukuje ją do studzienki, odcinek po odcinku, aż rura
+        odzyskuje pełny przekrój. Cała praca odbyła się na zewnątrz. Nikt z mieszkańców nie
+        musiał nikogo wpuszczać ani zmieniać planów na wieczór.
+      </p>
+
+      <figure class="rz2-figure">
+        <img
+          src="/img/realizacje/wuko-agregat-cisnieniowy-auto.webp"
+          alt="Biały bus z agregatem wuko w środku – zbiornik wody i bębny z wężami wysokociśnieniowymi – zaparkowany przy osiedlu bloków"
+          width="1200"
+          height="896"
+          loading="lazy"
+        />
+        <figcaption>
+          Nasz wóz na miejscu zlecenia – agregat wuko ze zbiornikiem wody i bębnami węży
+          wysokociśnieniowych.
+        </figcaption>
+      </figure>
+
+      <h3 class="rz2-h3">Efekt</h3>
+      <p>
+        Po wyczyszczeniu odcinka puściliśmy wodę z kilku punktów w budynku i obserwowaliśmy
+        przepływ w studzience. Pełny profil, bez podpiętrzania. Ścieki przestały podchodzić
+        w zlewie, a węzeł cieplny wrócił do normalnej pracy – konserwator potwierdził po kilku
+        dniach, że wieczorami jest sucho.
+      </p>
+    </div>
+
+    <div class="rz2-cta">
+      <p class="rz2-cta-text">
+        Masz w piwnicy albo w węźle cieplnym zlew, w którym przy większym zrzucie wody podchodzą
+        ścieki? Im dłużej rura zarasta, tym twardszy osad i dłuższa robota. Obsługujemy bloki,
+        kamienice i domy na terenie całej Warszawy – a jeśli budynek stoi w tej części miasta,
+        zajrzyj na stronę <a href="/wukowawer" class="rz2-link">Wuko Wawer</a>.
+      </p>
+      <a href={`tel:${siteConfig.phoneTel}`} class="rz2-call">
+        Ścieki podchodzą w zlewie? Zadzwoń: {siteConfig.phone}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .rz2 { padding: 5rem 0; background: #f8fafc; }
+  @media (min-width: 1024px) { .rz2 { padding: 7rem 0; } }
+
+  .rz2-inner {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .rz2-inner { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .rz2-inner { padding: 0 2rem; } }
+
+  .rz2-head { text-align: center; margin-bottom: 3rem; }
+  .eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .rz2-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 640px) { .rz2-title { font-size: 2.25rem; } }
+  @media (min-width: 1024px) { .rz2-title { font-size: 2.75rem; } }
+  .rz2-sub { font-size: 1.125rem; color: #475569; max-width: 40rem; margin: 0 auto; }
+
+  .rz2-body p {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  .rz2-h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .rz2-figure { margin: 2.5rem 0; }
+  .rz2-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+  }
+  .rz2-figure figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9375rem;
+    color: #64748b;
+    text-align: center;
+  }
+
+  .rz2-cta {
+    margin-top: 3rem;
+    background: #fff;
+    border: 1px solid #e0f2fe;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  .rz2-cta-text {
+    font-size: 1.125rem;
+    color: #334155;
+    line-height: 1.8;
+    margin-bottom: 1.75rem;
+  }
+  .rz2-link { color: #0284c7; font-weight: 600; text-decoration: none; }
+  .rz2-link:hover { text-decoration: underline; }
+  .rz2-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(90deg, var(--sky), var(--cyan));
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .rz2-call:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3); }
+</style>
