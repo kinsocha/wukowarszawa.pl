@@ -1,7 +1,7 @@
 ---
 title: Cofająca się woda w domu z szambem – tak udrożniliśmy przyłącze
 description: Realizacja z domu jednorodzinnego – woda cofała się w kilku odpływach naraz, a przyczyną był zator w przyłączu do szamba. Pokazujemy, jak przebiegło udrożnienie wuko.
-pubDate: 2026-07-09T16:47:33+02:00
+pubDate: 2026-07-19T17:42:19+02:00
 category: Realizacje
 readingTime: 5
 faq:
