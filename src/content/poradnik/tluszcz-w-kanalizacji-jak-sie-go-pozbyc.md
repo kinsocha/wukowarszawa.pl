@@ -14,10 +14,10 @@ faq:
   - q: Jak często czyścić kanalizację w lokalu gastronomicznym?
     a: Dwa razy w roku to rozsądne minimum – kuchnia restauracyjna produkuje wielokrotnie więcej tłuszczu niż domowa. W mieszkaniu wystarczy czyszczenie raz na rok.
   - q: Czy spłukiwanie tłuszczu gorącą wodą chroni rury?
-    a: Nie. Gorąca woda niesie tłuszcz tylko przez pierwszy metr, potem stygnie i tłuszcz osadza się głębiej w instalacji. Realna profilaktyka to zlewanie tłuszczu do słoika lub puszki i wyrzucanie do kosza oraz sitko na odpływie.
+    a: Nie. Wbrew internetowym poradnikom gorąca woda nie usuwa tłuszczu z rur – szybko stygnie w instalacji, a osad zostaje tam, gdzie narósł. Realna profilaktyka to zlewanie tłuszczu do słoika lub puszki i wyrzucanie do kosza oraz sitko na odpływie.
 ---
 
-Tłuszcz to najczęstszy winowajca zatkanej kuchni. Rzadko blokuje rurę z dnia na dzień – zwykle pracuje na to miesiącami. Najpierw woda schodzi odrobinę wolniej. Potem przy zlewaniu makaronu robi się jeziorko. W końcu któregoś dnia nie schodzi wcale.
+Tłuszcz to najczęstszy winowajca zatkanej kuchni. Rzadko blokuje rurę z dnia na dzień – zwykle pracuje na to miesiącami. Najpierw woda schodzi odrobinę wolniej. Potem przy zlewaniu makaronu zaczyna pojawiać się problem ze spływem wody. W końcu któregoś dnia nie schodzi wcale.
 
 ## Skąd się bierze tłuszcz w rurze
 
@@ -29,13 +29,13 @@ Woda zwalnia z dwóch powodów. Po pierwsze ociera się o szorstki, lepki osad i
 
 ## Dlaczego chemia przegrywa z tłuszczem
 
-Silna chemia często robi w zatorze prześwit – o ile zator nie jest duży – ale rzadko czyści rurę do końca. Woda zaczyna schodzić wąskim kanalikiem, osad zostaje na ściankach i po kilku tygodniach kanalik zakleja się z powrotem. Z granulatem dochodzi drugi problem: tam, gdzie nie zdoła przejść przez zator, reaguje z wodą i kamienieje. Przy dawce z saszetki to cienka warstwa, którą nasz sprzęt zdejmie razem z zatorem. Przy szklance wsypanej „na oko" potrafi powstać twarda masa, a jeśli stwardnieje w rurze w posadzce, bywa że kończy się kuciem podłogi.
+Silna chemia często robi w zatorze prześwit – o ile zator nie jest duży – ale rzadko czyści rurę do końca. Woda zaczyna schodzić wąskim kanalikiem, osad zostaje na ściankach i po kilku tygodniach kanalik zakleja się z powrotem. Z granulatem dochodzi drugi problem: jak każda chemia – żel czy płyn – bywa za słaby na duży zator, a rozpuszczone w wodzie granulki, które nie przegryzą się przez korek, zostają w rurze i kamienieją. Przy dawce z saszetki to cienka warstwa, którą nasz sprzęt zdejmie razem z zatorem. Przy szklance wsypanej „na oko" potrafi powstać twarda masa, a jeśli stwardnieje w rurze w posadzce, bywa że kończy się kuciem podłogi. W większości takich przypadków jesteśmy w stanie pomóc bez remontu — ale to już robota dłuższa i wyraźnie droższa niż zwykłe udrożnienie.
 
 Soda z octem? Domowy rytuał. Zaszumi, spieni się, wygląda naukowo – i na tym się kończy. Bardziej pokaz niż udrażnianie.
 
-Gorąca woda też nie jest rozwiązaniem, wbrew temu, co powtarzają internetowe poradniki. Gdyby działała, kuchnie by się nie zapychały – a zapychają się regularnie. Gorący strumień przesuwa tłuszcz o metr dalej, tam stygnie i osiada.
+Gorąca woda też nie jest rozwiązaniem, wbrew temu, co powtarzają internetowe poradniki. Gdyby działała, kuchnie by się nie zapychały – a zapychają się regularnie. Woda szybko stygnie w instalacji, a przyklejony do ścianek osad zostaje tam, gdzie narósł.
 
-Jedyna domowa próba, która ma sens, to gumowa przepychaczka. Świeży, miękki korek czasem uda się nią ruszyć. Osadu narastającego na ściankach od miesięcy – nie zdejmie.
+Z domowych prób sens mają dwie rzeczy. Gumowa przepychaczka – czasem uda się nią udrożnić syfon, ale zatoru siedzącego dalej w rurze nie ruszy. I ręczna sprężyna na korbkę, która wchodzi w samą rurę i potrafi przebić świeży korek. Osadu narastającego na ściankach od miesięcy nie zdejmie jednak żadna z nich.
 
 ## Sprężyna elektryczna, czyli jak czyścimy podejścia
 
