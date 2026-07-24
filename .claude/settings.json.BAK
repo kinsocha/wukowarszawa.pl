@@ -15,33 +15,7 @@
       "PowerShell(npm install @astrojs/mdx@^4)",
       "PowerShell(git add -A)",
       "PowerShell(gh run list -L 3)",
-      "PowerShell(Invoke-RestMethod \"https://wukowarszawa.pl/poradnik/\" -Method Head -UseBasicParsing)",
-      "Bash",
-      "PowerShell",
-      "Edit",
-      "Write",
-      "MultiEdit",
-      "WebFetch"
-    ],
-    "ask": [
-      "Bash(git push:*)",
-      "Bash(git reset:*)",
-      "Bash(git checkout:*)",
-      "Bash(git restore:*)",
-      "Bash(git clean:*)",
-      "Bash(git rm:*)",
-      "Bash(rm:*)",
-      "Bash(rmdir:*)",
-      "PowerShell(git push:*)",
-      "PowerShell(git reset:*)",
-      "PowerShell(git checkout:*)",
-      "PowerShell(git restore:*)",
-      "PowerShell(git clean:*)",
-      "PowerShell(git rm:*)",
-      "PowerShell(Remove-Item:*)",
-      "PowerShell(del:*)",
-      "PowerShell(rd:*)",
-      "PowerShell(erase:*)"
+      "PowerShell(Invoke-RestMethod \"https://wukowarszawa.pl/poradnik/\" -Method Head -UseBasicParsing)"
     ]
   }
 }
