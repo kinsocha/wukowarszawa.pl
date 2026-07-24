@@ -26,10 +26,11 @@ Zrobione (wg git, wieczór 2026-06-11):
 
 ## Do zrobienia / otwarte
 - [x] Numer 660 360 170 wstawiony w `src/config/site.ts` (phone + phoneTel) — propaguje na całą stronę.
+- [x] „Tłuszcz w kanalizacji — jak się go pozbyć" — NAPISANY 2026-07-24 (`src/content/poradnik/tluszcz-w-kanalizacji-jak-sie-go-pozbyc.md`). Zakres wg polecenia właściciela: TYLKO podejścia kanalizacyjne (rury ~50 mm wewnątrz budynków) → sprężyna elektryczna jako metoda; wuko wspomniane wyłącznie jako wyjątek przy prostym przebiegu rury. Indywidualny + gastronomia.
 - [ ] Kolejne artykuły poradnika. Tematy-kandydaci z researchu (2026-06-20), niekanibalizujące strony głównej ani dzielnic — uszeregowane wg priorytetu:
-  - „Tłuszcz w kanalizacji — jak się go pozbyć" (indywidualny + gastronomia)
+  - **„Czyszczenie przewodów odpływowych" (ustalenie właściciela 2026-07-24, na później)**: osobny artykuł o czyszczeniu przewodów odpływowych — tu podejście OD STUDZIENKI, więc metoda główna to udrażnianie wuko (ciśnieniem). Kontra do artykułu o tłuszczu (podejścia wewnątrz = sprężyna). Pilnować, żeby oba artykuły się nie kanibalizowały.
   - „Zatkany pion w bloku — kto odpowiada i jak udrożnić" (B2B, niska konkurencja)
-  - Zajęte (nie powtarzać): wuko czy sprężyna, ile kosztuje wuko, czyszczenie deszczówki, zapchana studzienka kanalizacyjna, zapchana kanalizacja krok po kroku.
+  - Zajęte (nie powtarzać): wuko czy sprężyna, ile kosztuje wuko, czyszczenie deszczówki, zapchana studzienka kanalizacyjna, zapchana kanalizacja krok po kroku, tłuszcz w kanalizacji.
   - Uwaga researchu: brak twardych wolumenów (Ahrefs/GKP) — priorytet wnioskowany z gęstości treści konkurencji, nie z pomiaru.
 - [ ] Kolejne podstrony dzielnicowe (patrz lista brakujących — pilnować anty-kanibalizacji).
 
