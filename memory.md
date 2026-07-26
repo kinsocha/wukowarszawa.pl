@@ -1,5 +1,5 @@
 # memory.md — wukowarszawa.pl
-> Hub pamięci TEGO projektu. Czytany na starcie każdej rozmowy. Aktualizacja: 2026-06-12.
+> Hub pamięci TEGO projektu. Czytany na starcie każdej rozmowy. Aktualizacja: 2026-07-24.
 
 ## Zasada zapisu
 - **Ustalenia specyficzne dla tego projektu** (decyzje, do zrobienia, drafty, reguły dot. tylko wukowarszawa.pl) trafiają TU.
@@ -42,7 +42,7 @@ Zrobione (wg git, wieczór 2026-06-11):
 - **Wuko a sprężyna — NIE robić osobnej podstrony (decyzja 2026-07-10).** Najpierw powstała podstrona `/wuko-a-sprezyna-elektryczna`, ale właściciel słusznie uznał, że kanibalizuje istniejący artykuł poradnika `wuko-czy-sprezyna-elektryczna.md` — podstronę USUNIĘTO. Zamiast niej artykuł wzbogacono o sekcję „Stare żeliwo i zapchany pion" (tekst właściciela: żeliwo + pion, na którym woda cofa się w kilku mieszkaniach) z frazami „wuko w Warszawie" (link `/`) i „wuko na Białołęce" (link `/wukobialoleka`). Wniosek na przyszłość: temat wuko-vs-sprężyna należy do tego jednego artykułu, nie dublować go podstroną.
 
 ## Realizacje (stan po 2026-07-19)
-- **Na stronie głównej jest JEDNA sekcja realizacji**: `RealizacjaZlew.astro` (między WukoMethod a VideoSection, tło #f8fafc, eyebrow „Kolejna realizacja z terenu") — ścieki podchodzące w technicznym zlewie w węźle cieplnym bloku, czyszczenie przykanalika wuko. Zlecenie z Wawra (poprawki właściciela: zlew w węźle cieplnym, NIE kratka w piwnicy; Wawer, NIE Targówek; „na Wawrze" dopisane do h2 na wyraźne polecenie właściciela). Link do `/wukowawer` w CTA. Zdjęcie: `public/img/realizacje/wuko-agregat-cisnieniowy-auto.webp` (źródło: `Desktop\zdjęcia udraznianiekanalizacji.eu - claude\wuko dla udraznianiekanalizacji.eu\wuko-samochód.png`).
+- **Na stronie głównej jest JEDNA sekcja realizacji**: `RealizacjaZlew.astro` (między WukoMethod a VideoSection, tło #f8fafc, eyebrow „Kolejna realizacja z terenu") — ścieki podchodzące w technicznym zlewie w węźle cieplnym bloku, czyszczenie przykanalika wuko. Zlecenie z Wawra (poprawki właściciela: zlew w węźle cieplnym, NIE kratka w piwnicy; Wawer, NIE Targówek; „na Wawrze" dopisane do h2 na wyraźne polecenie właściciela). Link do `/wukowawer` w CTA. Zdjęcie: `public/img/realizacje/wuko-warszawa.webp` (896×1200 pion, podmiana 2026-07-26; źródło: `Desktop\hf_20260726_115925_c4f955ce-13c1-4136-a7d5-caedbc27f699.png`; poprzednie `wuko-agregat-cisnieniowy-auto.webp` skasowane).
 - **Pierwsza realizacja (szambo, Białołęka) wróciła do poradnika**: właściciel kazał wyciąć ją z index → przywrócony z gita oryginalny artykuł `src/content/poradnik/zator-w-przylaczu-do-szamba.md` (stan z commita 31a251a, z FAQ; pubDate zmieniona na 2026-07-19 na polecenie właściciela). Komponent `Realizacja.astro` USUNIĘTY.
 - Historia zmian węzła cieplnego 2026-07-19: najpierw osobna podstrona `/realizacje/zlew-w-wezle-cieplnym/` (FAQ + JSON-LD), potem na polecenie właściciela cały artykuł jako sekcja na index — podstrona i kafelek-zajawka usunięte. FAQ z podstrony nie przeniesiono (index ma własny FAQPage; wątek drożnego syfonu wpleciony w sekcję „Objaw").
 - Wniosek: miejsce publikacji realizacji (sekcja na index vs artykuł w poradniku) każdorazowo potwierdzać z właścicielem — decyzje bywały w obie strony.
@@ -54,6 +54,14 @@ Gdy użytkownik zapyta „co mieliśmy zrobić" przy podstronie inspekcji kamer�
 - [ ] **Realizacje** — 3-5 prawdziwych zleceń (objaw → co pokazała kamera → efekt); tytuł po PROBLEMIE, nie po dzielnicy (anty-kanibalizacja).
 - [ ] **GSC** — Inspekcja adresu URL → „Poproś o zindeksowanie" dla `/inspekcja-kamera-kanalizacji/` (realny powód niewidoczności, nie żaden loader).
 - [ ] **Decyzja o cenie** — zostawiamy „po rozmowie" czy podajemy widełki „od X zł".
+
+## Uprawnienia Claude Code (zmiana: 2026-07-24) — dotyczy TEGO projektu (wukowarszawa.pl)
+- W pliku `C:\Users\lenovo\wukowarszawa.pl\.claude\settings.json` ustawiono reguły uprawnień, aby Claude Code **nie pytał o zgodę przy każdej czynności**, tylko wykonywał komendy automatycznie. Zmiana wprowadzona świadomie na prośbę właściciela (commit 7f8465c, 24.07.2026).
+- **`allow`** obejmuje m.in. `Bash`, `PowerShell`, `Edit`, `Write`, `MultiEdit`, `WebSearch`, `WebFetch` → te akcje wykonują się bez pytania.
+- **`ask`** wymusza pytanie o zgodę TYLKO przy komendach ryzykownych: `git push`, `git reset`, `git checkout`, `git restore`, `git clean`, `git rm` oraz usuwanie plików: `rm`, `rmdir`, `Remove-Item`, `del`, `rd`, `erase`.
+- Kopia zapasowa poprzednich ustawień: `C:\Users\lenovo\wukowarszawa.pl\.claude\settings.json.BAK`.
+- **Cel:** mniej przerywania pracy pytaniami, przy zachowaniu ochrony przed publikacją na żywo (`git push`) oraz przed skasowaniem plików i niezapisanych zmian.
+- **Uwaga:** reguły `ask` dopasowują się po POCZĄTKU komendy — komendy złożone (np. `coś && git push`) mogą nie zostać złapane. Przy nietypowych operacjach nadal warto zerknąć, czego dotyczą.
 
 ## Decyzje / ustalenia
 - Ocena zbiorcza (gwiazdki) liczona automatycznie z realnych opinii w `src/content/reviews` (Layout.astro) — usunięto sztuczne 467 z `site.ts`. Nie wpisywać ręcznej liczby. Realny brak: pusty `googleMapsUrl` (brak podpiętej wizytówki Google) + brak pełnego NAP — czeka na dane od właściciela.
