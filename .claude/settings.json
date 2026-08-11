@@ -21,7 +21,8 @@
       "Edit",
       "Write",
       "MultiEdit",
-      "WebFetch"
+      "WebFetch",
+      "WebFetch(domain:wukoexpress.pl)"
     ],
     "ask": [
       "Bash(git push:*)",

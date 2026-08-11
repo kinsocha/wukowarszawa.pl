@@ -991,6 +991,104 @@ export const districts: DistrictData[] = [
         'Na tej podstawie ładujemy właściwy sprzęt i podajemy orientacyjny koszt jeszcze przed dojazdem. Gdy zator wraca mimo czyszczenia, rurę sprawdzamy kamerą i pokazujemy, gdzie tkwi przyczyna. Zadzwoń: 660 360 170.',
     },
   },
+  {
+    slug: 'wukobemowo',
+    name: 'Bemowo',
+    fullName: 'Wuko Bemowo',
+    h1Main: 'Wuko Bemowo',
+    h1Accent: 'ciśnieniowe czyszczenie i udrażnianie rur',
+    metaTitle: 'Wuko Bemowo – ciśnieniowe udrażnianie kanalizacji | Wuko Warszawa',
+    metaDescription:
+      'Wuko Bemowo – udrażnianie kanalizacji w blokach i domach. Jelonki, Górce, Boernerowo, Chrzanów, Bemowo-Lotnisko. Wycena przed przyjazdem, faktura VAT.',
+    heroIntro:
+      'Działamy na całym Bemowie – od bloków na Jelonkach i Górcach, przez nowsze osiedla na Chrzanowie i Bemowie-Lotnisku, po domy jednorodzinne w Boernerowie i Grotach. Metodę dobieramy do instalacji, a cenę podajemy przed przyjazdem.',
+    areas: [
+      'Jelonki Północne',
+      'Jelonki Południowe',
+      'Górce',
+      'Groty',
+      'Boernerowo',
+      'Chrzanów',
+      'Bemowo-Lotnisko',
+      'Fort Bema',
+    ],
+    streets: [
+      'Powstańców Śląskich',
+      'Górczewska',
+      'Lazurowa',
+      'Człuchowska',
+      'Radiowa',
+      'Wrocławska',
+      'gen. Kaliskiego',
+      'Dywizjonu 303',
+      'Obrońców Tobruku',
+      'Anieli Krzywoń',
+      'Rozłogi',
+      'Batalionów Chłopskich',
+      'Szeligowska',
+      'Sternicza',
+      'Coopera',
+      'Czumy',
+      'Pełczyńskiego',
+      'Kocjana',
+    ],
+    description:
+      'Bemowo to w większości dzielnica bloków. Na Jelonkach i Górcach ścieki z kilkudziesięciu mieszkań schodzą jednym pionem, więc tłuszcz i osady odkładają się tam szybciej, niż się wydaje. Efekt zna każdy: najpierw bulgotanie w odpływie, potem cofka u sąsiada z niższego piętra. Płukanie hydrodynamiczne Wuko zdziera taką warstwę ze ścianek na całej długości rury, zamiast tylko przebić w niej otwór. Na Chrzanowie i Bemowie-Lotnisku stoją nowsze budynki z instalacją PVC – tam do rur trafiają czasem resztki po budowie albo wykończeniówce i to one blokują odpływ. Boernerowo i Groty to z kolei domy jednorodzinne z długimi przyłączami do studzienki. Na takich odcinkach Wuko dosięga dalej niż sprężyna i wypłukuje piasek, korzenie oraz osady z kilkudziesięciu metrów rury. Cieńsze podejścia od zlewu i umywalki, fi 40–50 mm, udrażniamy sprężyną elektryczną. Przy zatorach, które wracają, sprawdzamy rurę kamerą TV.',
+    testimonials: [
+      {
+        text: 'Pion w bloku na Jelonkach zapychał się kilka razy w roku. Po płukaniu ciśnieniem i sprawdzeniu kamerą mamy wreszcie spokój. Polecam.',
+        location: 'Jelonki Północne',
+      },
+      {
+        text: 'Zlew stał od rana. Pan przyjechał po południu, rozkręcił syfon, wprowadził sprężynę i po problemie. Czysto po pracy.',
+        location: 'Górce',
+      },
+      {
+        text: 'Przyłącze od domu do studzienki zarośnięte osadem. Wuko wypłukało wszystko bez rozkopywania ogrodu. Solidna robota, polecam.',
+        location: 'Boernerowo',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje Wuko na Bemowie?',
+        answer:
+          'Cenę podajemy telefonicznie, przed przyjazdem – wystarczy krótki opis problemu pod numerem 660 360 170. Orientacyjny cennik usług znajdziesz na stronie głównej, w sekcji Cennik. Kwota ustalona przez telefon nie rośnie na miejscu bez powodu.',
+      },
+      {
+        question: 'Jak szybko przyjedziecie na Jelonki, Górce albo Chrzanów?',
+        answer:
+          'Najczęściej w ciągu 1–2 godzin od zgłoszenia. Bemowo dobrze znamy – od Powstańców Śląskich i Górczewskiej po Lazurową. Zadzwoń i podaj adres, określimy realny czas dojazdu.',
+      },
+      {
+        question: 'Pion w bloku na Bemowie zatyka się regularnie – jak to rozwiązać na dłużej?',
+        answer:
+          'Gdy zator wraca w tym samym pionie, przyczyną jest zwykle osad narosły na dłuższym odcinku rury, a nie pojedynczy korek. Przepchnięcie robi w nim tylko prześwit. Płukanie Wuko usuwa warstwę ze ścianek, dlatego drożność utrzymuje się o wiele dłużej. Wspólnota lub spółdzielnia może zlecić czyszczenie całego pionu – wystawiamy faktury VAT.',
+      },
+      {
+        question: 'Czy obsługujecie domy jednorodzinne w Boernerowie i Grotach?',
+        answer:
+          'Tak. Domy mają dłuższe przyłącza niż mieszkania – od budynku do studzienki potrafi być kilkadziesiąt metrów rury. Wuko pracuje na takich odcinkach elastycznym wężem pod ciśnieniem i usuwa piasek, osady oraz korzenie. Sprężyna zostaje na krótkie, punktowe zatory.',
+      },
+      {
+        question: 'Nowe mieszkanie na Chrzanowie, a woda schodzi coraz wolniej. Skąd ten problem?',
+        answer:
+          'W świeżo oddanych budynkach w rurach zostają czasem resztki z budowy – zaprawa, pył, drobny gruz. Osad z codziennego użytkowania dokłada się do tego i odpływ zwalnia. Kamerą ustalamy, gdzie siedzi przeszkoda, i wypłukujemy ją ciśnieniem, bez kucia ścian.',
+      },
+    ],
+    extra: {
+      heading: 'Przepychanie rur wuko na Bemowie',
+      intro:
+        'Zatkana rura potrafi dać ten sam objaw w bloku na Jelonkach i w domu w Boernerowie, choć przyczyna leży zupełnie gdzie indziej. Raz to korek tuż za syfonem. Raz osad w pionie na wysokości kilku pięter, a innym razem przeszkoda w przyłączu pod trawnikiem. Zanim wybierzemy sprzęt – wuko, sprężynę elektryczną albo jedno i drugie – zadajemy przez telefon kilka pytań. <strong>Zapewniamy kompleksowy serwis kanalizacji nowoczesnym sprzętem oraz inspekcję rur kamerą.</strong>',
+      askLine: 'Odpowiedzi na te trzy pytania mówią nam najwięcej:',
+      questions: [
+        'Czy problem występuje <strong>w mieszkaniu lub domu</strong> (zlew, toaleta, brodzik), czy <strong>na zewnątrz</strong> (studzienka, przyłącze)?',
+        'Z jakiego materiału są rury, o ile wiesz – <strong>PVC, żeliwo, kamionka</strong>?',
+        'Czy zdarzyło się to <strong>pierwszy raz</strong>, czy odpływ zatyka się <strong>co jakiś czas</strong>?',
+      ],
+      outro:
+        'Dzięki temu zabieramy od razu właściwy sprzęt i podajemy orientacyjny koszt jeszcze przed wyjazdem. A jeśli zator wraca mimo czyszczenia, oglądamy rurę kamerą i pokazujemy, gdzie leży przyczyna. Zadzwoń: 660 360 170.',
+    },
+  },
 ];
 
 export function getDistrictBySlug(slug: string): DistrictData | undefined {

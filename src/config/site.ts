@@ -50,6 +50,7 @@ export const siteConfig = {
     'Mokotów',
     'Wola',
     'Ursynów',
+    'Bemowo',
   ],
 
   // Wszystkie dzielnice Warszawy (dla sekcji Locations)
