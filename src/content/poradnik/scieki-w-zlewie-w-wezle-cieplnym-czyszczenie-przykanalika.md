@@ -41,4 +41,4 @@ Po wyczyszczeniu odcinka puściliśmy wodę z kilku punktów w budynku i obserwo
 
 ## Co z tego wynika dla Ciebie
 
-Masz w piwnicy albo w węźle cieplnym zlew, w którym przy większym zrzucie wody podchodzą ścieki? Im dłużej rura zarasta, tym twardszy osad i dłuższa robota. Obsługujemy bloki, kamienice i domy na terenie całej Warszawy – a jeśli budynek stoi w tej części miasta, zajrzyj na stronę [Wuko Wawer](/wukowawer). Ścieki podchodzą w zlewie? Zadzwoń pod **660 360 170**, opisz sytuację, a podamy wycenę przed rozpoczęciem pracy.
+Masz w piwnicy albo w węźle cieplnym zlew, w którym przy większym zrzucie wody podchodzą ścieki? Im dłużej rura zarasta, tym twardszy osad i dłuższa robota. Obsługujemy bloki, kamienice i domy na terenie całej Warszawy – a jeśli budynek stoi w tej części miasta, zajrzyj na stronę [Wuko Wawer](/wukowawer/). Ścieki podchodzą w zlewie? Zadzwoń pod **660 360 170**, opisz sytuację, a podamy wycenę przed rozpoczęciem pracy.

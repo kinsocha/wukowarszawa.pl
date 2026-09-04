@@ -39,4 +39,4 @@ Po czyszczeniu wprowadziliśmy w rurę kamerę inspekcyjną. Chciałem zobaczyć
 
 Puściliśmy wodę z kilku mieszkań i obserwowałem przepływ w studzience – ścieki szły pełnym profilem, bez podpiętrzania. W piwnicy sucho. Budynek wrócił do normalnej pracy tego samego dnia, w którym zgłoszono awarię.
 
-Zajmujemy się blokami, kamienicami i domami na terenie całej Warszawy – jeśli Twój budynek stoi w tej okolicy, zajrzyj na stronę [Wuko Targówek](/wukotargowek). Ścieki wybijają w piwnicy albo woda stanęła w kilku mieszkaniach naraz? Zadzwoń pod **660 360 170**, opisz sytuację, a wycenę podamy przed rozpoczęciem pracy.
+Zajmujemy się blokami, kamienicami i domami na terenie całej Warszawy – jeśli Twój budynek stoi w tej okolicy, zajrzyj na stronę [Wuko Targówek](/wukotargowek/). Ścieki wybijają w piwnicy albo woda stanęła w kilku mieszkaniach naraz? Zadzwoń pod **660 360 170**, opisz sytuację, a wycenę podamy przed rozpoczęciem pracy.

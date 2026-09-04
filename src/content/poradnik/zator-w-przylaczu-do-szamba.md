@@ -43,4 +43,4 @@ Po udrożnieniu puściliśmy wodę i sprawdziliśmy odpływ. Schodzi od razu, be
 
 Mieszkasz w domu z szambem i woda schodzi wolniej w kilku miejscach? Nie czekaj, aż całkiem stanie. Im dłużej rura zarasta, tym twardszy osad i dłuższa robota przy udrażnianiu. Zapobiegawcze płukanie przyłącza co jakiś czas trzyma rurę drożną i oszczędza nerwów w najmniej wygodnym momencie.
 
-Obsługujemy domy i mieszkania na terenie całej Warszawy. Więcej o udrażnianiu w tej dzielnicy znajdziesz na stronie [Wuko Białołęka](/wukobialoleka). Woda zaczyna się cofać? Zadzwoń pod **660 360 170**, opisz, gdzie i jak wybija, a dobierzemy sprzęt i podamy koszt przed rozpoczęciem pracy.
+Obsługujemy domy i mieszkania na terenie całej Warszawy. Więcej o udrażnianiu w tej dzielnicy znajdziesz na stronie [Wuko Białołęka](/wukobialoleka/). Woda zaczyna się cofać? Zadzwoń pod **660 360 170**, opisz, gdzie i jak wybija, a dobierzemy sprzęt i podamy koszt przed rozpoczęciem pracy.

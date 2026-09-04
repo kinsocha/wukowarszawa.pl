@@ -1,98 +1,88 @@
 # =====================================================================
-# .htaccess - konfiguracja Apache dla wukowarszawa.pl
+# .htaccess - konfiguracja serwera dla wukowarszawa.pl (Astro, statyczny HTML)
 # =====================================================================
+# Plik trafia do /public_html/ na serwerze automatycznie (Astro kopiuje
+# zawartość /public/ do /dist/ przy buildzie).
 #
-# WAŻNE: Ten plik MUSI być w katalogu /public_html/ na serwerze.
-# Vite kopiuje wszystko z folderu /public/ do /dist/ przy buildzie,
-# więc ten plik wyląduje tam automatycznie po `npm run build`.
-
-# ---------------------------------------------------------------------
-# 1. SPA fallback - WAŻNE dla React Router (podstrony dzielnic)
-# ---------------------------------------------------------------------
-# Bez tego wejście na https://wukowarszawa.pl/wukotargowek bezpośrednio
-# (np. z Google) da błąd 404. Te reguły mówią Apache: jeśli żądany plik
-# lub folder nie istnieje, podaj index.html zamiast 404 - dzięki temu
-# React Router może obsłużyć trasę po stronie przeglądarki.
+# Zmiana 2026-09-04: usunięty fallback SPA z czasów React Routera. Każda
+# podstrona ma teraz własny katalog z index.html, więc nieistniejący adres
+# ma zwracać prawdziwy 404, a nie stronę główną z kodem 200 (GSC zgłaszał
+# takie adresy jako duplikaty strony głównej).
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
   # ---------------------------------------------------------------------
-  # 1a. 301 REDIRECTS ze starych URL .html na nowe (ZACHOWANIE SEO)
+  # 1. Jeden adres kanoniczny: https://wukowarszawa.pl (bez www, bez http)
   # ---------------------------------------------------------------------
-  # Stare URL: wukowarszawa.pl/wukotargowek.html
-  # Nowy URL:  wukowarszawa.pl/wukotargowek
-  # Google przepisze ranking ze starego URL na nowy w ciągu kilku tygodni.
+  RewriteCond %{HTTP_HOST} ^www\.wukowarszawa\.pl$ [NC]
+  RewriteRule ^(.*)$ https://wukowarszawa.pl/$1 [R=301,L]
 
-  # Dzielnice
-  RewriteRule ^wukotargowek\.html$ /wukotargowek [R=301,L]
-  RewriteRule ^wukobialoleka\.html$ /wukobialoleka [R=301,L]
-  RewriteRule ^wukobielany\.html$ /wukobielany [R=301,L]
-  RewriteRule ^wukobrodno\.html$ /wukobrodno [R=301,L]
-  RewriteRule ^wukowawer\.html$ /wukowawer [R=301,L]
-  RewriteRule ^wukoochota\.html$ /wukoochota [R=301,L]
-  RewriteRule ^wukopragapolnoc\.html$ /wukopragapolnoc [R=301,L]
-  RewriteRule ^wukopragapoludnie\.html$ /wukopragapoludnie [R=301,L]
-  RewriteRule ^wukorembertow\.html$ /wukorembertow [R=301,L]
-  RewriteRule ^wukoursus\.html$ /wukoursus [R=301,L]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://wukowarszawa.pl/$1 [R=301,L]
 
-  # Strona zbiorcza ulic Warszawy → strona główna
+  # ---------------------------------------------------------------------
+  # 2. Stare adresy .html z dawnej strony -> nowe adresy (jeden skok 301,
+  #    od razu na wersję z ukośnikiem, którą serwer zwraca jako 200)
+  # ---------------------------------------------------------------------
+  RewriteRule ^wukotargowek\.html$ /wukotargowek/ [R=301,L]
+  RewriteRule ^wukobialoleka\.html$ /wukobialoleka/ [R=301,L]
+  RewriteRule ^wukobielany\.html$ /wukobielany/ [R=301,L]
+  RewriteRule ^wukobrodno\.html$ /wukobrodno/ [R=301,L]
+  RewriteRule ^wukowawer\.html$ /wukowawer/ [R=301,L]
+  RewriteRule ^wukoochota\.html$ /wukoochota/ [R=301,L]
+  RewriteRule ^wukopragapolnoc\.html$ /wukopragapolnoc/ [R=301,L]
+  RewriteRule ^wukopragapoludnie\.html$ /wukopragapoludnie/ [R=301,L]
+  RewriteRule ^wukorembertow\.html$ /wukorembertow/ [R=301,L]
+  RewriteRule ^wukoursus\.html$ /wukoursus/ [R=301,L]
+
+  # Dawna strona zbiorcza ulic i dawne opinie
   RewriteRule ^wuko-warszawa\.html$ / [R=301,L]
-
-  # Recenzje - URL pozostaje aktywny dzięki Reactowi (route /reviews.html),
-  # ale można też przekierować na czystszy URL /opinie:
-  # (zostawiamy bez przekierowania - React Router obsłuży oba)
-
-  # ---------------------------------------------------------------------
-  # 1b. SPA fallback - WAŻNE dla React Router (podstrony dzielnic)
-  # ---------------------------------------------------------------------
-  # Bez tego wejście na https://wukowarszawa.pl/wukotargowek bezpośrednio
-  # (np. z Google) da błąd 404. Te reguły mówią Apache: jeśli żądany plik
-  # lub folder nie istnieje, podaj index.html zamiast 404 - dzięki temu
-  # React Router może obsłużyć trasę po stronie przeglądarki.
-
-  # Nie przekierowuj realnych plików ani folderów (np. /assets/..., /img/..., /porady-hydrauliczne/...)
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-
-  # Wszystko inne -> index.html (React obsłuży routing)
-  RewriteRule ^ index.html [L]
+  RewriteRule ^reviews\.html$ /opinie/ [R=301,L]
 </IfModule>
 
 # ---------------------------------------------------------------------
-# 2. Kompresja Gzip - szybsze ładowanie
+# 3. Własna strona błędu 404 (generowana przez Astro z src/pages/404.astro)
+# ---------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# ---------------------------------------------------------------------
+# 4. Kompresja Gzip
 # ---------------------------------------------------------------------
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json application/xml text/xml image/svg+xml
 </IfModule>
 
 # ---------------------------------------------------------------------
-# 3. Cache statycznych plików (JS, CSS, obrazy)
+# 5. Cache statycznych plików
 # ---------------------------------------------------------------------
 <IfModule mod_expires.c>
   ExpiresActive On
 
-  # HTML - nie cache'uj (zawsze świeże)
+  # HTML - zawsze świeże
   ExpiresByType text/html "access plus 0 seconds"
 
-  # CSS i JS - cache 1 rok (Vite robi unikalne hash w nazwie pliku, więc bezpiecznie)
+  # CSS i JS - Astro dodaje hash do nazwy pliku, więc rok jest bezpieczny
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
 
-  # Obrazy - cache 1 miesiąc
+  # Obrazy
   ExpiresByType image/jpeg "access plus 1 month"
   ExpiresByType image/png "access plus 1 month"
   ExpiresByType image/svg+xml "access plus 1 month"
   ExpiresByType image/webp "access plus 1 month"
 
-  # Fonty - cache 1 rok
+  # Wideo
+  ExpiresByType video/mp4 "access plus 1 month"
+
+  # Fonty
   ExpiresByType font/woff "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
 
 # ---------------------------------------------------------------------
-# 4. Bezpieczeństwo - podstawowe nagłówki
+# 6. Nagłówki bezpieczeństwa
 # ---------------------------------------------------------------------
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
@@ -101,6 +91,6 @@
 </IfModule>
 
 # ---------------------------------------------------------------------
-# 5. Domyślny dokument
+# 7. Domyślny dokument
 # ---------------------------------------------------------------------
 DirectoryIndex index.html

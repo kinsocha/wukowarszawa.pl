@@ -10,7 +10,7 @@ const navLinks = [
   { href: '#dlaczego-my', label: 'Dlaczego my' },
   { href: '#proces', label: 'Proces' },
   { href: '#cennik', label: 'Cennik' },
-  { href: '/opinie', label: 'Opinie' },
+  { href: '/opinie/', label: 'Opinie' },
   { href: '/poradnik/', label: 'Poradnik' },
   { href: '#kontakt', label: 'Kontakt' },
 ];
@@ -46,7 +46,7 @@ const navLinks = [
           <div id="districts-menu" class="dropdown-menu u-hidden">
             <div class="dropdown-inner">
               {districts.map(d => (
-                <a href={`/${d.slug}`}>Wuko {d.name}</a>
+                <a href={`/${d.slug}/`}>Wuko {d.name}</a>
               ))}
             </div>
           </div>
@@ -78,7 +78,7 @@ const navLinks = [
       <div class="mobile-districts">
         <p class="mobile-districts-title">Dzielnice:</p>
         {districts.map(d => (
-          <a href={`/${d.slug}`} class="mobile-link">Wuko {d.name}</a>
+          <a href={`/${d.slug}/`} class="mobile-link">Wuko {d.name}</a>
         ))}
       </div>
       <a href={`tel:${siteConfig.phoneTel}`} class="mobile-cta">

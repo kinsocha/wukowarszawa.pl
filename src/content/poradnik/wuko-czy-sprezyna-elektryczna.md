@@ -49,7 +49,7 @@ Osobny temat to stare rury żeliwne. Częsty widok w kamienicach i starszej zabu
 
 Druga sytuacja to zapchany pion. Gdy woda cofa się w kilku mieszkaniach naraz albo wybija w najniżej położonym odpływie, korek siedzi w pionie – wspólnej rurze, do której podłączone są kolejne piętra. Dobrze dobrana sprężyna wchodzi w pion i rozbija zator, który go blokuje. Bloki, kamienice, domy jednorodzinne – zasada jest ta sama.
 
-[Wuko w Warszawie](/) robimy obiema metodami, na terenie całej stolicy. A jeśli szukasz konkretnie [wuko na Białołęce](/wukobialoleka), mamy dla tej dzielnicy osobną stronę z dojazdem i kontaktem.
+[Wuko w Warszawie](/) robimy obiema metodami, na terenie całej stolicy. A jeśli szukasz konkretnie [wuko na Białołęce](/wukobialoleka/), mamy dla tej dzielnicy osobną stronę z dojazdem i kontaktem.
 
 ## Kiedy łączymy obie metody
 
