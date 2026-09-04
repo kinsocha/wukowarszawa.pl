@@ -19,6 +19,8 @@ faq:
 
 Klient zadzwonił z Anina w [Wawrze](/wukowawer), że ścieki wybijają w wannie po spuszczeniu wody w toalecie, umywalce, zlewie na parterze i też jeśli puści się wodę na piętrze. Z rana szamboniarka wybrała szambo i po chwili pojawił się problem. Przybyliśmy w niecałą godzinę po zgłoszeniu.
 
+<p id="rury-zatykaja-sie-po-wybraniu-szamba"><strong>Często tak bywa, że po wybraniu szamba rury się zatykają. Przykra sprawa, ale nie jest to nic rzadkiego – trafiamy na to regularnie.</strong></p>
+
 ## Wąż wuko od strony szamba
 
 Po odkryciu wieka szamba od razu było widać rurę kanalizacyjną, przez którą małym strumykiem wylatywała woda do zbiornika na szambo. Wprowadziliśmy wąż wuko i załączyliśmy pompę wysokociśnieniową. Po dosłownie kilku sekundach pojawił się ogromny strumień wody z rury kanalizacyjnej. Cała woda, która zgromadziła się w rurze, w jednej chwili ruszyła i wypełniła 1/5 zbiornika.

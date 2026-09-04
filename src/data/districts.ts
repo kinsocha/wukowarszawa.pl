@@ -369,7 +369,7 @@ export const districts: DistrictData[] = [
       height: 1600,
       name: 'Interwencja Wuko w Aninie (Wawer) – ścieki wybijają w wannie',
       caption:
-        'Interwencja w Aninie: ścieki wybijały w wannie po spuszczeniu wody w toalecie, umywalce i zlewie, także po odkręceniu kranu na piętrze. Cały przebieg opisaliśmy w realizacji: <a href="/poradnik/scieki-wybijaja-w-wannie-po-wybraniu-szamba-wuko">ścieki wybijają w wannie, choć szambo dopiero wybrane</a>.',
+        'Interwencja w Aninie: ścieki wybijały w wannie po spuszczeniu wody w toalecie, umywalce i zlewie, także po odkręceniu kranu na piętrze. Cały przebieg opisaliśmy w realizacji: <a href="/poradnik/scieki-wybijaja-w-wannie-po-wybraniu-szamba-wuko#rury-zatykaja-sie-po-wybraniu-szamba">ścieki wybijają w wannie, choć szambo dopiero wybrane</a>.',
     },
     description:
       'Zatory w rurach potrafią sparaliżować codzienne funkcjonowanie domu lub firmy. Stosujemy metodę hydrodynamiczną, która pozwala skutecznie usunąć nawet trudne zanieczyszczenia – bez rozkuwania, bez ryzyka dla instalacji. Przyjeżdżamy z profesjonalnym sprzętem, dobieramy ciśnienie do rodzaju instalacji i działamy szybko. Wuko Wawer to idealne rozwiązanie dla mieszkań, domów jednorodzinnych oraz lokali usługowych.',
