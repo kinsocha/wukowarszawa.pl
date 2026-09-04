@@ -111,6 +111,19 @@ const reasons = [
       <p class="dc-p">
         {district.streets.join(' • ')} i pozostałe ulice dzielnicy {district.name}.
       </p>
+      {district.areaImage && (
+        <figure class="dc-area-fig">
+          <img
+            src={district.areaImage.src}
+            alt={district.areaImage.alt}
+            width={district.areaImage.width}
+            height={district.areaImage.height}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption set:html={district.areaImage.caption} />
+        </figure>
+      )}
     </div>
   </div>
 </section>
@@ -179,6 +192,27 @@ const reasons = [
       <p class="dc-p">{district.extra.outro}</p>
     </div>
   </section>
+)}
+
+{district.areaImage && (
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    '@id': siteConfig.url + district.areaImage.src + '#image',
+    name: district.areaImage.name,
+    description: district.areaImage.alt,
+    caption: district.areaImage.caption.replace(/<[^>]+>/g, ''),
+    contentUrl: siteConfig.url + district.areaImage.src,
+    url: siteConfig.url + district.areaImage.src,
+    width: { '@type': 'QuantitativeValue', value: district.areaImage.width, unitCode: 'E37' },
+    height: { '@type': 'QuantitativeValue', value: district.areaImage.height, unitCode: 'E37' },
+    encodingFormat: 'image/webp',
+    inLanguage: 'pl',
+    contentLocation: { '@type': 'Place', name: district.name + ', Warszawa' },
+    mainEntityOfPage: siteConfig.url + '/' + district.slug,
+    creator: { '@type': 'Organization', name: siteConfig.name },
+    copyrightHolder: { '@type': 'Organization', name: siteConfig.name },
+  })} />
 )}
 
 <!-- Breadcrumb JSON-LD -->
@@ -449,6 +483,17 @@ const reasons = [
   /* Obszar dzialania */
   .dc-area-block { margin-bottom: 3rem; }
   .dc-area-h3 { font-size: 1.25rem; font-weight: 600; color: #334155; margin-bottom: 1rem; }
+  .dc-area-fig { margin: 2rem 0 0; }
+  .dc-area-fig img {
+    display: block;
+    width: 100%;
+    max-width: 45.8rem;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+  }
+  .dc-area-fig figcaption { max-width: 45.8rem; margin-top: 0.75rem; font-size: 1rem; line-height: 1.6; color: #64748b; }
+  .dc-area-fig figcaption a { color: #2563eb; text-decoration: underline; }
   .dc-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; }
   .dc-tag {
     padding: 0.5rem 1rem;
