@@ -20,8 +20,8 @@ const breadcrumbSchema = JSON.stringify({
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Strona główna', item: siteConfig.url + '/' },
-    { '@type': 'ListItem', position: 2, name: 'Poradnik', item: siteConfig.url + '/poradnik/' },
-    { '@type': 'ListItem', position: 3, name: post.data.title, item: new URL(`/poradnik/${post.slug}/`, siteConfig.url).href },
+    { '@type': 'ListItem', position: 2, name: 'Poradnik', item: siteConfig.url + '/poradnik' },
+    { '@type': 'ListItem', position: 3, name: post.data.title, item: new URL(`/poradnik/${post.slug}`, siteConfig.url).href },
   ],
 });
 
@@ -34,7 +34,7 @@ const articleSchema = JSON.stringify({
   publisher: { '@type': 'Organization', name: siteConfig.name, url: siteConfig.url },
   datePublished: post.data.pubDate.toISOString(),
   dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
-  mainEntityOfPage: new URL(`/poradnik/${post.slug}/`, siteConfig.url).href,
+  mainEntityOfPage: new URL(`/poradnik/${post.slug}`, siteConfig.url).href,
 });
 
 const faqSchema = JSON.stringify({
@@ -70,7 +70,7 @@ const dateStr = post.data.pubDate.toLocaleDateString('pl-PL', {
       <div class="ar-crumbs">
         <a href="/">Strona główna</a>
         <span>/</span>
-        <a href="/poradnik/">Poradnik</a>
+        <a href="/poradnik">Poradnik</a>
       </div>
       <span class="ar-cat">{post.data.category}</span>
       <h1 class="ar-h1">{post.data.title}</h1>

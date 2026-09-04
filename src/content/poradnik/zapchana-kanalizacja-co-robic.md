@@ -62,6 +62,6 @@ Najtaniej jest nie zapychać. W kuchni — nie zlewaj tłuszczu do zlewu. Przest
 
 W łazience to samo sitko zatrzyma włosy, zanim zwiążą się w kłąb. Prosta rzecz, a oszczędza najwięcej kłopotu — splątane włosy z mydłem to w łazience zator numer jeden.
 
-I jedno na koniec. Jeśli mimo wszystko zatory wracają regularnie, to nie kwestia czyszczenia, tylko instalacji. Wtedy zamiast walczyć z objawem co kilka tygodni, lepiej sprawdzić, jak ułożone są rury — najprościej [inspekcją kamerą](/inspekcja-kamera-kanalizacji/), która pokazuje wnętrze rury od środka i podpowiada, dlaczego zator wraca w to samo miejsce.
+I jedno na koniec. Jeśli mimo wszystko zatory wracają regularnie, to nie kwestia czyszczenia, tylko instalacji. Wtedy zamiast walczyć z objawem co kilka tygodni, lepiej sprawdzić, jak ułożone są rury — najprościej [inspekcją kamerą](/inspekcja-kamera-kanalizacji), która pokazuje wnętrze rury od środka i podpowiada, dlaczego zator wraca w to samo miejsce.
 
 Masz odpływ, który stoi albo wraca mimo prób? Zadzwoń pod **660 360 170**. Obejrzymy instalację, dobierzemy metodę i podamy orientacyjny koszt, zanim zaczniemy. [Udrażnianiem rur w Warszawie](/) zajmujemy się na co dzień — działamy na terenie całej stolicy i okolic.

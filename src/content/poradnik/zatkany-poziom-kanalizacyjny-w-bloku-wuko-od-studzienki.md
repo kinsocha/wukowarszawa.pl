@@ -33,10 +33,10 @@ Cała praca odbyła się na zewnątrz. Nikt z mieszkańców nie musiał nas wpus
 
 ## Inspekcja kamerą na koniec
 
-Po czyszczeniu wprowadziliśmy w rurę kamerę inspekcyjną. Chciałem zobaczyć, w jakim stanie jest odcinek, który dopiero co stał pełny ścieków. Ścianki po płukaniu czyste, uszczelki na łączeniach siedziały w kielichach, bez pęknięć i ubytków. Czyli zator wziął się z osadu, który narastał latami, a nie z uszkodzenia rury. Dla zarządcy to dobra wiadomość – żadnego kucia ani wymiany, wystarczy pamiętać o czyszczeniu, zanim rura znowu zarośnie. Z przeglądu zostało [nagranie z inspekcji kamerą](/inspekcja-kamera-kanalizacji/), które przekazaliśmy administracji do dokumentacji.
+Po czyszczeniu wprowadziliśmy w rurę kamerę inspekcyjną. Chciałem zobaczyć, w jakim stanie jest odcinek, który dopiero co stał pełny ścieków. Ścianki po płukaniu czyste, uszczelki na łączeniach siedziały w kielichach, bez pęknięć i ubytków. Czyli zator wziął się z osadu, który narastał latami, a nie z uszkodzenia rury. Dla zarządcy to dobra wiadomość – żadnego kucia ani wymiany, wystarczy pamiętać o czyszczeniu, zanim rura znowu zarośnie. Z przeglądu zostało [nagranie z inspekcji kamerą](/inspekcja-kamera-kanalizacji), które przekazaliśmy administracji do dokumentacji.
 
 ## Efekt
 
 Puściliśmy wodę z kilku mieszkań i obserwowałem przepływ w studzience – ścieki szły pełnym profilem, bez podpiętrzania. W piwnicy sucho. Budynek wrócił do normalnej pracy tego samego dnia, w którym zgłoszono awarię.
 
-Zajmujemy się blokami, kamienicami i domami na terenie całej Warszawy – jeśli Twój budynek stoi w tej okolicy, zajrzyj na stronę [Wuko Targówek](/wukotargowek/). Ścieki wybijają w piwnicy albo woda stanęła w kilku mieszkaniach naraz? Zadzwoń pod **660 360 170**, opisz sytuację, a wycenę podamy przed rozpoczęciem pracy.
+Zajmujemy się blokami, kamienicami i domami na terenie całej Warszawy – jeśli Twój budynek stoi w tej okolicy, zajrzyj na stronę [Wuko Targówek](/wukotargowek). Ścieki wybijają w piwnicy albo woda stanęła w kilku mieszkaniach naraz? Zadzwoń pod **660 360 170**, opisz sytuację, a wycenę podamy przed rozpoczęciem pracy.

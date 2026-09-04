@@ -37,7 +37,7 @@ Druga: zator wraca. Czyszczenie pomaga, przez kilka miesięcy jest spokój, po c
 
 Trzecia: nad trasą rury albo tuż obok rosną drzewa lub rozłożyste krzewy. Im starsze, tym dłuższe mają korzenie.
 
-Pewność daje dopiero [inspekcja kamerą](/inspekcja-kamera-kanalizacji/). Kamera pokazuje stan rury od środka: widać wiechę korzeni, łączenie, którym weszły, i to, jak dużą część przekroju zdążyły zarosnąć. Z przeglądu robimy nagranie i przekazujemy je klientowi – przydaje się przy decyzji, co z rurą dalej.
+Pewność daje dopiero [inspekcja kamerą](/inspekcja-kamera-kanalizacji). Kamera pokazuje stan rury od środka: widać wiechę korzeni, łączenie, którym weszły, i to, jak dużą część przekroju zdążyły zarosnąć. Z przeglądu robimy nagranie i przekazujemy je klientowi – przydaje się przy decyzji, co z rurą dalej.
 
 ## Dlaczego chemia tu nie pomoże
 
@@ -51,7 +51,7 @@ Jakiś czas temu zadzwonił do nas właściciel domu w Wawrze. Ta sama historia 
 
 Zaczęliśmy od kamery. Na nagraniu, mniej więcej w połowie odcinka między domem a studzienką, widać było łączenie rur i zwisającą z niego brodę korzeni, obrośniętą papierem i osadem.
 
-Do takiej pracy służy głowica tnąca – końcówka prowadzona na elastycznej spirali, którą napędza maszyna z silnikiem elektrycznym. Wprowadzamy ją przez studzienkę, więc niczego nie trzeba rozkopywać. Głowica wycina korzenie przy samej ściance, przechodząc zarośnięty fragment kilka razy, aż przekrój jest czysty. Potem do akcji wchodzi wuko: strumień wody pod ciśnieniem płucze cały odcinek i wypycha wycięte resztki razem z osadem do studzienki, skąd je wybieramy. O tym, kiedy pracuje wuko, a kiedy sprężyna, piszemy szerzej w artykule [wuko czy sprężyna elektryczna](/poradnik/wuko-czy-sprezyna-elektryczna/).
+Do takiej pracy służy głowica tnąca – końcówka prowadzona na elastycznej spirali, którą napędza maszyna z silnikiem elektrycznym. Wprowadzamy ją przez studzienkę, więc niczego nie trzeba rozkopywać. Głowica wycina korzenie przy samej ściance, przechodząc zarośnięty fragment kilka razy, aż przekrój jest czysty. Potem do akcji wchodzi wuko: strumień wody pod ciśnieniem płucze cały odcinek i wypycha wycięte resztki razem z osadem do studzienki, skąd je wybieramy. O tym, kiedy pracuje wuko, a kiedy sprężyna, piszemy szerzej w artykule [wuko czy sprężyna elektryczna](/poradnik/wuko-czy-sprezyna-elektryczna).
 
 Na koniec jeszcze raz kamera i próba: puściliśmy wodę, schodzi od razu, nic się nie cofa. Właściciel dostał dwa nagrania – sprzed czyszczenia i po nim.
 

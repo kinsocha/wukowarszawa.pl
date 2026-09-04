@@ -37,10 +37,10 @@ const formatter = new Intl.DateTimeFormat('pl-PL', {
               </time>
             </div>
             <h3 class="ps-card-title">
-              <a href={`/poradnik/${article.slug}/`}>{article.data.title}</a>
+              <a href={`/poradnik/${article.slug}`}>{article.data.title}</a>
             </h3>
             <p class="ps-card-desc">{article.data.description}</p>
-            <a href={`/poradnik/${article.slug}/`} class="ps-read">
+            <a href={`/poradnik/${article.slug}`} class="ps-read">
               Czytaj
               <Icon name="arrow-right" class="ps-read-ico" />
             </a>
@@ -50,7 +50,7 @@ const formatter = new Intl.DateTimeFormat('pl-PL', {
     </div>
 
     <div class="ps-cta-wrap">
-      <a href="/poradnik/" class="ps-cta">
+      <a href="/poradnik" class="ps-cta">
         Zobacz wszystkie porady
         <Icon name="arrow-right" class="ps-cta-ico" />
       </a>

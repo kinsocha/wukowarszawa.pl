@@ -53,7 +53,7 @@ Przez rewizję wprowadzamy elastyczną spiralę napędzaną maszyną z silnikiem
 
 Po udrożnieniu sprawdzamy odpływy w mieszkaniach, w których wybijało – ścieki schodzą swobodnie, nic się nie cofa.
 
-Jeśli pion zatyka się co kilka miesięcy, oglądamy go od środka [kamerą inspekcyjną](/inspekcja-kamera-kanalizacji/). Na nagraniu widać, czy żeliwo jest zarośnięte osadem, czy rura jest cała i czy coś w niej siedzi. Zapis przekazujemy zarządcy – przydaje się przy decyzji, czy pion wystarczy czyścić regularnie, czy planować wymianę. Więcej o czyszczeniu starych pionów piszemy też w artykule [wuko czy sprężyna elektryczna](/poradnik/wuko-czy-sprezyna-elektryczna/).
+Jeśli pion zatyka się co kilka miesięcy, oglądamy go od środka [kamerą inspekcyjną](/inspekcja-kamera-kanalizacji). Na nagraniu widać, czy żeliwo jest zarośnięte osadem, czy rura jest cała i czy coś w niej siedzi. Zapis przekazujemy zarządcy – przydaje się przy decyzji, czy pion wystarczy czyścić regularnie, czy planować wymianę. Więcej o czyszczeniu starych pionów piszemy też w artykule [wuko czy sprężyna elektryczna](/poradnik/wuko-czy-sprezyna-elektryczna).
 
 ## Współpraca ze wspólnotami i zarządcami
 

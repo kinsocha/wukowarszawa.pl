@@ -116,7 +116,7 @@ const serviceSchema = JSON.stringify({
   name: 'Inspekcja kamerą kanalizacji Warszawa',
   description:
     'Monitoring i kamerowanie rur kanalizacyjnych w Warszawie: lokalizacja miejsca awarii, wykrywanie przyczyny nawracających zatorów, przegląd instalacji przed zakupem nieruchomości i remontem.',
-  url: new URL('/inspekcja-kamera-kanalizacji/', siteConfig.url).href,
+  url: new URL('/inspekcja-kamera-kanalizacji', siteConfig.url).href,
   areaServed: { '@type': 'City', name: 'Warszawa' },
   provider: {
     '@type': 'LocalBusiness',
@@ -132,7 +132,7 @@ const breadcrumbSchema = JSON.stringify({
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Strona główna', item: siteConfig.url + '/' },
-    { '@type': 'ListItem', position: 2, name: 'Inspekcja kamerą kanalizacji', item: new URL('/inspekcja-kamera-kanalizacji/', siteConfig.url).href },
+    { '@type': 'ListItem', position: 2, name: 'Inspekcja kamerą kanalizacji', item: new URL('/inspekcja-kamera-kanalizacji', siteConfig.url).href },
   ],
 });
 
@@ -278,7 +278,7 @@ const faqSchema = JSON.stringify({
             osad albo tłuszcz, na miejscu usuwamy zator – ciśnieniowo metodą Wuko lub sprężyną
             elektryczną, w zależności od instalacji. Więcej o metodach czyszczenia przeczytasz na
             <a href="/#uslugi" class="ik-inline-link">stronie głównej</a> oraz w naszym
-            <a href="/poradnik/" class="ik-inline-link">poradniku</a>.
+            <a href="/poradnik" class="ik-inline-link">poradniku</a>.
           </p>
         </div>
       </div>

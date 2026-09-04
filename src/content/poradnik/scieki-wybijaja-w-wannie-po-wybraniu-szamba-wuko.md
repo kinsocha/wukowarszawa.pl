@@ -17,7 +17,7 @@ faq:
     a: Cena zależy od kilku czynników – długości odcinka od domu do zbiornika, stopnia zarośnięcia rury i tego, czy jest dostęp od strony szamba. Wycenę podajemy przez telefon, przed przyjazdem. Zadzwoń pod 660 360 170 – do awarii kanalizacji jedziemy również w nocy.
 ---
 
-Klient zadzwonił z Anina w [Wawrze](/wukowawer/), że ścieki wybijają w wannie po spuszczeniu wody w toalecie, umywalce, zlewie na parterze i też jeśli puści się wodę na piętrze. Z rana szamboniarka wybrała szambo i po chwili pojawił się problem. Przybyliśmy w niecałą godzinę po zgłoszeniu.
+Klient zadzwonił z Anina w [Wawrze](/wukowawer), że ścieki wybijają w wannie po spuszczeniu wody w toalecie, umywalce, zlewie na parterze i też jeśli puści się wodę na piętrze. Z rana szamboniarka wybrała szambo i po chwili pojawił się problem. Przybyliśmy w niecałą godzinę po zgłoszeniu.
 
 ## Wąż wuko od strony szamba
 

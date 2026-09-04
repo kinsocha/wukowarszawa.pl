@@ -3,6 +3,6 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://wukowarszawa.pl',
-  trailingSlash: 'always',
+  trailingSlash: 'never',
   integrations: [sitemap()],
 });

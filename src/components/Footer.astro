@@ -8,7 +8,7 @@ const year = new Date().getFullYear();
 const services = [
   { label: 'Hydrodynamiczne Wuko', href: '/#uslugi' },
   { label: 'Sprężyna elektryczna', href: '/#uslugi' },
-  { label: 'Inspekcja kamerą TV', href: '/inspekcja-kamera-kanalizacji/' },
+  { label: 'Inspekcja kamerą TV', href: '/inspekcja-kamera-kanalizacji' },
   { label: 'Mieszkania i domy', href: '/#uslugi' },
   { label: 'Wspólnoty mieszkaniowe', href: '/#uslugi' },
   { label: 'Lokale usługowe', href: '/#uslugi' },
@@ -72,7 +72,7 @@ const services = [
         <h3 class="footer-heading">Dzielnice</h3>
         <ul class="footer-list">
           {districts.map(d => (
-            <li><a href={`/${d.slug}/`} class="footer-link">Wuko {d.name}</a></li>
+            <li><a href={`/${d.slug}`} class="footer-link">Wuko {d.name}</a></li>
           ))}
         </ul>
       </div>

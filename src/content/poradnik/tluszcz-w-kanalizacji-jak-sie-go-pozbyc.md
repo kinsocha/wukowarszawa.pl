@@ -47,7 +47,7 @@ Silnik ma moc 600 W – dla skali: czajnik, którym zagotujesz wodę na herbatę
 
 Całość trwa przeważnie od kilku do kilkunastu minut. Po udrożnieniu odkręcamy kran i patrzymy na odpływ – woda schodzi od razu, bez zastojów. Szafka pod zlewem i podłoga zostają czyste, bo sprężyna elektryczna pracuje wewnątrz rury, niczego nie rozchlapując.
 
-A co z wuko, czyli czyszczeniem ciśnieniem wody? W podejściach kuchennych to wyjątek, nie reguła. Rura 50 mm musiałaby biec prosto, bez ostrych kolan – a pod zlewem prawie nigdy tak nie jest, więc głowica ciśnieniowa zwyczajnie nie przejdzie. Jak dzielimy robotę między obie metody, opisaliśmy osobno w artykule [wuko czy sprężyna elektryczna](/poradnik/wuko-czy-sprezyna-elektryczna/).
+A co z wuko, czyli czyszczeniem ciśnieniem wody? W podejściach kuchennych to wyjątek, nie reguła. Rura 50 mm musiałaby biec prosto, bez ostrych kolan – a pod zlewem prawie nigdy tak nie jest, więc głowica ciśnieniowa zwyczajnie nie przejdzie. Jak dzielimy robotę między obie metody, opisaliśmy osobno w artykule [wuko czy sprężyna elektryczna](/poradnik/wuko-czy-sprezyna-elektryczna).
 
 ## Gastronomia: ten sam problem, inna skala
 

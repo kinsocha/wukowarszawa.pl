@@ -56,12 +56,12 @@ const formatter = new Intl.DateTimeFormat('pl-PL', {
                 </time>
               </div>
               <h2 class="pl-card-title">
-                <a href={`/poradnik/${article.slug}/`}>{article.data.title}</a>
+                <a href={`/poradnik/${article.slug}`}>{article.data.title}</a>
               </h2>
               <p class="pl-card-desc">{article.data.description}</p>
               <div class="pl-card-foot">
                 <span class="pl-reading">{article.data.readingTime} min czytania</span>
-                <a href={`/poradnik/${article.slug}/`} class="pl-read">
+                <a href={`/poradnik/${article.slug}`} class="pl-read">
                   Czytaj
                   <Icon name="arrow-right" class="pl-read-ico" />
                 </a>
