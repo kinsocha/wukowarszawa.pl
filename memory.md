@@ -18,11 +18,13 @@ Zrobione (wg git, wieczór 2026-06-11):
 - Strona główna: sekcja merytoryczna o metodzie WUKO (czym jest, WUKO vs sprężyna, średnice rur).
 - Poradnik: kolekcja MDX, podstrona `/poradnik/`, szablon artykułu, 3 pierwsze artykuły, sekcja poradnika na stronie głównej.
 
-## Podstrony dzielnicowe (stan na 2026-06-14)
+## Podstrony dzielnicowe (stan na 2026-09-04)
 - Sterowane danymi: jeden wpis w `src/data/districts.ts` + cienki wrapper `src/pages/wuko<slug>.astro`. Navbar/Footer/Locations iterują tablicę `districts` automatycznie. `mainDistricts` w `src/config/site.ts` steruje sekcją „Inne dzielnice" na podstronach (dodawać tam każdą nową dzielnicę).
 - Komponent `DistrictContent.astro` NIE ma mapy Google ani zdjęć — nowe podstrony ich nie dodają.
-- Istniejące (12): Targówek, Białołęka, Bielany, Bródno, Wawer, Ochota, Praga Północ, Praga Południe, Rembertów, Ursus, Mokotów, **Wola** (dodana 2026-06-14).
-- Brakujące (kandydaci): Ursynów, Bemowo, Żoliborz, Włochy, Wesoła, Śródmieście, Wilanów.
+- Istniejące (15): Targówek, Białołęka, Bielany, Bródno, Wawer, Ochota, Praga Północ, Praga Południe, Rembertów, Ursus, Mokotów, Wola (2026-06-14), Ursynów (ma zdjęcie `public/img/przepychanie-rur-wuko-ursynow.webp`), Bemowo (commit f7bf8f0, 2026-08-11), **Żoliborz** (dodany 2026-09-04, `/wukozoliborz`, bez zdjęcia — jak Bemowo; NIEZACOMMITOWANY, czeka na akceptację właściciela).
+- Brakujące (kandydaci): Włochy, Wesoła, Śródmieście, Wilanów.
+- Uwaga do szablonu `DistrictContent.astro`: nagłówki „Dlaczego warto wybrać nas w {name}" i „Potrzebujesz Wuko w {name}?" wstawiają mianownik („w Żoliborz", „w Wola") — błąd gramatyczny wspólny dla wszystkich podstron, do ewentualnej poprawy przez osobne pole z odmianą (np. `nameLoc: 'na Żoliborzu'`). Nie ruszać bez polecenia właściciela.
+- Wpisy Bemowo i Ursynów mają w pytaniach diagnostycznych „PVC, żeliwo, kamionka" — sprzeczne z globalną regułą „kamionki nigdy nie wspominać" (2026-08-20); Żoliborz już bez kamionki. Do poprawy przy okazji, za zgodą właściciela.
 
 ## Do zrobienia / otwarte
 - [x] Numer 660 360 170 wstawiony w `src/config/site.ts` (phone + phoneTel) — propaguje na całą stronę.
@@ -42,7 +44,8 @@ Zrobione (wg git, wieczór 2026-06-11):
 - Wzorzec do powielenia na kolejne usługi. Kandydaci NIŻSZEGO priorytetu (odrzucone teraz przez konkurencję/kanibalizację): „pogotowie kanalizacyjne 24h" (rzeźnia exact-match domen), „przepychanie rur" (blisko strony głównej).
 - **Wuko a sprężyna — NIE robić osobnej podstrony (decyzja 2026-07-10).** Najpierw powstała podstrona `/wuko-a-sprezyna-elektryczna`, ale właściciel słusznie uznał, że kanibalizuje istniejący artykuł poradnika `wuko-czy-sprezyna-elektryczna.md` — podstronę USUNIĘTO. Zamiast niej artykuł wzbogacono o sekcję „Stare żeliwo i zapchany pion" (tekst właściciela: żeliwo + pion, na którym woda cofa się w kilku mieszkaniach) z frazami „wuko w Warszawie" (link `/`) i „wuko na Białołęce" (link `/wukobialoleka`). Wniosek na przyszłość: temat wuko-vs-sprężyna należy do tego jednego artykułu, nie dublować go podstroną.
 
-## Realizacje (stan po 2026-08-01)
+## Realizacje (stan po 2026-08-30)
+- **Zatkany poziom w bloku przy Wysockiego (Targówek) — NAPISANA i ZACOMMITOWANA 2026-08-30** (`src/content/poradnik/zatkany-poziom-kanalizacyjny-w-bloku-wuko-od-studzienki.md`, kategoria Realizacje, commit 6d1e27a). Awaria: ścieki wybijały w piwnicy, zator na poziomie (nie w pionie); wuko od studzienki (głowica przebijająca → płukanie ścianek), na koniec inspekcja kamerą (ścianki czyste, uszczelki w kielichach — nagranie dla administracji). Tytuł po problemie (ulica, bez dzielnicy — anty-kanibalizacja z /wukotargowek); Targówek tylko w treści + link. Linki wewnętrzne: /inspekcja-kamera-kanalizacji/ + /wukotargowek. FAQ 5 pytań, telefon w odpowiedzi o cenie. Build zweryfikowany (canonical + Article + FAQPage z frontmattera). NIEWYPCHNIĘTA (git push w regułach "ask").
 - **Węzeł cieplny (Wawer) przeniesiony z index do poradnika (2026-08-01, polecenie właściciela)**: sekcja `RealizacjaZlew.astro` zdjęta ze strony głównej (komponent USUNIĘTY, import z index.astro wycięty), treść 1:1 jako artykuł `src/content/poradnik/scieki-w-zlewie-w-wezle-cieplnym-czyszczenie-przykanalika.md` (kategoria Realizacje, pubDate 2026-08-01T09:26:43). Tytuł z „na Wawrze" — zostawiony, bo to h2 dyktowany wcześniej wprost przez właściciela. FAQ (5 pytań) napisane od nowa — FAQ ze starej podstrony `/realizacje/zlew-w-wezle-cieplnym/` nigdy nie trafiło do gita. Zdjęcie bez zmian: `public/img/realizacje/wuko-warszawa.webp` (896×1054 pion, plik właściciela, bez rekompresji). Na index nie ma już żadnej sekcji realizacji — realizacje żyją w poradniku.
 - **Pierwsza realizacja (szambo, Białołęka) wróciła do poradnika**: właściciel kazał wyciąć ją z index → przywrócony z gita oryginalny artykuł `src/content/poradnik/zator-w-przylaczu-do-szamba.md` (stan z commita 31a251a, z FAQ; pubDate zmieniona na 2026-07-19 na polecenie właściciela). Komponent `Realizacja.astro` USUNIĘTY.
 - Historia zmian węzła cieplnego 2026-07-19: najpierw osobna podstrona `/realizacje/zlew-w-wezle-cieplnym/` (FAQ + JSON-LD), potem na polecenie właściciela cały artykuł jako sekcja na index — podstrona i kafelek-zajawka usunięte. FAQ z podstrony nie przeniesiono (index ma własny FAQPage; wątek drożnego syfonu wpleciony w sekcję „Objaw").

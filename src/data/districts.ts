@@ -1089,6 +1089,114 @@ export const districts: DistrictData[] = [
         'Dzięki temu zabieramy od razu właściwy sprzęt i podajemy orientacyjny koszt jeszcze przed wyjazdem. A jeśli zator wraca mimo czyszczenia, oglądamy rurę kamerą i pokazujemy, gdzie leży przyczyna. Zadzwoń: 660 360 170.',
     },
   },
+  {
+    slug: 'wukozoliborz',
+    name: 'Żoliborz',
+    fullName: 'Wuko Żoliborz',
+    h1Main: 'Wuko Żoliborz',
+    h1Accent: 'ciśnieniowe czyszczenie i udrażnianie kanalizacji',
+    metaTitle: 'Wuko Żoliborz – ciśnieniowe udrażnianie kanalizacji | Wuko Warszawa',
+    metaDescription:
+      'Wuko Żoliborz – udrażnianie kanalizacji w kamienicach, blokach i domach. Stary Żoliborz, Sady Żoliborskie, Marymont, Zatrasie, Powązki. Wycena przed przyjazdem, faktura VAT.',
+    heroIntro:
+      'Na Żoliborzu pracujemy w trzech różnych światach: w przedwojennych willach i kamienicach Starego Żoliborza, w blokach Sadów Żoliborskich, Zatrasia i Marymontu oraz w nowych osiedlach na Żoliborzu Południowym. W każdym rury zatykają się z innego powodu. Sprzęt dobieramy po objawach, cenę podajemy przez telefon.',
+    areas: [
+      'Stary Żoliborz',
+      'Żoliborz Oficerski',
+      'Żoliborz Dziennikarski',
+      'Żoliborz Urzędniczy',
+      'Sady Żoliborskie',
+      'Zatrasie',
+      'Marymont-Potok',
+      'Marymont-Ruda',
+      'Powązki',
+      'Żoliborz Południowy',
+      'Kępa Potocka',
+    ],
+    streets: [
+      'Słowackiego',
+      'Krasińskiego',
+      'ks. Popiełuszki',
+      'Mickiewicza',
+      'Wyspiańskiego',
+      'al. Wojska Polskiego',
+      'Broniewskiego',
+      'Powązkowska',
+      'Gwiaździsta',
+      'Marymoncka',
+      'Potocka',
+      'Rydygiera',
+      'Przasnyska',
+      'Elbląska',
+      'Włościańska',
+      'Sady Żoliborskie',
+      'gen. Zajączka',
+      'Kaniowska',
+      'Śmiała',
+      'Czarnieckiego',
+      'Hozjusza',
+      'pl. Wilsona',
+      'pl. Inwalidów',
+      'Suzina',
+      'Bohomolca',
+    ],
+    description:
+      'Żoliborz zatyka się na trzy sposoby. Stary Żoliborz to przedwojenne wille i kamienice – Oficerski, Dziennikarski, Urzędniczy. Kanalizacja ma tam nieraz osiemdziesiąt lat i więcej: żeliwne piony, długie przykanaliki do studzienki pod chodnikiem, a w ogrodach stare drzewa, których korzenie wchodzą do rury przez wysuniętą uszczelkę albo rozejście łączenia. Taki odcinek płuczemy wuko od studzienki, a przy korzeniach dokładamy głowicę tnącą. Sady Żoliborskie, Zatrasie i Marymont to bloki z lat 60. i 70. – ścieki z kilkudziesięciu mieszkań idą jednym pionem i poziomem w piwnicy, więc tłuszcz i osad narastają tam latami, aż woda zaczyna cofać się na parterze. Przepchnięcie robi w takim osadzie tylko otwór. Wuko zdziera go ze ścianek na całej długości. Na Żoliborzu Południowym stoją nowe budynki z instalacją PVC – tam odpływ blokują zwykle resztki z budowy i wykończeniówki. Podejścia od zlewu, umywalki i brodzika, fi 40–50 mm, udrażniamy sprężyną elektryczną. Gdy zator wraca, oglądamy rurę kamerą, a nagranie zostawiamy klientowi.',
+    testimonials: [
+      {
+        text: 'Kamienica na Żoliborzu Dziennikarskim, żeliwny pion z lat 30. Woda cofała się w łazience na parterze. Panowie przepłukali pion i poziom w piwnicy, a na kamerze pokazali, że rura jest czysta. Polecam.',
+        location: 'Żoliborz Dziennikarski',
+      },
+      {
+        text: 'Przykanalik od domu do studzienki pod chodnikiem zarośnięty korzeniami. Wuko plus głowica tnąca i wszystko poszło bez kopania. Na koniec dostałem nagranie z kamery.',
+        location: 'Stary Żoliborz',
+      },
+      {
+        text: 'Zlew w kuchni stał od wieczora. Rano telefon, po południu było po sprawie – syfon, sprężyna, czysto. Polecam.',
+        location: 'Sady Żoliborskie',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje wuko na Żoliborzu?',
+        answer:
+          'Cenę ustalamy przez telefon, zanim wyjedziemy – zadzwoń pod 660 360 170 i opisz w kilku słowach, co się dzieje. Zależy ona od kilku rzeczy: gdzie siedzi zator, jak długi odcinek trzeba wyczyścić i czy jest dostęp przez rewizję albo studzienkę. Orientacyjny cennik jest na stronie głównej. Kwota z telefonu nie zmienia się na miejscu bez powodu.',
+      },
+      {
+        question: 'Jak szybko dojedziecie na Stary Żoliborz, Sady Żoliborskie albo Marymont?',
+        answer:
+          'Zwykle w ciągu 1–2 godzin od telefonu. Żoliborz jest zwarty – od placu Wilsona przez Słowackiego i Broniewskiego po Powązkowską dojeżdżamy bez błądzenia. Podaj adres, a powiemy, o której będziemy.',
+      },
+      {
+        question: 'Mam przedwojenną willę na Żoliborzu Oficerskim. Czy stare żeliwo wytrzyma płukanie wuko?',
+        answer:
+          'Tak. Ciśnienie wody w wuko dobieramy do rury, a strumień pracuje na osadzie, nie na ściance. W starych instalacjach zator to zwykle gruba warstwa narosła przez dziesięciolecia plus korzenie z ogrodu, które weszły przez rozejście łączenia. Wuko wypłukuje osad, głowica tnąca radzi sobie z korzeniami. Na koniec sprawdzamy kamerą, czy rura jest cała i czy uszczelki siedzą w kielichach.',
+      },
+      {
+        question: 'Woda cofa się w piwnicy bloku na Sadach Żoliborskich. Kto ma to zlecić?',
+        answer:
+          'Poziom w piwnicy i pion to część wspólna budynku, więc zlecenie składa administracja, wspólnota albo spółdzielnia. Nie trzeba wchodzić do mieszkań – pracujemy od studzienki albo od rewizji w piwnicy. Wystawiamy fakturę VAT, a po robocie możemy przekazać nagranie z kamery do dokumentacji zarządcy.',
+      },
+      {
+        question: 'Nowe mieszkanie na Żoliborzu Południowym, a brodzik odpływa coraz wolniej. Co jest przyczyną?',
+        answer:
+          'W świeżo oddanych budynkach w rurach zostaje czasem zaprawa, pył i drobny gruz z wykończeniówki. Do tego dokłada się mydło i włosy z codziennego użytkowania. Woda ociera się o ten osad i zwalnia. Podejście od brodzika udrażniamy sprężyną elektryczną przez odpływ, a jeśli przeszkoda siedzi głębiej, oglądamy rurę kamerą i wtedy dobieramy sprzęt.',
+      },
+    ],
+    extra: {
+      heading: 'Przepychanie rur wuko na Żoliborzu',
+      intro:
+        'Ten sam objaw – woda staje w zlewie albo cofa się w piwnicy – ma na Żoliborzu zupełnie różne przyczyny, zależnie od tego, czy to willa z lat 30., blok z lat 60., czy budynek oddany dwa lata temu. Innego sprzętu potrzeba do korzeni w starym przykanaliku, innego do tłuszczu w pionie, jeszcze innego do zaprawy w nowym podejściu. Dlatego przez telefon zadajemy kilka pytań, zanim zdecydujemy, co pakujemy do auta. <strong>Kanalizację czyścimy nowoczesnym sprzętem i sprawdzamy jej stan kamerą.</strong>',
+      askLine: 'Najwięcej mówią nam odpowiedzi na te trzy pytania:',
+      questions: [
+        'Gdzie widać problem – <strong>w mieszkaniu lub domu</strong> (zlew, brodzik, toaleta), czy <strong>na zewnątrz</strong> (studzienka, przykanalik, piwnica)?',
+        'Ile lat ma budynek i z czego są rury, jeśli wiesz – <strong>PVC czy żeliwo</strong>?',
+        'Czy to <strong>pierwszy raz</strong>, czy zator <strong>wraca co kilka miesięcy</strong>?',
+      ],
+      outro:
+        'Wtedy od razu bierzemy właściwy sprzęt i mówimy, ile to będzie kosztować, jeszcze zanim wsiądziemy do auta. Jeśli zator wraca mimo czyszczenia, oglądamy rurę kamerą i pokazujemy na nagraniu, gdzie leży przyczyna. Zadzwoń: 660 360 170.',
+    },
+  },
 ];
 
 export function getDistrictBySlug(slug: string): DistrictData | undefined {

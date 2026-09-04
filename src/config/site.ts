@@ -51,6 +51,7 @@ export const siteConfig = {
     'Wola',
     'Ursynów',
     'Bemowo',
+    'Żoliborz',
   ],
 
   // Wszystkie dzielnice Warszawy (dla sekcji Locations)
