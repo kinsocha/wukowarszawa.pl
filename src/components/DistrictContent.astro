@@ -113,14 +113,18 @@ const reasons = [
       </p>
       {district.areaImage && (
         <figure class="dc-area-fig">
-          <img
-            src={district.areaImage.src}
-            alt={district.areaImage.alt}
-            width={district.areaImage.width}
-            height={district.areaImage.height}
-            loading="lazy"
-            decoding="async"
-          />
+          <a href={district.areaImage.src} target="_blank" rel="noopener" title="Otwórz grafikę w pełnym rozmiarze">
+            <img
+              src={district.areaImage.src}
+              srcset={district.areaImage.srcSmall ? `${district.areaImage.srcSmall} 800w, ${district.areaImage.src} ${district.areaImage.width}w` : undefined}
+              sizes={district.areaImage.srcSmall ? '(max-width: 80rem) calc(100vw - 2rem), 76rem' : undefined}
+              alt={district.areaImage.alt}
+              width={district.areaImage.width}
+              height={district.areaImage.height}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
           <figcaption set:html={district.areaImage.caption} />
         </figure>
       )}
@@ -484,15 +488,15 @@ const reasons = [
   .dc-area-block { margin-bottom: 3rem; }
   .dc-area-h3 { font-size: 1.25rem; font-weight: 600; color: #334155; margin-bottom: 1rem; }
   .dc-area-fig { margin: 2rem 0 0; }
+  .dc-area-fig a { display: block; }
   .dc-area-fig img {
     display: block;
     width: 100%;
-    max-width: 45.8rem;
     height: auto;
     border-radius: 1rem;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
   }
-  .dc-area-fig figcaption { max-width: 45.8rem; margin-top: 0.75rem; font-size: 1rem; line-height: 1.6; color: #64748b; }
+  .dc-area-fig figcaption { margin-top: 0.75rem; font-size: 1rem; line-height: 1.6; color: #64748b; }
   .dc-area-fig figcaption a { color: #2563eb; text-decoration: underline; }
   .dc-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; }
   .dc-tag {

@@ -14,7 +14,8 @@ export interface DistrictData {
   areas: string[]; // części dzielnicy / osiedla
   streets: string[]; // ulice obsługiwane
   areaImage?: {
-    src: string;
+    src: string; // duży plik (do schema i pełnego rozmiaru)
+    srcSmall?: string; // mniejszy plik do srcset (telefony)
     alt: string;
     width: number;
     height: number;
@@ -362,9 +363,10 @@ export const districts: DistrictData[] = [
     ],
     areaImage: {
       src: '/img/wuko-wawer-anin-scieki-wybijaja-w-wannie-interwencja.webp',
+      srcSmall: '/img/wuko-wawer-anin-scieki-wybijaja-w-wannie-interwencja-800.webp',
       alt: 'Interwencja Wuko w Aninie (Wawer): ścieki wybijają w wannie – zdjęcia po spuszczeniu wody w toalecie, umywalce, zlewie i na piętrze, mapa Anina oraz schemat cofania ścieków do wanny',
-      width: 733,
-      height: 450,
+      width: 1600,
+      height: 1600,
       name: 'Interwencja Wuko w Aninie (Wawer) – ścieki wybijają w wannie',
       caption:
         'Interwencja w Aninie: ścieki wybijały w wannie po spuszczeniu wody w toalecie, umywalce i zlewie, także po odkręceniu kranu na piętrze. Cały przebieg opisaliśmy w realizacji: <a href="/poradnik/scieki-wybijaja-w-wannie-po-wybraniu-szamba-wuko">ścieki wybijają w wannie, choć szambo dopiero wybrane</a>.',
