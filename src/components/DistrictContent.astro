@@ -74,7 +74,7 @@ const reasons = [
 <section id="zakres-prac" class="dc-section dc-bg-light">
   <div class="dc-wide">
     <div class="dc-head">
-      <span class="eyebrow">Co robimy w {district.name}</span>
+      <span class="eyebrow">Co robimy {district.nameLoc}</span>
       <h2 class="dc-h2">Zakres prac</h2>
     </div>
     <div class="dc-grid-3">
@@ -96,7 +96,7 @@ const reasons = [
   <div class="dc-wide">
     <div class="dc-head">
       <span class="eyebrow">Obsługujemy</span>
-      <h2 class="dc-h2">{district.name} – obszar działania</h2>
+      <h2 class="dc-h2">Obszar działania {district.nameLoc}</h2>
     </div>
     <div class="dc-area-block">
       <h3 class="dc-area-h3">Osiedla i części dzielnicy:</h3>
@@ -137,7 +137,7 @@ const reasons = [
   <section class="dc-section dc-bg-light">
     <div class="dc-wide">
       <div class="dc-head">
-        <span class="eyebrow">Opinie z {district.name}</span>
+        <span class="eyebrow">Opinie {district.nameLoc}</span>
         <h2 class="dc-h2">Co mówią klienci</h2>
       </div>
       <div class="dc-grid-3">
@@ -159,7 +159,7 @@ const reasons = [
 <!-- Dlaczego my -->
 <section class="dc-section dc-bg-white">
   <div class="dc-narrow">
-    <h2 class="dc-h2 dc-h2-spaced">Dlaczego warto wybrać nas w {district.name}</h2>
+    <h2 class="dc-h2 dc-h2-spaced">Dlaczego warto wybrać nas {district.nameLoc}</h2>
     <div class="dc-reasons">
       {reasons.map(p => (
         <div class="dc-reason">
@@ -263,7 +263,7 @@ const reasons = [
 <!-- CTA -->
 <section class="dc-cta">
   <div class="dc-cta-inner">
-    <h2 class="dc-cta-title">Potrzebujesz Wuko w {district.name}?</h2>
+    <h2 class="dc-cta-title">Potrzebujesz Wuko {district.nameLoc}?</h2>
     <p class="dc-cta-sub">Zadzwoń – ustalimy termin i orientacyjny koszt.</p>
     <a href={`tel:${siteConfig.phoneTel}`} class="dc-cta-btn">
       <Icon name="phone" class="dc-cta-ico" />

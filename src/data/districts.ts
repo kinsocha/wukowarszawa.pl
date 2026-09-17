@@ -5,6 +5,7 @@
 export interface DistrictData {
   slug: string; // URL np. "wukowawer" → /wukowawer
   name: string; // "Wawer"
+  nameLoc: string; // odmiana z przyimkiem do nagłówków, np. "w Wawrze", "na Woli", "we Włochach" – NIGDY mianownik po przyimku
   fullName: string; // "Wuko Wawer"
   h1Main?: string; // opcjonalna 1. linia H1 (domyślnie fullName)
   h1Accent?: string; // opcjonalna 2. linia H1 w gradiencie (domyślnie "udrażnianie rur")
@@ -45,6 +46,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukotargowek',
     name: 'Targówek',
+    nameLoc: 'na Targówku',
     fullName: 'Wuko Targówek',
     metaTitle: 'Wuko Targówek – udrażnianie rur | Wuko Warszawa',
     metaDescription:
@@ -105,6 +107,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukobialoleka',
     name: 'Białołęka',
+    nameLoc: 'na Białołęce',
     fullName: 'Wuko Białołęka',
     metaTitle: 'Wuko Białołęka – udrażnianie rur | Wuko Warszawa',
     metaDescription:
@@ -186,6 +189,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukobielany',
     name: 'Bielany',
+    nameLoc: 'na Bielanach',
     fullName: 'Wuko Bielany',
     metaTitle: 'Wuko Bielany – udrażnianie rur | Wuko Warszawa',
     metaDescription:
@@ -248,6 +252,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukobrodno',
     name: 'Bródno',
+    nameLoc: 'na Bródnie',
     fullName: 'Wuko Bródno',
     metaTitle: 'Wuko Bródno – udrażnianie rur | Wuko Warszawa',
     metaDescription:
@@ -328,6 +333,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukowawer',
     name: 'Wawer',
+    nameLoc: 'w Wawrze',
     fullName: 'Wuko Wawer',
     metaTitle: 'Wuko Wawer – udrażnianie rur | Wuko Warszawa',
     metaDescription:
@@ -413,6 +419,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukoochota',
     name: 'Ochota',
+    nameLoc: 'na Ochocie',
     fullName: 'Wuko Ochota',
     metaTitle: 'Wuko Ochota – udrażnianie rur | Wuko Warszawa',
     metaDescription:
@@ -475,6 +482,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukopragapolnoc',
     name: 'Praga Północ',
+    nameLoc: 'na Pradze Północ',
     fullName: 'Wuko Praga Północ',
     metaTitle: 'Wuko Praga Północ – udrażnianie rur | Wuko Warszawa',
     metaDescription:
@@ -544,6 +552,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukopragapoludnie',
     name: 'Praga Południe',
+    nameLoc: 'na Pradze Południe',
     fullName: 'Wuko Praga Południe',
     metaTitle: 'Wuko Praga Południe – udrażnianie rur | Wuko Warszawa',
     metaDescription:
@@ -609,6 +618,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukorembertow',
     name: 'Rembertów',
+    nameLoc: 'w Rembertowie',
     fullName: 'Wuko Rembertów',
     metaTitle: 'Wuko Rembertów – udrażnianie rur | Wuko Warszawa',
     metaDescription:
@@ -671,6 +681,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukoursus',
     name: 'Ursus',
+    nameLoc: 'w Ursusie',
     fullName: 'Wuko Ursus',
     metaTitle: 'Wuko Ursus – udrażnianie rur | Wuko Warszawa',
     metaDescription:
@@ -736,6 +747,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukomokotow',
     name: 'Mokotów',
+    nameLoc: 'na Mokotowie',
     fullName: 'Wuko Mokotów',
     metaTitle: 'Wuko Mokotów – ciśnieniowe udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
@@ -822,6 +834,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukowola',
     name: 'Wola',
+    nameLoc: 'na Woli',
     fullName: 'Wuko Wola',
     metaTitle: 'Wuko Wola – ciśnieniowe udrażnianie kanalizacji | Wuko Warszawa',
     metaDescription:
@@ -907,6 +920,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukoursynow',
     name: 'Ursynów',
+    nameLoc: 'na Ursynowie',
     fullName: 'Wuko Ursynów',
     h1Main: 'Wuko Ursynów',
     h1Accent: 'ciśnieniowe udrażnianie i czyszczenie kanalizacji',
@@ -1013,6 +1027,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukobemowo',
     name: 'Bemowo',
+    nameLoc: 'na Bemowie',
     fullName: 'Wuko Bemowo',
     h1Main: 'Wuko Bemowo',
     h1Accent: 'ciśnieniowe czyszczenie i udrażnianie rur',
@@ -1111,6 +1126,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukozoliborz',
     name: 'Żoliborz',
+    nameLoc: 'na Żoliborzu',
     fullName: 'Wuko Żoliborz',
     h1Main: 'Wuko Żoliborz',
     h1Accent: 'ciśnieniowe czyszczenie i udrażnianie kanalizacji',
@@ -1219,6 +1235,7 @@ export const districts: DistrictData[] = [
   {
     slug: 'wukowlochy',
     name: 'Włochy',
+    nameLoc: 'we Włochach',
     fullName: 'Wuko Włochy',
     h1Main: 'Wuko Włochy',
     h1Accent: 'ciśnieniowe udrażnianie i czyszczenie kanalizacji',
