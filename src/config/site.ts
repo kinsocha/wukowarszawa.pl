@@ -52,6 +52,7 @@ export const siteConfig = {
     'Ursynów',
     'Bemowo',
     'Żoliborz',
+    'Włochy',
   ],
 
   // Wszystkie dzielnice Warszawy (dla sekcji Locations)

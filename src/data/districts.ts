@@ -1216,6 +1216,111 @@ export const districts: DistrictData[] = [
         'Wtedy od razu bierzemy właściwy sprzęt i mówimy, ile to będzie kosztować, jeszcze zanim wsiądziemy do auta. Jeśli zator wraca mimo czyszczenia, oglądamy rurę kamerą i pokazujemy na nagraniu, gdzie leży przyczyna. Zadzwoń: 660 360 170.',
     },
   },
+  {
+    slug: 'wukowlochy',
+    name: 'Włochy',
+    fullName: 'Wuko Włochy',
+    h1Main: 'Wuko Włochy',
+    h1Accent: 'ciśnieniowe udrażnianie i czyszczenie kanalizacji',
+    metaTitle: 'Wuko Włochy – ciśnieniowe udrażnianie kanalizacji | Wuko Warszawa',
+    metaDescription:
+      'Wuko Włochy – udrażnianie kanalizacji w domach na Starych i Nowych Włochach, w blokach na Okęciu oraz w halach i hurtowniach w Rakowie i na Salomei. Wycena przed przyjazdem, faktura VAT.',
+    heroIntro:
+      'Włochy to z jednej strony wille i domy jednorodzinne na Starych i Nowych Włochach, z drugiej bloki na Okęciu, a z trzeciej hale, hurtownie i warsztaty w Rakowie, na Salomei i w Załuskach. W każdym z tych miejsc kanalizacja zatyka się czym innym. Przyjeżdżamy z wuko, sprężyną elektryczną i kamerą, sprzęt dobieramy po tym, co usłyszymy przez telefon.',
+    areas: [
+      'Stare Włochy',
+      'Nowe Włochy',
+      'Okęcie',
+      'Raków',
+      'Salomea',
+      'Załuski',
+      'Opacz Wielka',
+      'Paluch',
+    ],
+    streets: [
+      'al. Krakowska',
+      'Popularna',
+      'Bolesława Chrobrego',
+      'Globusowa',
+      'Ryżowa',
+      'Łopuszańska',
+      'Świerszcza',
+      'Cienista',
+      'Solipska',
+      'Potrzebna',
+      'Fasolowa',
+      'Chrościckiego',
+      'Rybnicka',
+      'Cegielniana',
+      'Sabały',
+      'Hynka',
+      'Żwirki i Wigury',
+      'Komitetu Obrony Robotników',
+      'Jutrzenki',
+      'Krakowiaków',
+      'Instalatorów',
+      'Mineralna',
+      'Obywatelska',
+      'Milanowska',
+      'Kleszczowa',
+    ],
+    description:
+      'Na Starych i Nowych Włochach stoją przedwojenne wille i domy jednorodzinne z ogrodami. Kanalizacja biegnie tam od domu długim przykanalikiem do studzienki przy ulicy, a nad rurą rosną stare drzewa. Korzenie wchodzą do środka tam, gdzie wysunęła się uszczelka albo rozeszło łączenie. Po kilku miesiącach woda znów staje. Taki odcinek płuczemy wuko od studzienki, a na korzenie zakładamy głowicę tnącą. Okęcie to bloki z lat 60. i 70. przy Sabały i Hynka oraz nowe osiedla wzdłuż alei Krakowskiej. W bloku ścieki z kilkudziesięciu mieszkań schodzą jednym pionem do poziomu w piwnicy i tłuszcz narasta tam latami, aż woda zaczyna cofać się na parterze. Sprężyna przebije taki korek, ale osad zostanie na ściankach. Wuko wypłukuje go z całego poziomu. Raków, Salomea, Załuski i Opacz Wielka to hale, hurtownie, warsztaty i lokale gastronomiczne przy alei Krakowskiej i Łopuszańskiej. Do studzienek trafia tam piasek z placów, tłuszcz z kuchni i osad z myjni. Płuczemy przykanalik, studzienki i odwodnienie parkingu, a firmie wystawiamy fakturę VAT. Podejścia od zlewu, umywalki i brodzika, fi 40–50 mm, udrażniamy sprężyną elektryczną. Gdy zator wraca, oglądamy rurę kamerą i zostawiamy nagranie.',
+    testimonials: [
+      {
+        text: 'Dom na Starych Włochach, przykanalik do studzienki zarośnięty korzeniami. Przyjechali po południu, wuko i głowica tnąca, po godzinie rura czysta. Na kamerze pokazali, że w jednym miejscu wysunęła się uszczelka – wiem, co naprawić. Polecam.',
+        location: 'Stare Włochy',
+      },
+      {
+        text: 'Hurtownia przy Łopuszańskiej. Studzienka na placu pełna piasku, po każdym deszczu woda stała na parkingu. Wypłukali studzienki i odwodnienie, faktura VAT od ręki.',
+        location: 'Raków',
+      },
+      {
+        text: 'Blok na Okęciu, w piwnicy cofała się woda z poziomu. Administracja zleciła w środę rano, po południu było po sprawie. Dostaliśmy nagranie z kamery do dokumentacji. Polecam.',
+        location: 'Okęcie',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje wuko we Włochach?',
+        answer:
+          'Zadzwoń pod 660 360 170 i powiedz w kilku słowach, co się dzieje – kwotę podajemy przed wyjazdem. Zależy ona od kilku rzeczy: czy zator siedzi w podejściu, w pionie czy w przykanaliku, jak długi odcinek trzeba wypłukać i czy jest dostęp przez studzienkę albo rewizję. Orientacyjny cennik znajdziesz na stronie głównej. Kwota z telefonu nie rośnie na miejscu bez powodu.',
+      },
+      {
+        question: 'Jak szybko dojedziecie na Okęcie albo na Stare Włochy?',
+        answer:
+          'Zwykle w ciągu 1–2 godzin od telefonu. Aleją Krakowską, Popularną albo Łopuszańską wjeżdżamy w każdą część dzielnicy bez kluczenia. Podaj adres, a powiemy, o której będziemy.',
+      },
+      {
+        question: 'Mamy hurtownię w Rakowie. Po każdym deszczu woda stoi na placu przy studzience. Co z tym zrobić?',
+        answer:
+          'Studzienki i odwodnienie placu zamulają się piaskiem i liśćmi, aż kratka przestaje przyjmować wodę. Płuczemy je wuko od studzienki: głowica wypłukuje piasek z całego odcinka, nie tylko spod kratki. Przyjeżdżamy w godzinach, w których nie blokujemy wam dostaw, i wystawiamy fakturę VAT. Jeśli woda wraca po każdej ulewie, oglądamy odwodnienie kamerą i pokazujemy, w którym miejscu rura jest załamana albo zamulona.',
+      },
+      {
+        question: 'Dom jednorodzinny na Nowych Włochach, zator wraca co kilka miesięcy. Dlaczego?',
+        answer:
+          'Najczęściej dlatego, że poprzednie udrożnienie zrobiło w zatorze tylko otwór, a osad albo korzenie zostały w rurze. W domu z ogrodem korzenie wchodzą do przykanalika przez wysuniętą uszczelkę albo rozejście łączenia i odrastają. Wypłukujemy odcinek wuko od studzienki, korzenie tniemy głowicą, a potem wprowadzamy kamerę i pokazujemy na nagraniu, w którym miejscu wchodzą do rury. Wtedy wiesz, czy wystarczy czyszczenie raz na jakiś czas, czy ten fragment trzeba naprawić.',
+      },
+      {
+        question: 'Restauracja przy alei Krakowskiej – zlew w kuchni schodzi coraz wolniej, chemia pomaga na kilka dni. Przyjedziecie po godzinach?',
+        answer:
+          'Tak, także wieczorem po zamknięciu lokalu. W kuchni gastronomicznej podejście od zlewu obrasta tłuszczem dużo szybciej niż w mieszkaniu, a chemia robi w nim tylko prześwit, przez który woda schodzi przez kilka dni. Podejście fi 50 mm czyścimy sprężyną elektryczną po odkręceniu syfonu, a odcinek od budynku do studzienki, jeśli też jest zarośnięty, płuczemy wuko. Faktura VAT na firmę.',
+      },
+    ],
+    extra: {
+      heading: 'Przepychanie rur wuko we Włochach',
+      intro:
+        'Włochy to dzielnica, w której jednego dnia potrafimy pracować w ogrodzie przedwojennej willi, w piwnicy bloku na Okęciu i na placu hurtowni w Rakowie. Za każdym razem inny sprzęt: do korzeni w przykanaliku głowica tnąca, do tłuszczu w pionie sprężyna albo wuko od studzienki, do piasku w odwodnieniu tylko wuko. Dlatego zanim wyjedziemy, zadajemy przez telefon kilka pytań. <strong>Rurę czyścimy na całej długości, a nie tylko w miejscu korka.</strong>',
+      askLine: 'Najbardziej pomagają nam trzy odpowiedzi:',
+      questions: [
+        'Gdzie stoi woda – <strong>w budynku</strong> (zlew, brodzik, toaleta, piwnica), czy <strong>na zewnątrz</strong> (studzienka, wpust na placu, przykanalik)?',
+        'Co to za obiekt – <strong>dom, blok czy firma</strong> – i czy wiesz, z czego są rury: <strong>PVC czy żeliwo</strong>?',
+        'Czy zator pojawił się <strong>pierwszy raz</strong>, czy <strong>wraca</strong> mimo wcześniejszego przepychania?',
+      ],
+      outro:
+        'Po tych odpowiedziach wiemy, co pakujemy do auta, i mówimy, ile to będzie kosztować. Zadzwoń: 660 360 170.',
+    },
+  },
 ];
 
 export function getDistrictBySlug(slug: string): DistrictData | undefined {
