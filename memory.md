@@ -22,9 +22,9 @@ Zrobione (wg git, wieczór 2026-06-11):
 - Sterowane danymi: jeden wpis w `src/data/districts.ts` + cienki wrapper `src/pages/wuko<slug>.astro`. Navbar/Footer/Locations iterują tablicę `districts` automatycznie. `mainDistricts` w `src/config/site.ts` steruje sekcją „Inne dzielnice" na podstronach (dodawać tam każdą nową dzielnicę).
 - Komponent `DistrictContent.astro` NIE ma mapy Google ani zdjęć — nowe podstrony ich nie dodają.
 - **Zdjęcie pod listą ulic (od 2026-09-04)**: opcjonalne pole `areaImage` w `DistrictData` (src, alt, width, height, name, caption z HTML) renderuje `<figure class="dc-area-fig">` bezpośrednio pod akapitem „Dojeżdżamy m.in. na ulice” + JSON-LD `ImageObject` (contentUrl, caption bez HTML, contentLocation, mainEntityOfPage). Wymiary w atrybutach idą z danych, więc każda dzielnica może mieć inną proporcję. Pierwsze użycie: Wawer — infografika właściciela z interwencji w Aninie `public/img/wuko-wawer-anin-scieki-wybijaja-w-wannie-interwencja.webp` (1600×1600, ~316 KB, q86) + `…-800.webp` (800×800, ~114 KB) w srcset (`srcSmall`), wyświetlana na pełną szerokość `dc-wide`, klik otwiera duży plik. Źródło: `C:UserslenovoDownloadshf_20260904_114600_91bbc622-74ec-4440-bc35-ced0c5e8f278.png` (2048×2048, kwadrat). Pierwsza próba z pulpitowym 733×450 była nieczytelna — ten plik miał białe pasy po bokach (treść ~450 px), a wersje „kadr” 1200×675 z Pobranych ucinają dolny rząd zdjęć; nie używać ich, podpis linkuje do realizacji `/poradnik/scieki-wybijaja-w-wannie-po-wybraniu-szamba-wuko#rury-zatykaja-sie-po-wybraniu-szamba` — kotwica to pogrubiony akapit HTML (`<p id=…><strong>`) wstawiony 2026-09-04 po pierwszym akapicie artykułu na polecenie właściciela („często tak bywa, że po wybraniu szamba rury się zatykają”). Uwaga: grafika podaje „prawdopodobną przyczynę: zator w pionie”, a artykuł — za późno wybrane szambo; rozbieżność zgłoszona właścicielowi 2026-09-04, podpis celowo nie wskazuje przyczyny. Drugie pole `extra.image` (Ursynów) nadal ma sztywne 1200×900 w szablonie.
-- Istniejące (15): Targówek, Białołęka, Bielany, Bródno, Wawer, Ochota, Praga Północ, Praga Południe, Rembertów, Ursus, Mokotów, Wola (2026-06-14), Ursynów (ma zdjęcie `public/img/przepychanie-rur-wuko-ursynow.webp`), Bemowo (commit f7bf8f0, 2026-08-11), **Żoliborz** (dodany 2026-09-04, `/wukozoliborz`, bez zdjęcia — jak Bemowo; commit 7023b1e, wypchnięty na polecenie właściciela).
-- Brakujące (kandydaci): Włochy, Wesoła, Śródmieście, Wilanów.
-- Uwaga do szablonu `DistrictContent.astro`: nagłówki „Dlaczego warto wybrać nas w {name}" i „Potrzebujesz Wuko w {name}?" wstawiają mianownik („w Żoliborz", „w Wola") — błąd gramatyczny wspólny dla wszystkich podstron, do ewentualnej poprawy przez osobne pole z odmianą (np. `nameLoc: 'na Żoliborzu'`). Nie ruszać bez polecenia właściciela.
+- Istniejące (16): Targówek, Białołęka, Bielany, Bródno, Wawer, Ochota, Praga Północ, Praga Południe, Rembertów, Ursus, Mokotów, Wola (2026-06-14), Ursynów (ma zdjęcie `public/img/przepychanie-rur-wuko-ursynow.webp`), Bemowo (commit f7bf8f0, 2026-08-11), **Żoliborz** (dodany 2026-09-04, `/wukozoliborz`, bez zdjęcia — jak Bemowo; commit 7023b1e, wypchnięty na polecenie właściciela). **Włochy** (dodane 2026-09-17, `/wukowlochy`, bez zdjęcia; kąt: wille Starych/Nowych Włoch → korzenie w przykanaliku, bloki na Okęciu → tłuszcz w pionie/poziomie, hale i hurtownie w Rakowie/na Salomei → piasek w studzienkach i odwodnieniu, gastronomia przy al. Krakowskiej; niewypchnięte).
+- Brakujące (kandydaci): Wesoła, Śródmieście, Wilanów.
+- **REGUŁA (właściciel 2026-09-17, „zapamiętaj”): nazwa dzielnicy NIGDY w mianowniku po przyimku.** Szablon `DistrictContent.astro` bierze do nagłówków pole `nameLoc` (odmiana z przyimkiem: „na Żoliborzu”, „w Wawrze”, „we Włochach”) – „Co robimy …”, „Opinie …”, „Dlaczego warto wybrać nas …”, „Obszar działania …”, „Potrzebujesz Wuko …?”. Każdy nowy wpis w `districts.ts` MUSI mieć `nameLoc` (pole wymagane w interfejsie). Mianownik zostaje tylko w formie marki „Wuko {name}” (title, H1, FAQ, kafelki) i w apozycji „dzielnica {name}” / „ulice dzielnicy {name}”. Wcześniejszy stan („w Żoliborz”, „w Wola”) naprawiony 2026-09-17.
 - Wpisy Bemowo i Ursynów mają w pytaniach diagnostycznych „PVC, żeliwo, kamionka" — sprzeczne z globalną regułą „kamionki nigdy nie wspominać" (2026-08-20); Żoliborz już bez kamionki. Do poprawy przy okazji, za zgodą właściciela.
 
 ## Do zrobienia / otwarte
@@ -79,3 +79,44 @@ Gdy użytkownik zapyta „co mieliśmy zrobić" przy podstronie inspekcji kamer�
 - Kontrola po wdrożeniu (curl): `https://www.wukowarszawa.pl/` → 301; `/wukotargowek/` → 301 na `/wukotargowek`; `/wukotargowek` → 200; `/zmyslony` → 404; `/wukotargowek.html` → 301 na `/wukotargowek`.
 - Historia błędu (GSC z 28.08.2026: 15 niezindeksowanych): linki wewnętrzne prowadziły na formę, która dawała 301 (10 „strona zawiera przekierowanie"), stary `.htaccess` z fallbackiem SPA po React zwracał stronę główną z kodem 200 dla każdego zmyślonego adresu, a `www.` nie miało przekierowania (3 „alternatywna strona z canonical"). LEKCJA: (a) jedna forma adresu w całym serwisie, (b) przy migracji React → Astro usuwać stary `.htaccess`, (c) po każdym wdrożeniu 3 curl-e. Reguła globalna: 5d w globalnym CLAUDE.md.
 - Po wdrożeniu w GSC kliknąć „Sprawdź poprawkę" przy obu przyczynach; przez kilka tygodni adresy z ukośnikiem będą raportowane jako przekierowania — to poprawne (301 na formę docelową).
+- **Weryfikacja GSC z 7.09 „Niepowodzenie" 15.09 (analiza 2026-09-17)**: serwer i build były już poprawne (curl: 200 / 301 / 404 / www / http OK, 32 strony z własnym canonicalem). „Niepowodzenie" w raporcie przekierowań to adresy Z ukośnikiem, które celowo dają 301 — GSC liczy to jako wciąż istniejący problem; adresy bez ukośnika miały datę crawla sprzed 4.09 („Oczekuje"). Jedyna realna luka: `/index.html` i `/podstrona/index.html` zwracały 200 (drugi adres tej samej strony) → **sekcja 3a w `.htaccess`** (commity e034fdd + 5ecc562): `RewriteCond %{THE_REQUEST} …index\.html` + `RewriteRule ^(.*?)/?index\.html$ /$1 [R=301,L]` — jednym skokiem na adres bez ukośnika; warunek THE_REQUEST chroni przed pętlą z wewnętrznym rewrite sekcji 4. Do kontroli po wdrożeniu dochodzi 4. curl: `/wukowawer/index.html` → 301 na `/wukowawer`.
+- **Strona 404 = noindex, bez canonicala** (od 2026-09-17): `Layout.astro` ma prop `noindex?: boolean` (robots `noindex, nofollow`, tag canonical pomijany); używa go `src/pages/404.astro`. Dla innych stron pomocniczych (np. „dziękujemy") stosować ten sam prop.
+- **Pułapka przy sprawdzaniu serwera curl-em**: Seohost/LiteSpeed po ~50 szybkich zapytaniach zwraca `429 Too Many Requests` (treść „Too Many Requests" zamiast HTML) — grep po canonicalu daje wtedy fałszywe „brak". Odstęp min. 2 s między zapytaniami; przy pustym wyniku najpierw sprawdzić kod odpowiedzi. Otwarte: czy Googlebot też dostaje 429 — sprawdzić w GSC „Statystyki indeksowania".
+
+## Wytyczne pisania realizacji WUKO (research konkurencji 2026-09-15, polecenie właściciela)
+Pełna notatka z logiem researchu: `C:\Users\lenovo\.claude\projects\c--Users-lenovo-wukowarszawa-pl\memory\project-wytyczne-realizacje-wuko.md`. Skrót do stosowania przy KAŻDEJ nowej realizacji:
+1. Tytuł po problemie, bez dzielnicy (anty-kanibalizacja); wolno dodać zwrot akcji („miało być tylko…, skończyło się…”). Dzielnica w treści + link do `/wuko<dzielnica>`.
+2. Data i godzina zgłoszenia w pierwszym akapicie.
+3. Liczby: metry odcinka, liczba studni, średnica fi, czas od zgłoszenia do przyjazdu, czas pracy. NIGDY ilość zużytej wody.
+4. Kolejność: objaw → co zastaliśmy → co zrobiliśmy → czym sprawdziliśmy → efekt → jedno zdanie wniosku dla klienta.
+5. Dowód wykonania: kamera po pracy, nagranie dla administracji (kamera ocenia stan, nie „wykrywa wycieków”).
+6. Zdjęcia przed/po obok siebie, podpis z miejscem i sprzętem.
+7. Nazwa obiektu/klienta tylko za zgodą klienta; domyślnie „blok przy ul. X”.
+8. Przy zleceniach planowych: pochwała klienta za profilaktykę (raz na kilka wpisów, innymi słowami).
+9. Długość 500–900 słów. NIE kopiować Kan-Max (2000+ słów, doklejony ogólny poradnik, emotikony, powtórzenia).
+10. Motyw „sprzęt to nie wszystko, człowiek musi wejść” — oszczędnie.
+11. Koniec: FAQ 5 pytań + 660 360 170 w CTA.
+12. Przed pisaniem: `Pisanie tekstów\memory.md` + hub reguł pisania.
+Kontekst: w Warszawie żaden sprawdzony konkurent (WUKO Express, Hydrokret, wuko.waw.pl, Sidex, Dankan) nie opisuje realizacji — nisza. Jedyne wzorce w PL: Kan-Max (blog, 6 case study od 06.2026), EKOS/kanalizacja.com (notki + galeria), WUKO Jelenia Góra, ZIĘBUD Wrocław (Szwedzka 9). Niesprawdzone: hydraulikwarszawski.pl/realizacje (403), FB/YouTube. Ahrefs Top Pages niedostępny w planie.
+
+## Plan realizacji per dzielnica (stan na 2026-09-15)
+**Stan pokrycia (sprawdzone grep po `src/content/poradnik` i `src/data/districts.ts`):**
+- Realizacje istniejące (4): Białołęka (przyłącze do szamba), Wawer ×2 (węzeł cieplny; Anin – wanna po wybraniu szamba), Targówek (poziom przy Wysockiego + kamera). Temat „szambo” użyty już 2×, nie brać go do kolejnych.
+- Wzmianki poza realizacjami: Wawer (anegdota o korzeniach w art. `korzenie-w-rurze…`), Białołęka (link w `wuko-czy-sprezyna…`).
+- Linki realizacja → dzielnica: 5 (OK). Linki zwrotne dzielnica → realizacja: TYLKO Wawer (areaImage Anin). **Do zrobienia bez nowej treści:** blok `extra` z linkiem do realizacji na `/wukotargowek` (Wysockiego) i `/wukobialoleka` (szambo), jak na Ursynowie/Bemowie/Żoliborzu.
+- Bez realizacji (12): Bielany, Bródno, Ochota, Praga Północ, Praga Południe, Rembertów, Ursus, Mokotów, Wola, Ursynów (ma zdjęcie), Bemowo i Żoliborz (mają `extra` tekst).
+- Ahrefs (wolumeny „wuko <dzielnica>”) niedostępny w planie – kolejność bez danych o popycie.
+
+**Kolejka (każdy wpis = PRAWDZIWE zlecenie właściciela: data, zdjęcia, liczby; typ problemu to cel, nie fikcja; jeden typ problemu = jedna dzielnica, anty-duplikat):**
+1. Praga Południe – deszczówka: zalany garaż/podwórko po ulewie, wpusty + studzienki (link do art. deszczówka).
+2. Bródno – planowe czyszczenie poziomu dla wspólnoty, prewencja („chwalimy zarządcę”), kamera po pracy.
+3. Bielany – korzenie w przykanaliku domu jednorodzinnego, głowica tnąca (link do art. korzenie).
+4. Mokotów – gastronomia: tłuszcz w przykanaliku / separator (link do art. tłuszcz).
+5. Wola – osad pobudowlany po remoncie (gruz, zaprawa) od studzienki.
+6. Praga Północ – stare żeliwo w kamienicy, cofka w piwnicy, zator na poziomie.
+7. Ochota – garaż podziemny, odwodnienie liniowe / wpusty.
+8. Rembertów – dom jednorodzinny, przykanalik do sieci miejskiej, zator po latach.
+9. Ursus – nowe osiedle, piasek w studzienkach.
+10. Ursynów, Bemowo, Żoliborz – na końcu (strony już wzbogacone).
+Wawer / Targówek / Białołęka – pauza na nowe realizacje, tylko linki zwrotne.
+Reguły pisania: sekcja „Wytyczne pisania realizacji WUKO” wyżej (tytuł po problemie, bez dzielnicy w tytule).

@@ -208,6 +208,11 @@ const navLinks = [
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
     border: 1px solid #f1f5f9;
     padding: 0.5rem 0;
+    max-height: calc(100vh - 8rem);
+    max-height: calc(100dvh - 8rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
   }
   .dropdown-inner a {
     display: block;
