@@ -28,6 +28,7 @@ Zrobione (wg git, wieczór 2026-06-11):
 - Wpisy Bemowo i Ursynów mają w pytaniach diagnostycznych „PVC, żeliwo, kamionka" — sprzeczne z globalną regułą „kamionki nigdy nie wspominać" (2026-08-20); Żoliborz już bez kamionki. Do poprawy przy okazji, za zgodą właściciela.
 
 ## Do zrobienia / otwarte
+- [ ] **GSC — zgłosić do indeksacji** (prośba właściciela 2026-09-23: przypominać na starcie rozmowy): Sprawdzenie adresu URL → „Poproś o zindeksowanie” dla `https://wukowarszawa.pl/wukowlochy` oraz `https://wukowarszawa.pl/wukowesola`. Obie podstrony wdrożone i odpowiadają 200 (curl 23.09.2026), ale nie były zgłaszane ręcznie.
 - [x] Numer 660 360 170 wstawiony w `src/config/site.ts` (phone + phoneTel) — propaguje na całą stronę.
 - [x] „Tłuszcz w kanalizacji — jak się go pozbyć" — NAPISANY 2026-07-24 (`src/content/poradnik/tluszcz-w-kanalizacji-jak-sie-go-pozbyc.md`). Zakres wg polecenia właściciela: TYLKO podejścia kanalizacyjne (rury ~50 mm wewnątrz budynków) → sprężyna elektryczna jako metoda; wuko wspomniane wyłącznie jako wyjątek przy prostym przebiegu rury. Indywidualny + gastronomia.
 - [ ] Kolejne artykuły poradnika. Tematy-kandydaci z researchu (2026-06-20), niekanibalizujące strony głównej ani dzielnic — uszeregowane wg priorytetu:
