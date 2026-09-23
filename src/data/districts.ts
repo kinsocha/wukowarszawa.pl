@@ -1338,6 +1338,113 @@ export const districts: DistrictData[] = [
         'Po tych odpowiedziach wiemy, co pakujemy do auta, i mówimy, ile to będzie kosztować. Zadzwoń: 660 360 170.',
     },
   },
+  {
+    slug: 'wukowesola',
+    name: 'Wesoła',
+    nameLoc: 'w Wesołej',
+    fullName: 'Wuko Wesoła',
+    h1Main: 'Wuko Wesoła',
+    h1Accent: 'ciśnieniowe udrażnianie i czyszczenie kanalizacji',
+    metaTitle: 'Wuko Wesoła – ciśnieniowe udrażnianie kanalizacji | Wuko Warszawa',
+    metaDescription:
+      'Wuko Wesoła – udrażnianie kanalizacji w domach w Starej Miłośnie, na Groszówce, w Zielonej i na Woli Grzybowskiej. Przykanaliki, studzienki, odwodnienia. Wycena przed przyjazdem.',
+    heroIntro:
+      'W Wesołej jeździmy głównie do domów jednorodzinnych: długi przykanalik pod ogrodem, studzienka przy bramie, czasem własny zbiornik na ścieki. Trafiają się też szeregowce i niewielkie bloki. Przyjeżdżamy z wuko, elektryczną sprężyną i kamerą, a co zabrać, wiemy już po rozmowie telefonicznej.',
+    areas: [
+      'Stara Miłosna',
+      'Wola Grzybowska',
+      'Zielona-Grzybowa',
+      'Groszówka',
+      'Plac Wojska Polskiego',
+    ],
+    streets: [
+      '1 Praskiego Pułku',
+      'Trakt Brzeski',
+      'Jana Pawła II',
+      'Okuniewska',
+      'Armii Krajowej',
+      'Gościniec',
+      'Cieplarniana',
+      'Jeździecka',
+      'Borkowska',
+      'Pogodna',
+      'Klimatyczna',
+      'Turkusowa',
+      'Diamentowa',
+      'Wspólna',
+      'Mickiewicza',
+      'Żeromskiego',
+      'Słowackiego',
+      'Broniewskiego',
+      'Staszica',
+      'Prusa',
+      'Wawerska',
+      'Wita Stwosza',
+      'Mazowiecka',
+      'Kwiatowa',
+      'Apteczna',
+      'Sikorskiego',
+      'Kilińskiego',
+      'Niemcewicza',
+      'Spokojna',
+    ],
+    description:
+      'Wesoła to w większości domy jednorodzinne między sosnami – lasy zajmują ponad 60 procent dzielnicy, a działki bywają duże i piaszczyste. Droga ścieków z takiego domu do studzienki albo do zbiornika liczy kilkanaście, czasem kilkadziesiąt metrów i biegnie pod ogrodem, podjazdem i korzeniami drzew. Ten odcinek zgłaszany jest najczęściej, a objaw wygląda zwykle podobnie: woda schodzi wolniej w całym domu naraz i podnosi się w najniższym punkcie – przy kratce w pralni, w łazience na parterze albo w piwnicy. Przykanalik płuczemy wuko od studzienki, na całej długości. Strumień wody pod ciśnieniem wynosi z rury piasek naniesiony po ulewie i zmywa osad ze ścianek, a na korzenie, które weszły do środka przez wysuniętą uszczelkę albo rozejście kielicha, zakładamy głowicę tnącą. Tym samym sprzętem czyścimy studzienki, odwodnienie podjazdu i – w domach ze zbiornikiem – odcinek od budynku do szamba. Wewnątrz budynku pracuje elektryczna sprężyna. Podejścia od zlewu, umywalki i brodzika mają fi 40–50 mm i zarastają tłuszczem, mydłem i włosami; hydraulik odkręca syfon, wprowadza spiralę z dobraną końcówką i czyści rurę od środka, aż woda znów schodzi swobodnie. Tak samo podchodzimy do poziomu w piwnicy szeregowca i niewielkiego bloku przy Jana Pawła II. Gdy zator wraca mimo udrożnienia, wprowadzamy kamerę: widać na niej, w jakim stanie jest rura, czy coś w niej siedzi i w którym miejscu wchodzą korzenie. Nagranie zostaje u właściciela domu.',
+    testimonials: [
+      {
+        text: 'Dom w Starej Miłośnie, woda podnosiła się w pralni i przy kratce w garażu. Przyjechali tego samego dnia i wypłukali przykanalik od studzienki do granicy działki. Na kamerze pokazali, że w jednym miejscu zeszła uszczelka – wiem teraz, co poprawić przy okazji remontu podjazdu. Polecam.',
+        location: 'Stara Miłosna',
+      },
+      {
+        text: 'Szambo wybrane, a woda i tak schodziła wolno. Zatkany był odcinek od domu do zbiornika. Godzina roboty i po sprawie.',
+        location: 'Wola Grzybowska',
+      },
+      {
+        text: 'Po każdej większej ulewie woda stała na podjeździe, bo studzienka przestała ją przyjmować. Wypłukali ją razem z odwodnieniem, przyjechali w umówionych godzinach i zostawili po sobie porządek. Polecam.',
+        location: 'Groszówka',
+      },
+    ],
+    faq: [
+      {
+        question: 'Ile kosztuje wuko w Wesołej?',
+        answer:
+          'Cenę podajemy przed wyjazdem – zadzwoń pod 660 360 170 i powiedz w kilku zdaniach, co się dzieje. Składa się na nią kilka rzeczy: czy zator siedzi w podejściu pod zlewem, na poziomie w piwnicy, czy w przykanaliku, jak długi odcinek trzeba przepłukać i czy jest studzienka albo rewizja, przez którą wejdziemy sprzętem. Orientacyjny cennik znajdziesz na stronie głównej. Kwota ustalona przez telefon nie zmienia się na miejscu bez powodu.',
+      },
+      {
+        question: 'Jak szybko dojedziecie do Starej Miłosnej?',
+        answer:
+          'Zwykle w ciągu 1–2 godzin od telefonu. Traktem Brzeskim, ulicą 1 Praskiego Pułku i Jana Pawła II wjeżdżamy w każdą część dzielnicy. Podaj adres i numer domu, a powiemy, o której będziemy pod bramą.',
+      },
+      {
+        question: 'Mamy dom z własnym zbiornikiem na ścieki. Szambo zostało wybrane, a woda dalej schodzi wolno. Co z tym zrobić?',
+        answer:
+          'Zbiornik bywa pełny tylko przez część czasu, a odcinek od domu do szamba pracuje cały rok i obrasta od środka osadem. Gdy prześwit zrobi się wąski, wywóz nic nie zmienia – woda nadal staje. Taki odcinek płuczemy wuko: głowica przechodzi go na całej długości i wynosi osad do zbiornika, a nie zostawia go na ściankach. Przy okazji czyścimy studzienkę przed budynkiem, jeśli jest.',
+      },
+      {
+        question: 'Zlew w kuchni schodzi coraz wolniej, chemia pomaga na kilka dni. Co zrobicie inaczej?',
+        answer:
+          'Chemia robi w tłuszczu wąski prześwit, przez który woda schodzi przez kilka dni, a potem wszystko wraca. Podejście od zlewu ma fi 50 mm, więc hydraulik odkręca syfon – to zwykła czynność przy takiej robocie – wprowadza elektryczną sprężynę z końcówką dobraną do osadu i czyści rurę na całej długości podejścia. Przeważnie zajmuje to od kilku do kilkunastu minut. Po udrożnieniu puszczamy wodę i sprawdzamy, czy schodzi bez zastojów.',
+      },
+      {
+        question: 'Po ulewie woda stoi na podjeździe, a studzienka jej nie przyjmuje. Da się to wyczyścić?',
+        answer:
+          'Tak. Do studzienek i odwodnienia przy domu spływa piasek z podjazdu, igliwie i liście, aż rura pod kratką zamula się na tyle, że woda nie ma gdzie uciec. Płuczemy ten odcinek wuko od studzienki – strumień wody wynosi piasek z całej rury, nie tylko spod samej kratki. Jeśli woda stoi po każdym deszczu mimo czystej rury, oglądamy odcinek kamerą i pokazujemy na nagraniu, czy rura jest gdzieś załamana albo pęknięta.',
+      },
+    ],
+    extra: {
+      heading: 'Przepychanie rur wuko w Wesołej',
+      intro:
+        'Domy w Wesołej stoją na dużych działkach, a rura z budynku do studzienki potrafi mieć kilkadziesiąt metrów i po drodze kilka łuków. Dlatego zanim wyjedziemy, pytamy o kilka rzeczy – od odpowiedzi zależy, czy wystarczy elektryczna sprężyna, czy jedziemy z wuko i głowicami. <strong>Odcinek płuczemy w całości, a nie tylko w miejscu korka.</strong>',
+      askLine: 'Najwięcej mówią nam trzy odpowiedzi:',
+      questions: [
+        'Gdzie podnosi się woda – <strong>w budynku</strong> (zlew, brodzik, kratka w pralni, piwnica), czy <strong>na zewnątrz</strong> (studzienka, odwodnienie podjazdu, przykanalik)?',
+        'Dom jest podłączony <strong>do kanalizacji miejskiej</strong>, czy ma <strong>własny zbiornik na ścieki</strong>?',
+        'To <strong>pierwszy raz</strong>, czy zator <strong>wraca</strong> mimo wcześniejszego udrożnienia?',
+      ],
+      outro:
+        'Po tych trzech odpowiedziach wiemy, jaki sprzęt zabrać, i mówimy, ile to będzie kosztować. Zadzwoń: 660 360 170.',
+    },
+  },
 ];
 
 export function getDistrictBySlug(slug: string): DistrictData | undefined {

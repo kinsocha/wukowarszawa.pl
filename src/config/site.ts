@@ -53,6 +53,7 @@ export const siteConfig = {
     'Bemowo',
     'Żoliborz',
     'Włochy',
+    'Wesoła',
   ],
 
   // Wszystkie dzielnice Warszawy (dla sekcji Locations)
